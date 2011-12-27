@@ -16,6 +16,8 @@
 
 I followed the instructions in the demo from Lecture 2.
 
-To see the changes made by the IDE, I made git commits after each step.
+To see the changes, I made git commits after each step.
 
     commit 8260ff6a13bccc0802f8dfaa11f998b2ee0b4022 002_Calculator: create new project, add digit buttons
+    commit 2b07958fba27f3c05025fe96d55456bb84c6fa82 002_Calculator: add operation and enter buttons
+    commit 139cd5376c739f5d5197275630e7a378bc1b89fd 002_Calculator: add CalculatorBrain model

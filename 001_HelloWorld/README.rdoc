@@ -1,5 +1,11 @@
 = Creating Your First iOS App
 
+== Software versions
+
+    Mac OS X Lion v10.7.2
+    Xcode v4.2.1
+    iOS 5.0
+
 == Resources
 
     http://developer.apple.com/library/ios/#documentation/iPhone/Conceptual/iPhone101/Articles/00_Introduction.html#//apple_ref/doc/uid/TP40007514
@@ -8,7 +14,7 @@
 
 I followed the instructions in the tutorial
 
-To see the changes made by the IDE, I made git commits after each step.
+To see the changes, I made git commits after each step.
 
     commit d8e756cf63e0001054f9d6b55c62475f799ddc69 HelloWorld: create new project
     commit c56953bc6859c8f21b20bc95473f1c55a3bde500 HelloWorld: add label, button and textField
