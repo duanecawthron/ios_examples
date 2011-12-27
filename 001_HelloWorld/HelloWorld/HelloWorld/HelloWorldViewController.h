@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HelloWorldViewController : UIViewController {
+@interface HelloWorldViewController : UIViewController <UITextFieldDelegate> {
     NSString *userName;
 }
 
