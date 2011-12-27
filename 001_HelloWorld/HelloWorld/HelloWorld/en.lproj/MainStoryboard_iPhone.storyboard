@@ -44,6 +44,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="r3Y-dy-Gx4" id="Tdg-aW-fHO"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="181" y="153"/>
@@ -54,6 +57,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HelloWorldViewController.h"/>
             <relationships>
                 <relationship kind="action" name="changeGreeting:"/>
+                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
             </relationships>
         </class>
     </classes>
