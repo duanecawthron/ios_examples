@@ -1,0 +1,15 @@
+= Install Xcode
+
+== Resources
+
+    http://developer.apple.com/
+
+== Install Xcode on Mac OS X Lion v10.7.2
+
+Installation is simple. Just install Xcode from the App Store.
+
+== Update Xcode on Mac OS X Lion v10.7.2
+
+Curiously, running "Software Update" does not update Xcode. Instead it updates /Applications/Install Xcode.app. To update Xcode, you must this application.
+
+    /Applications/Install Xcode.app

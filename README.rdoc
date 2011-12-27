@@ -1,0 +1,13 @@
+= iPhone and iPad Application Development Examples
+
+These examples are experiments used to learn about iOS app development.
+
+== Resources
+
+    http://developer.apple.com/
+
+== iOS Examples
+
+These examples demonstrate various features of iOS development.
+
+000_xcode:: Install Xcode
