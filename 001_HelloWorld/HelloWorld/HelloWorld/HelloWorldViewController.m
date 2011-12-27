@@ -9,8 +9,10 @@
 #import "HelloWorldViewController.h"
 
 @implementation HelloWorldViewController
-@synthesize textField;
-@synthesize label;
+
+@synthesize userName=_userName;
+@synthesize textField=_textField;
+@synthesize label=_label;
 
 - (void)didReceiveMemoryWarning
 {
