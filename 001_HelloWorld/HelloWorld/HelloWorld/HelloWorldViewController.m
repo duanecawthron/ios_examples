@@ -10,6 +10,7 @@
 
 @implementation HelloWorldViewController
 @synthesize textField;
+@synthesize label;
 
 - (void)didReceiveMemoryWarning
 {
@@ -28,6 +29,7 @@
 - (void)viewDidUnload
 {
     [self setTextField:nil];
+    [self setLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
