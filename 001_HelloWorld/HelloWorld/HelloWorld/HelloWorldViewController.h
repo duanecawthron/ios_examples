@@ -10,4 +10,5 @@
 
 @interface HelloWorldViewController : UIViewController
 
+- (IBAction)changeGreeting:(id)sender;
 @end

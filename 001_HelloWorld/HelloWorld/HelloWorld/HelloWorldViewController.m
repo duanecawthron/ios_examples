@@ -61,4 +61,6 @@
     }
 }
 
+- (IBAction)changeGreeting:(id)sender {
+}
 @end
