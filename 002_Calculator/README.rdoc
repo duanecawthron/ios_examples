@@ -1,50 +1,21 @@
-= Creating Your First iOS App
+= RPN Calculator from Stanford University CS 193P Lecture 2
 
 == Software versions
 
-	Mac OS X Lion v10.7.2
-	Xcode v4.2.1
-	iOS 5.0
+    Mac OS X Lion v10.7.2
+    Xcode v4.2.1
+    iOS 5.0
 
 == Resources
 
-    http://developer.apple.com/library/ios/#documentation/iPhone/Conceptual/iPhone101/Articles/00_Introduction.html#//apple_ref/doc/uid/TP40007514
-
-	Stanford University
-	Developing Apps for iOS
-	CS 193P
-	Paul Hegarty
-
-	Run iTunes, click iTumes Store and search for iOS or iPhone in iTunes U.
-
-	There are two classes. Each is available in high (HD) or standard (SD) definition video.
-
-	Fall 2011 for Xcode 4 and iOS 5
-	http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=473757255
-	iPad and iPhone Application Development
-	Fall 2011
-	Xcode 4 and iOS 5
-	See http://www.stanford.edu/class/cs193p/cgi-bin/drupal/ for downloads.
-
-	Fall 2010 for Xcode 3 and iOS 4
-	http://itunes.apple.com/us/podcast/cs193p-student-final-projects/id395605774?i=90218598
-	Developing Apps for iOS
-	Fall 2010
-	Xcode 3 and iOS 4
-	See http://www.stanford.edu/class/cs193p/cgi-bin/drupal/downloads-2010-fall for downloads.
+    Stanford University CS 193P
+    http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=473757255
+    http://www.stanford.edu/class/cs193p/cgi-bin/drupal/ for downloads.
 
 == Introduction
 
-I followed the instructions in the tutorial
+I followed the instructions in the demo from Lecture 2.
 
 To see the changes made by the IDE, I made git commits after each step.
 
-    commit d8e756cf63e0001054f9d6b55c62475f799ddc69 HelloWorld: create new project
-    commit c56953bc6859c8f21b20bc95473f1c55a3bde500 HelloWorld: add label, button and textField
-    commit 95c8a5736bcb507fab43419080a241c0518170c8 HelloWorld: autocapitalizationType textField
-    commit 4a123f740be8e16f5a2d60f7f4637e6532facb34 HelloWorld: Create an Action for the Button
-    commit d469a044e4bd312fc552d2b69358f20747d7c2d2 HelloWorld: Create an Outlet for the Text Field
-    commit 2054ee9b14ebe8080cc43e087762a70901fbdd5d HelloWorld: Create an Outlet for the Button
-    commit 94944dc1f3c8d241162f967304751504fdd41a59 HelloWorld: Make the Text Field’s Delegate Connection
-    commit 761ff1f7e61c6d2f8e1906676482693844955423 HelloWorld: Add a Property for the User’s Name
-    commit 0a7577165131c55b94a48ed961d96853273d3dec HelloWorld: Implement the changeGreeting: Method, Configure the View Controller as the Text Field’s Delegate
+    commit 8260ff6a13bccc0802f8dfaa11f998b2ee0b4022 002_Calculator: create new project, add digit buttons

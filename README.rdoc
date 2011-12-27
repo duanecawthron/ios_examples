@@ -6,6 +6,26 @@ These examples are experiments used to learn about iOS app development.
 
     http://developer.apple.com/
 
+== Stanford University CS 193P
+
+This class is taught by Paul Hegarty. It is available from iTunes U. Run iTunes, click iTumes Store and search for iOS or iPhone in iTunes U. There are two classes. Each is available in high (HD) or standard (SD) definition video.
+
+Fall 2011 for Xcode 4 and iOS 5
+
+    http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=473757255
+    iPad and iPhone Application Development
+    CS 193P
+    Paul Hegarty
+    See http://www.stanford.edu/class/cs193p/cgi-bin/drupal/ for downloads.
+
+Fall 2010 for Xcode 3 and iOS 4
+
+    http://itunes.apple.com/us/podcast/cs193p-student-final-projects/id395605774?i=90218598
+    Developing Apps for iOS
+    CS 193P
+    Paul Hegarty
+    See http://www.stanford.edu/class/cs193p/cgi-bin/drupal/downloads-2010-fall for downloads.
+
 == iOS Examples
 
 These examples demonstrate various features of iOS development.
