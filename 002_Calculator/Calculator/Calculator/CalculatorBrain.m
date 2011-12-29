@@ -49,12 +49,14 @@
     double result = 0;
     if ([operation isEqualToString:@"+"]) {
         result = [self popOperand] + [self popOperand];
-    } else if ([operation isEqualToString:@"-"]) {
-        result = [self popOperand] - [self popOperand];
     } else if ([@"*" isEqualToString:operation]) {
         result = [self popOperand] * [self popOperand];
+    } else if ([operation isEqualToString:@"-"]) {
+        double temp = [self popOperand];
+        result = [self popOperand] - temp;
     } else if ([@"/" isEqualToString:operation]) {
-        result = [self popOperand] / [self popOperand];
+        double temp = [self popOperand];
+        result = [self popOperand] / temp;
     }
     [self pushOperand:result];
     return result;
