@@ -32,12 +32,18 @@
     // NSLog(@"digit pressed = %@", digit);
 
     if (self.userIsInTheMiddleOfEnteringANumber) {
-        // UILabel *myDisplay = self.display; // or [self display];
-        // NSString *currentText = myDisplay.text; // or [myDisplay text];
-        // NSString *newText = [currentText stringByAppendingString:digit];
-        // myDisplay.text = newText; // or [myDisplay setText:newText];
-        // or
+        NSRange range = [self.display.text rangeOfString:@"."];
+        if ([digit isEqualToString:@"."] && range.location != NSNotFound) {
+            // don't add another period
+        } else {
+            self.display.text = [self.display.text stringByAppendingString:digit];
+        }
+    } else if ([digit isEqualToString:@"0"]) {
+        self.display.text = digit;
+    } else if ([digit isEqualToString:@"."]) {
+        self.display.text = @"0";
         self.display.text = [self.display.text stringByAppendingString:digit];
+        self.userIsInTheMiddleOfEnteringANumber = YES;
     } else {
         self.display.text = digit;
         self.userIsInTheMiddleOfEnteringANumber = YES;

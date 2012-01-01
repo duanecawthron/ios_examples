@@ -68,9 +68,12 @@
         } else if ([operation isEqualToString:@"-"]) {
             double temp = [self popOperandOffProgramStack:stack];
             result = [self popOperandOffProgramStack:stack] - temp;
-        } else if ([@"/" isEqualToString:operation]) {
+        } else if ([operation isEqualToString:@"/"]) {
             double temp = [self popOperandOffProgramStack:stack];
             result = [self popOperandOffProgramStack:stack] / temp;
+        } else if ([operation isEqualToString:@"C"]) {
+            [stack removeAllObjects];
+            result = 0;
         }
     }
 
