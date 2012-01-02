@@ -46,7 +46,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="g2f-eB-WAv"/>
+                    <navigationItem key="navigationItem" title="Psychologist" id="g2f-eB-WAv"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-176" y="-43"/>
