@@ -17,10 +17,24 @@
 
 @synthesize diagnosis = _diagnosis;
 
+- (HappinessViewController *)splitViewHappinessViewController
+{
+    id hvc = [self.splitViewController.viewControllers lastObject];
+    if (![hvc isKindOfClass:[HappinessViewController class]]) {
+        hvc = nil;
+    }
+    return hvc;
+}
+
 - (void) setAndShowDiagnosis:(int)diagnosis
 {
     self.diagnosis = diagnosis;
-    [self performSegueWithIdentifier:@"ShowDiagnosis" sender:self];
+    if ([self splitViewHappinessViewController]) {
+        // NSLog(@"diag= %d", diagnosis);
+        [self splitViewHappinessViewController].happiness = diagnosis;
+    } else {
+        [self performSegueWithIdentifier:@"ShowDiagnosis" sender:self];
+    }
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
