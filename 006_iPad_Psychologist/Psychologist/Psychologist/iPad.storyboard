@@ -65,7 +65,7 @@
         <scene sceneID="LJC-rQ-97C">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bg2-YM-Uy1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="g2B-lE-XMl" customClass="RotatableViewController" sceneMemberID="viewController">
+                <viewController title="Psycologist" id="g2B-lE-XMl" customClass="RotatableViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XKR-sO-7yV">
                         <rect key="frame" x="0.0" y="64" width="320" height="788"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -239,6 +239,27 @@
             <point key="canvasLocation" x="810" y="-1119"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="FaceView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FaceView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dataSource"/>
+            </relationships>
+        </class>
+        <class className="HappinessViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HappinessViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="faceView" candidateClass="FaceView"/>
+                <relationship kind="outlet" name="toolbar" candidateClass="UIToolbar"/>
+            </relationships>
+        </class>
+        <class className="PsychologistViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PsychologistViewController.h"/>
+        </class>
+        <class className="RotatableViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RotatableViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
