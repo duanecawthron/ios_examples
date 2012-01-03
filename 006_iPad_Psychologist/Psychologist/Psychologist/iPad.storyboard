@@ -14,16 +14,22 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="bdV-0j-7N0" customClass="FaceView">
-                                <rect key="frame" x="5" y="0.0" width="768" height="1004"/>
+                                <rect key="frame" x="0.0" y="44" width="768" height="960"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="0ii-x1-J3n">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                     <connections>
                         <outlet property="faceView" destination="bdV-0j-7N0" id="c3J-Mk-WRR"/>
+                        <outlet property="toolbar" destination="0ii-x1-J3n" id="mGB-75-cWk"/>
                     </connections>
                 </viewController>
             </objects>
@@ -233,26 +239,6 @@
             <point key="canvasLocation" x="810" y="-1119"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="FaceView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FaceView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dataSource"/>
-            </relationships>
-        </class>
-        <class className="HappinessViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HappinessViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="faceView" candidateClass="FaceView"/>
-            </relationships>
-        </class>
-        <class className="PsychologistViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PsychologistViewController.h"/>
-        </class>
-        <class className="RotatableViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RotatableViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -22,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A02A8FD14B3845C00B302E7 /* SplitViewBarButtonItemPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitViewBarButtonItemPresenter.h; sourceTree = "<group>"; };
 		6A0D9FFB14B10BE8001B2524 /* Psychologist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Psychologist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A0D9FFF14B10BE8001B2524 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6A0DA00114B10BE8001B2524 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,6 +99,7 @@
 				6A0DA01114B10BE8001B2524 /* iPhone.storyboard */,
 				6A62A94B14B346B800F11C97 /* RotatableViewController.h */,
 				6A62A94C14B346B800F11C97 /* RotatableViewController.m */,
+				6A02A8FD14B3845C00B302E7 /* SplitViewBarButtonItemPresenter.h */,
 				6A0DA01414B10BE8001B2524 /* PsychologistViewController.h */,
 				6A0DA01514B10BE8001B2524 /* PsychologistViewController.m */,
 				6A0DA00614B10BE8001B2524 /* Supporting Files */,
