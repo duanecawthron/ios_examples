@@ -8,6 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RotatableViewController : UIViewController
-
+@interface RotatableViewController : UIViewController <UISplitViewControllerDelegate>
 @end
