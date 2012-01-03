@@ -36,3 +36,4 @@ These examples demonstrate various features of iOS development.
 003_Programmable_Calculator:: RPN Calculator from Stanford University CS 193P Lecture 4
 004_Happiness:: Happiness App from Stanford University CS 193P Lecture 5
 005_Psychologist:: Psychologist App from Stanford University CS 193P Lecture 6
+006_iPad_Psychologist:: Psychologist iPad qApp from Stanford University CS 193P Lecture 7
