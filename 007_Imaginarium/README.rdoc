@@ -1,0 +1,17 @@
+= Imaginarium App from Stanford University CS 193P Lecture 8
+
+== Software versions
+
+    Mac OS X Lion v10.7.2
+    Xcode v4.2.1
+    iOS 5.0
+
+== Resources
+
+    Stanford University CS 193P
+    http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=473757255
+    http://www.stanford.edu/class/cs193p/cgi-bin/drupal/ for downloads.
+
+== Introduction
+
+I followed the instructions in the demo from Lecture 8.
