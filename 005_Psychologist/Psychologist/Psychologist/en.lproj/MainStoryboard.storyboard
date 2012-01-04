@@ -255,6 +255,30 @@
             </objects>
             <point key="canvasLocation" x="1541" y="-159"/>
         </scene>
+        <scene sceneID="KQO-bj-gdB">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3PD-3c-rqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="MCh-yz-qAM" customClass="DrPillWebsiteViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rJN-lY-8Gw">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="PMa-lj-1RI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FL2-cu-SRi"/>
+                    <connections>
+                        <outlet property="webView" destination="PMa-lj-1RI" id="znt-yB-zQc"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2004" y="-137"/>
+        </scene>
         <scene sceneID="u0P-G4-nJg">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="69U-fj-eOF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -279,6 +303,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="MCh-yz-qAM" kind="push" id="q8y-zR-60e"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -317,6 +344,12 @@
         </scene>
     </scenes>
     <classes>
+        <class className="DrPillWebsiteViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrPillWebsiteViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
         <class className="FaceView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FaceView.h"/>
             <relationships>
