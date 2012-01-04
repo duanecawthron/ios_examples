@@ -18,6 +18,7 @@
 		6A3CCDFE14B1F8DE00BC6CD6 /* FaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A3CCDFB14B1F8DE00BC6CD6 /* FaceView.m */; };
 		6A3CCDFF14B1F8DE00BC6CD6 /* HappinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A3CCDFD14B1F8DE00BC6CD6 /* HappinessViewController.m */; };
 		6A9CC35B14B4A7C9005127B0 /* DrPillWebsiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A9CC35A14B4A7C9005127B0 /* DrPillWebsiteViewController.m */; };
+		6A9CC35E14B4ADB8005127B0 /* RotatableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A9CC35D14B4ADB8005127B0 /* RotatableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,9 @@
 		6A3CCDFD14B1F8DE00BC6CD6 /* HappinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HappinessViewController.m; sourceTree = "<group>"; };
 		6A9CC35914B4A7C9005127B0 /* DrPillWebsiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrPillWebsiteViewController.h; sourceTree = "<group>"; };
 		6A9CC35A14B4A7C9005127B0 /* DrPillWebsiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrPillWebsiteViewController.m; sourceTree = "<group>"; };
+		6A9CC35C14B4ADB8005127B0 /* RotatableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatableViewController.h; sourceTree = "<group>"; };
+		6A9CC35D14B4ADB8005127B0 /* RotatableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatableViewController.m; sourceTree = "<group>"; };
+		6A9CC35F14B4ADF3005127B0 /* SplitViewBarButtonItemPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitViewBarButtonItemPresenter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +95,11 @@
 				6A0DA00E14B10BE8001B2524 /* PsychologistAppDelegate.h */,
 				6A0DA00F14B10BE8001B2524 /* PsychologistAppDelegate.m */,
 				6A3CCDFA14B1F8DE00BC6CD6 /* FaceView.h */,
+				6A9CC35C14B4ADB8005127B0 /* RotatableViewController.h */,
+				6A9CC35D14B4ADB8005127B0 /* RotatableViewController.m */,
 				6A3CCDFB14B1F8DE00BC6CD6 /* FaceView.m */,
 				6A3CCDFC14B1F8DE00BC6CD6 /* HappinessViewController.h */,
+				6A9CC35F14B4ADF3005127B0 /* SplitViewBarButtonItemPresenter.h */,
 				6A3CCDFD14B1F8DE00BC6CD6 /* HappinessViewController.m */,
 				6A0DA01114B10BE8001B2524 /* MainStoryboard.storyboard */,
 				6A0DA01414B10BE8001B2524 /* PsychologistViewController.h */,
@@ -181,6 +188,7 @@
 				6A3CCDFE14B1F8DE00BC6CD6 /* FaceView.m in Sources */,
 				6A3CCDFF14B1F8DE00BC6CD6 /* HappinessViewController.m in Sources */,
 				6A9CC35B14B4A7C9005127B0 /* DrPillWebsiteViewController.m in Sources */,
+				6A9CC35E14B4ADB8005127B0 /* RotatableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
