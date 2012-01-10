@@ -71,6 +71,12 @@
         } else if ([operation isEqualToString:@"/"]) {
             double temp = [self popOperandOffProgramStack:stack];
             result = [self popOperandOffProgramStack:stack] / temp;
+        } else if ([operation isEqualToString:@"sin"]) {
+            result = sin([self popOperandOffProgramStack:stack]);
+        } else if ([operation isEqualToString:@"cos"]) {
+            result = cos([self popOperandOffProgramStack:stack]);
+        } else if ([operation isEqualToString:@"sqrt"]) {
+            result = sqrt([self popOperandOffProgramStack:stack]);
         } else if ([operation isEqualToString:@"C"]) {
             [stack removeAllObjects];
             result = 0;

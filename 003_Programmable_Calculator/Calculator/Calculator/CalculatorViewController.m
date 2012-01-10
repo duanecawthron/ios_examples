@@ -17,6 +17,7 @@
 @implementation CalculatorViewController
 
 @synthesize display = _display;
+@synthesize formula = _formula;
 @synthesize userIsInTheMiddleOfEnteringANumber = _userIsInTheMiddleOfEnteringANumber;
 @synthesize brain = _brain;
 
@@ -53,6 +54,8 @@
 - (IBAction)enterPressed {
     [self.brain pushOperand:[self.display.text doubleValue]];
     self.userIsInTheMiddleOfEnteringANumber = NO;
+    self.formula.text = [self.formula.text stringByAppendingFormat:@"%@ ", self.display.text];
+
 }
 
 - (IBAction)operationPressed:(UIButton *)sender {
@@ -60,6 +63,24 @@
     double result = [self.brain performOperation:sender.currentTitle];
     NSString *resultString = [NSString stringWithFormat:@"%g", result];
     self.display.text = resultString;
+    
+    if ([sender.currentTitle isEqualToString:@"C"]) {
+        self.formula.text = @"";
+    } else {
+        self.formula.text = [self.formula.text stringByAppendingFormat:@"%@ ", sender.currentTitle];
+    }
 }
 
+- (IBAction)enterPI {
+    if (self.userIsInTheMiddleOfEnteringANumber) {
+        [self enterPressed];
+    }
+    self.display.text = [NSString stringWithFormat:@"%g", M_PI];
+    [self enterPressed];
+}
+
+- (void)viewDidUnload {
+    [self setFormula:nil];
+    [super viewDidUnload];
+}
 @end
