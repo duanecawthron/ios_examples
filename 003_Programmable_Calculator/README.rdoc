@@ -14,4 +14,8 @@
 
 == Introduction
 
-This example starts with 002_Calculator and adds the ability to run a program. I followed the instructions in the demo from Lecture 4.
+This example starts with 002_Calculator and adds the ability to run a program.
+
+ 	Follow the instructions in the demo from Lecture 4.
+	Add features from Assignment 1.
+

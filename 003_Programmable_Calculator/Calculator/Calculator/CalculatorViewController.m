@@ -71,10 +71,31 @@
     }
 }
 
-- (IBAction)enterPI {
-    if (self.userIsInTheMiddleOfEnteringANumber) {
-        [self enterPressed];
+- (IBAction)variablePressed:(UIButton *)sender {
+    if (self.userIsInTheMiddleOfEnteringANumber) [self enterPressed];
+    self.display.text = sender.currentTitle;
+    [self.brain pushVariable:self.display.text];
+    self.formula.text = [self.formula.text stringByAppendingFormat:@"%@ ", self.display.text];
+}
+
+- (IBAction)testPressed:(UIButton *)sender {
+    NSArray *keys = [NSArray arrayWithObjects:@"x", @"y", @"z", nil];
+    NSArray *values = nil;
+    if ([sender.currentTitle isEqualToString:@"Test 1"]) {
+        values = [NSArray arrayWithObjects:[NSNumber numberWithDouble:1.0], [NSNumber numberWithDouble:2.0], [NSNumber numberWithDouble:3.0], nil];
+    } else if ([sender.currentTitle isEqualToString:@"Test 2"]) {
+        values = [NSArray arrayWithObjects:[NSNumber numberWithDouble:4.0], [NSNumber numberWithDouble:5.0], [NSNumber numberWithDouble:6.0], nil];
+    } else if ([sender.currentTitle isEqualToString:@"Test 3"]) {
+        values = [NSArray arrayWithObjects:[NSNumber numberWithDouble:7.0], [NSNumber numberWithDouble:8.0], [NSNumber numberWithDouble:9.0], nil];
     }
+    NSDictionary *variableValues = [NSDictionary dictionaryWithObjects:values forKeys:keys];
+    double result = [[self.brain class] runProgram:self.brain.program usingVariableValues:variableValues];
+    NSString *resultString = [NSString stringWithFormat:@"%g", result];
+    self.display.text = resultString;
+}
+
+- (IBAction)enterPI {
+    if (self.userIsInTheMiddleOfEnteringANumber) [self enterPressed];
     self.display.text = [NSString stringWithFormat:@"%g", M_PI];
     [self enterPressed];
 }

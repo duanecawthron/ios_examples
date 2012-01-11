@@ -11,11 +11,14 @@
 @interface CalculatorBrain : NSObject
 
 - (void)pushOperand:(double)operand;
+- (void)pushVariable:(NSString *)variable;
 - (double)performOperation:(NSString *)operation;
 
 @property (nonatomic, readonly) id program;
 
 + (double)runProgram:(id)program;
++ (double)runProgram:(id)program usingVariableValues:(NSDictionary *)variableValues;
 + (NSString *)descriptionOfProgram:(id)program;
++ (NSSet *)variablesUsedInProgram:(id)program; // all the names of variables used in program, NSSet of NSString objects, nil if none
 
 @end
