@@ -396,8 +396,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <connections>
                                     <outlet property="dataSource" destination="7EZ-YD-QML" id="8Xv-a9-leE"/>
+                                    <outletCollection property="gestureRecognizers" destination="SBd-CF-uZ4" appends="YES" id="ZfG-Cf-hqj"/>
+                                    <outletCollection property="gestureRecognizers" destination="hTv-uM-JnV" appends="YES" id="9Bv-9c-fJT"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -405,6 +408,16 @@
                     </view>
                     <navigationItem key="navigationItem" title="Graph" id="6CA-1F-VJs"/>
                 </viewController>
+                <pinchGestureRecognizer id="SBd-CF-uZ4">
+                    <connections>
+                        <action selector="handlePinch:" destination="Ovz-KU-Ey3" id="dhr-2o-8X5"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="hTv-uM-JnV">
+                    <connections>
+                        <action selector="handlePan:" destination="Ovz-KU-Ey3" id="TH5-RX-PYO"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="487" y="105"/>
         </scene>
@@ -437,6 +450,9 @@
         <class className="GraphView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphView.h"/>
             <relationships>
+                <relationship kind="action" name="handlePan:" candidateClass="UIPanGestureRecognizer"/>
+                <relationship kind="action" name="handlePinch:" candidateClass="UIPinchGestureRecognizer"/>
+                <relationship kind="action" name="pinch:" candidateClass="UIPinchGestureRecognizer"/>
                 <relationship kind="outlet" name="dataSource"/>
             </relationships>
         </class>

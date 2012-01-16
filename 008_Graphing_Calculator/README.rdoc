@@ -11,6 +11,7 @@
     Stanford University CS 193P
     http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=473757255
     http://www.stanford.edu/class/cs193p/cgi-bin/drupal/ for downloads.
+	http://www.raywenderlich.com/6567/uigesturerecognizer-tutorial-in-ios-5-pinches-pans-and-more
 
 == Introduction
 
