@@ -11,11 +11,18 @@
     Stanford University CS 193P
     http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=473757255
     http://www.stanford.edu/class/cs193p/cgi-bin/drupal/ for downloads.
-	http://www.raywenderlich.com/6567/uigesturerecognizer-tutorial-in-ios-5-pinches-pans-and-more
+    http://www.raywenderlich.com/6567/uigesturerecognizer-tutorial-in-ios-5-pinches-pans-and-more
 
 == Introduction
 
 This example starts with 003_Programmable_Calculator and adds the ability to draw a graph.
 
-	Add features from Assignment 3.
+    Add features from Assignment 3.
 
+== Five Steps to Delegate
+
+    Create the @protocol
+    Add delegate @property to delegator’s public @interface
+    Use delegate property inside delegator’s implementation
+    Set the delegate property somewhere inside the delegate’s @implementation
+    Implement the protocol’s method(s) in the delegate (include <> on @interface)
