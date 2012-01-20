@@ -106,9 +106,8 @@
 
     for (x += 1; x <= myBounds.size.width; x += 1) {
         xScaled = (x - self.origin.x) / self.scale;
-        yScaled = xScaled;
-        //yScaled = [self.dataSource yValueForGraphView:self usingXValue:xScaled];
-
+        //yScaled = xScaled;
+        yScaled = [self.dataSource yValueForGraphView:self forXValue:xScaled];
         y = self.origin.y - (yScaled * self.scale);
         //NSLog(@"drawto %g.%g scaled= %g,%g", x, y, xScaled, yScaled);
         CGContextAddLineToPoint(context, x, y);

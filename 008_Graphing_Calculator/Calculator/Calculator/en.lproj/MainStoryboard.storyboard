@@ -387,7 +387,7 @@
         <scene sceneID="Jc6-1r-aJV">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wi9-2J-x9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="7EZ-YD-QML" sceneMemberID="viewController">
+                <viewController title="GraphViewController" id="7EZ-YD-QML" customClass="GraphViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5wt-EX-Th7">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -398,7 +398,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outlet property="dataSource" destination="7EZ-YD-QML" id="8Xv-a9-leE"/>
+                                    <outlet property="dataSource" destination="7EZ-YD-QML" id="fVa-Ui-MgC"/>
                                     <outletCollection property="gestureRecognizers" destination="SBd-CF-uZ4" appends="YES" id="ZfG-Cf-hqj"/>
                                     <outletCollection property="gestureRecognizers" destination="hTv-uM-JnV" appends="YES" id="9Bv-9c-fJT"/>
                                 </connections>
@@ -452,8 +452,13 @@
             <relationships>
                 <relationship kind="action" name="handlePan:" candidateClass="UIPanGestureRecognizer"/>
                 <relationship kind="action" name="handlePinch:" candidateClass="UIPinchGestureRecognizer"/>
-                <relationship kind="action" name="pinch:" candidateClass="UIPinchGestureRecognizer"/>
                 <relationship kind="outlet" name="dataSource"/>
+            </relationships>
+        </class>
+        <class className="GraphViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="graphView" candidateClass="GraphView"/>
             </relationships>
         </class>
     </classes>

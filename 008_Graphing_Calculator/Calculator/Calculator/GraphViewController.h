@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GraphView.h"
 
 @interface GraphViewController : UIViewController
-
 @end

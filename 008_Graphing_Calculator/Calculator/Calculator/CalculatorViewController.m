@@ -8,9 +8,8 @@
 
 #import "CalculatorViewController.h"
 #import "CalculatorBrain.h"
-#import "GraphView.h"
 
-@interface CalculatorViewController() <GraphViewDataSource>
+@interface CalculatorViewController()
 @property (nonatomic) BOOL userIsInTheMiddleOfEnteringANumber;
 @property (nonatomic, strong) CalculatorBrain *brain;
 @end
@@ -93,11 +92,6 @@
     double result = [[self.brain class] runProgram:self.brain.program usingVariableValues:variableValues];
     NSString *resultString = [NSString stringWithFormat:@"%g", result];
     self.display.text = resultString;
-}
-
-- (double)yValueForGraphView:(GraphView *)sender usingXValue:(double)xValue
-{
-    return 40;
 }
 
 - (IBAction)enterPI {
