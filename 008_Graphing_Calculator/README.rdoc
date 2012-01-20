@@ -19,7 +19,7 @@ This example starts with 003_Programmable_Calculator and adds the ability to dra
 
     Add features from Assignment 3.
 
-== Five Steps to Delegate
+== Five Steps to Delegate from Lecture 9
 
     Create the @protocol
     Add delegate @property to delegator’s public @interface
