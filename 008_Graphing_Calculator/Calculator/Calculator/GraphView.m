@@ -64,10 +64,16 @@
     [recognizer setTranslation:CGPointMake(0, 0) inView:self];
 }
 
+- (IBAction)handleTap:(UITapGestureRecognizer *)gesture {
+    if (gesture.state == UIGestureRecognizerStateEnded) {
+        self.origin = [gesture locationInView:self];
+    }
+}
+
 - (void)drawRect:(CGRect)rect
 {
     NSString *description = [self.dataSource descriptionOfGraph:self];
-    NSLog(@"%@", description);
+    //NSLog(@"%@", description);
 
     CGPoint midPoint;
     midPoint.x = self.bounds.origin.x + self.bounds.size.width/2;
