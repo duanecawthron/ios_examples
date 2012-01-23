@@ -14,6 +14,8 @@
 
 @implementation GraphViewController
 
+@synthesize brain = _brain;
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return YES;
@@ -21,7 +23,9 @@
 
 - (double)yValueForGraphView:(GraphView *)sender forXValue:(double)xValue
 {
-    return xValue * 2;
+    NSDictionary *variableValues = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithDouble:xValue], @"x", nil];
+    double result = [[self.brain class] runProgram:self.brain.program usingVariableValues:variableValues];
+    return result;
 }
 
 @end

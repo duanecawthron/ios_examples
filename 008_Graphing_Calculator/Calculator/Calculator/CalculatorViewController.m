@@ -21,6 +21,11 @@
 @synthesize userIsInTheMiddleOfEnteringANumber = _userIsInTheMiddleOfEnteringANumber;
 @synthesize brain = _brain;
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    [segue.destinationViewController setBrain:self.brain];
+}
+
 - (CalculatorBrain *) brain
 {
     if (!_brain) _brain = [[CalculatorBrain alloc] init];

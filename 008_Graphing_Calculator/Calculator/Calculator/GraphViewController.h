@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "GraphView.h"
+#import "CalculatorBrain.h"
 
 @interface GraphViewController : UIViewController
+@property (nonatomic, strong) CalculatorBrain *brain;
 @end
