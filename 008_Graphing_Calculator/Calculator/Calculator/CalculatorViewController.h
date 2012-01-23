@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RotatableViewController.h"
 
-@interface CalculatorViewController : UIViewController
+@interface CalculatorViewController : RotatableViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *display;
 @property (weak, nonatomic) IBOutlet UILabel *formula;

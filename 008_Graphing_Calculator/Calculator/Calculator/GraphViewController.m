@@ -10,13 +10,26 @@
 //#import "GraphView.h"
 
 @interface GraphViewController() <GraphViewDataSource>
-
+@property (nonatomic, weak) IBOutlet UIToolbar *toolbar;
 @end
 
 @implementation GraphViewController
 
 @synthesize brain = _brain;
 @synthesize graphView = _graphView;
+@synthesize splitViewBarButtonItem =_splitViewBarButtonItem;
+@synthesize toolbar = _toolbar;
+
+- (void) setSplitViewBarButtonItem:(UIBarButtonItem *)splitViewBarButtonItem
+{
+    if (_splitViewBarButtonItem != splitViewBarButtonItem) {
+        NSMutableArray *toolbarItems = [self.toolbar.items mutableCopy];
+        if (_splitViewBarButtonItem) [toolbarItems removeObject:_splitViewBarButtonItem];
+        if (splitViewBarButtonItem) [toolbarItems insertObject:splitViewBarButtonItem atIndex:0];
+        self.toolbar.items = toolbarItems;
+        _splitViewBarButtonItem = splitViewBarButtonItem;
+    }
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {

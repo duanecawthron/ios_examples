@@ -135,7 +135,8 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return YES;
+    if ([self splitViewGrpahViewController]) return YES;
+    else return NO;
 }
 
 @end

@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="Lg5-DE-F8O" customClass="GraphView">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+                                <rect key="frame" x="0.0" y="44" width="768" height="960"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -25,12 +25,18 @@
                                     <outletCollection property="gestureRecognizers" destination="nM0-6C-Pee" appends="YES" id="mfI-kR-Fxd"/>
                                 </connections>
                             </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="iJA-sM-GBe">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                     <connections>
                         <outlet property="graphView" destination="Lg5-DE-F8O" id="GFU-8I-gdM"/>
+                        <outlet property="toolbar" destination="iJA-sM-GBe" id="Sjz-sP-d8m"/>
                     </connections>
                 </viewController>
                 <tapGestureRecognizer numberOfTapsRequired="3" id="uGV-vt-J84">
@@ -81,7 +87,7 @@
         <scene sceneID="Yxq-X6-FOE">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHY-u5-Wj9" sceneMemberID="firstResponder"/>
-                <viewController id="4Jx-2V-tfT" customClass="CalculatorViewController" sceneMemberID="viewController">
+                <viewController title="Calculator" id="4Jx-2V-tfT" customClass="CalculatorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hbn-ha-n7h">
                         <rect key="frame" x="0.0" y="64" width="320" height="788"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
