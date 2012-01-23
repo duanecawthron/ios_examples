@@ -10,11 +10,13 @@
 //#import "GraphView.h"
 
 @interface GraphViewController() <GraphViewDataSource>
+
 @end
 
 @implementation GraphViewController
 
 @synthesize brain = _brain;
+@synthesize graphView = _graphView;
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {

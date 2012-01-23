@@ -73,7 +73,7 @@
 - (void)drawRect:(CGRect)rect
 {
     NSString *description = [self.dataSource descriptionOfGraph:self];
-    //NSLog(@"%@", description);
+    NSLog(@"%@", description);
 
     CGPoint midPoint;
     midPoint.x = self.bounds.origin.x + self.bounds.size.width/2;
@@ -108,7 +108,8 @@
 
     CGFloat x = myBounds.origin.x;
     CGFloat xScaled = (x - self.origin.x) / self.scale;
-    CGFloat yScaled = xScaled;
+    //CGFloat yScaled = xScaled;
+    CGFloat yScaled = [self.dataSource yValueForGraphView:self forXValue:xScaled];
     CGFloat y = self.origin.y - (yScaled * self.scale);
     //NSLog(@"moveto %g.%g scaled= %g,%g", x, y, xScaled, yScaled);
     CGContextMoveToPoint(context, x, y);

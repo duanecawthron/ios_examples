@@ -18,6 +18,7 @@
 This example starts with 003_Programmable_Calculator and adds the ability to draw a graph.
 
     Add features from Assignment 3.
+    Add iPad support from Lecture 7 demo.
 
 == Five Steps to Delegate from Lecture 9
 

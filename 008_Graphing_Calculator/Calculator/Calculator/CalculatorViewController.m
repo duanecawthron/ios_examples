@@ -8,6 +8,7 @@
 
 #import "CalculatorViewController.h"
 #import "CalculatorBrain.h"
+#import "GraphViewController.h"
 
 @interface CalculatorViewController()
 @property (nonatomic) BOOL userIsInTheMiddleOfEnteringANumber;
@@ -20,6 +21,28 @@
 @synthesize formula = _formula;
 @synthesize userIsInTheMiddleOfEnteringANumber = _userIsInTheMiddleOfEnteringANumber;
 @synthesize brain = _brain;
+
+- (GraphViewController *)splitViewGrpahViewController
+{
+    id hvc = [self.splitViewController.viewControllers lastObject];
+    if (![hvc isKindOfClass:[GraphViewController class]]) {
+        hvc = nil;
+    }
+    return hvc;
+}
+
+- (IBAction)drawGraph:(id)sender
+{
+    if ([self splitViewGrpahViewController]) {
+        [self.splitViewGrpahViewController setBrain:self.brain];
+        
+        // the followin are equivalent
+        [[[self splitViewGrpahViewController] graphView] setNeedsDisplay];
+        // [[self splitViewGrpahViewController].graphView setNeedsDisplay];
+        // [self.splitViewGrpahViewController.graphView setNeedsDisplay];
+        // self.splitViewGrpahViewController.graphView.setNeedsDisplay;
+    }
+}
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -109,4 +132,10 @@
     [self setFormula:nil];
     [super viewDidUnload];
 }
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return YES;
+}
+
 @end

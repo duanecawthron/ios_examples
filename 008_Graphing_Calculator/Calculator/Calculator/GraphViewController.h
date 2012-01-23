@@ -12,4 +12,5 @@
 
 @interface GraphViewController : UIViewController
 @property (nonatomic, strong) CalculatorBrain *brain;
+@property (nonatomic, weak) IBOutlet GraphView *graphView;
 @end
