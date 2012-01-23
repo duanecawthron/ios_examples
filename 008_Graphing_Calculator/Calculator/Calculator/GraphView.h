@@ -12,6 +12,7 @@
 
 @protocol GraphViewDataSource
 - (double)yValueForGraphView:(GraphView *)sender forXValue:(double)xValue;
+- (NSString *)descriptionOfGraph:(GraphView *)sender;
 @end
 
 @interface GraphView : UIView

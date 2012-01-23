@@ -66,6 +66,9 @@
 
 - (void)drawRect:(CGRect)rect
 {
+    NSString *description = [self.dataSource descriptionOfGraph:self];
+    NSLog(@"%@", description);
+
     CGPoint midPoint;
     midPoint.x = self.bounds.origin.x + self.bounds.size.width/2;
     midPoint.y = self.bounds.origin.y + self.bounds.size.height/2;

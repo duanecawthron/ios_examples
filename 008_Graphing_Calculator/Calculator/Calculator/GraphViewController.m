@@ -7,7 +7,7 @@
 //
 
 #import "GraphViewController.h"
-#import "GraphView.h"
+//#import "GraphView.h"
 
 @interface GraphViewController() <GraphViewDataSource>
 @end
@@ -26,6 +26,11 @@
     NSDictionary *variableValues = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithDouble:xValue], @"x", nil];
     double result = [[self.brain class] runProgram:self.brain.program usingVariableValues:variableValues];
     return result;
+}
+
+- (NSString *)descriptionOfGraph:(GraphView *)sender
+{
+    return [[self.brain class] descriptionOfProgram:self.brain.program];
 }
 
 @end

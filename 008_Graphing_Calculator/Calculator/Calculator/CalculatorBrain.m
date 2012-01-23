@@ -35,7 +35,22 @@
 
 + (NSString *)descriptionOfProgram:(id)program
 {
-    return @"Implement this in assignment 2";
+    NSString *description = @"f(x) = ";
+    
+    if ([program isKindOfClass:[NSArray class]]) {
+        for (NSUInteger i = 0; i < [program count]; ++i) {
+            id key = [program objectAtIndex:i];
+
+            if ([key isKindOfClass:[NSNumber class]]) {
+                description = [description stringByAppendingFormat:@"%g ", [(NSNumber *)key doubleValue]];
+            } else if ([key isKindOfClass:[NSString class]]) {
+                description = [description stringByAppendingFormat:@"%@ ", (NSString *)key];
+            }
+        }
+    }
+
+    NSLog(@"%@", description);
+    return description;
 }
 
 - (void)pushOperand:(double)operand
@@ -131,7 +146,7 @@
 
 + (NSSet *)variablesUsedInProgram:(id)program
 {
-    
+    return nil;
 }
 
 @end
