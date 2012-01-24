@@ -73,6 +73,16 @@
 - (void)setProgram:(id)program
 {
     _program = program;
+    
+    // set the iPhone Graph title
+    self.title = [CalculatorBrain descriptionOfProgram:self.program];
+    
+    // set the iPad Graph title
+    for (UIBarButtonItem *item in self.toolbar.items) {
+        // the "Fixed Space Bar Button Item" tag is set to 1 in the iPad storyboard
+        if (item.tag == 1) item.title = [CalculatorBrain descriptionOfProgram:self.program];
+    }
+
     [self.graphView setNeedsDisplay];
 }
 
