@@ -34,7 +34,6 @@
 - (IBAction)drawGraph:(id)sender
 {
     if ([self splitViewGrpahViewController]) {
-        [self.splitViewGrpahViewController setBrain:self.brain];
         [self.splitViewGrpahViewController setProgram:self.brain.program];
         
         // the followin are equivalent
@@ -47,7 +46,6 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [segue.destinationViewController setBrain:self.brain];
     [self.splitViewGrpahViewController setProgram:self.brain.program];
 }
 

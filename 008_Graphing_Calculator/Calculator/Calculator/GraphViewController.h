@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "GraphView.h"
-#import "CalculatorBrain.h"
 #import "SplitViewBarButtonItemPresenter.h"
 
 @interface GraphViewController : UIViewController <SplitViewBarButtonItemPresenter>
-@property (nonatomic, strong) CalculatorBrain *brain;
 @property (nonatomic, strong) id program;
 @property (nonatomic, weak) IBOutlet GraphView *graphView;
 @end

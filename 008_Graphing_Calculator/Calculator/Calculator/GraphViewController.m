@@ -7,6 +7,7 @@
 //
 
 #import "GraphViewController.h"
+#import "CalculatorBrain.h"
 #import "CalculatorProgramTableViewController.h"
 
 @interface GraphViewController() <GraphViewDataSource>
@@ -15,7 +16,6 @@
 
 @implementation GraphViewController
 
-@synthesize brain = _brain;
 @synthesize graphView = _graphView;
 @synthesize splitViewBarButtonItem =_splitViewBarButtonItem;
 @synthesize toolbar = _toolbar;
@@ -60,13 +60,13 @@
 - (double)yValueForGraphView:(GraphView *)sender forXValue:(double)xValue
 {
     NSDictionary *variableValues = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithDouble:xValue], @"x", nil];
-    double result = [[self.brain class] runProgram:self.program usingVariableValues:variableValues];
+    double result = [CalculatorBrain runProgram:self.program usingVariableValues:variableValues];
     return result;
 }
 
 - (NSString *)descriptionOfGraph:(GraphView *)sender
 {
-    return [[self.brain class] descriptionOfProgram:self.program];
+    return [CalculatorBrain descriptionOfProgram:self.program];
 }
 
 @end
