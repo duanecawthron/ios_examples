@@ -137,7 +137,10 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     if ([self splitViewGrpahViewController]) return YES;
-    else return NO;
+    else {
+        // Return YES for supported orientations
+        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    }
 }
 
 @end

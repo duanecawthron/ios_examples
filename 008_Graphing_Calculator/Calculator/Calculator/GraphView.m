@@ -73,7 +73,7 @@
 - (void)drawRect:(CGRect)rect
 {
     NSString *description = [self.dataSource descriptionOfGraph:self];
-    NSLog(@"%@", description);
+    //NSLog(@"%@", description);
 
     CGPoint midPoint;
     midPoint.x = self.bounds.origin.x + self.bounds.size.width/2;

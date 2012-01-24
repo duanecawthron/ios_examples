@@ -80,6 +80,12 @@
                                   choseProgram:(id)program
 {
     self.program = program;
+    
+    // if you wanted to close the popover when a graph was selected
+    // you could uncomment the following line
+    // you'd probably want to set self.popoverController = nil after doing so
+    // [self.popoverController dismissPopoverAnimated:YES];
+    [self.navigationController popViewControllerAnimated:YES]; // added after lecture to support iPhone
 }
 
 

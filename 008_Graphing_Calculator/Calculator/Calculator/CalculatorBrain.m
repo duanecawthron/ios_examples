@@ -49,7 +49,7 @@
         }
     }
 
-    NSLog(@"%@", description);
+    //NSLog(@"%@", description);
     return description;
 }
 
