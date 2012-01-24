@@ -9,6 +9,10 @@
 #import "GraphView.h"
 #import "AxesDrawer.h"
 
+@interface GraphView()
+- (void) saveOriginAndScale;
+@end
+
 @implementation GraphView
 
 @synthesize dataSource = _dataSource;
@@ -31,6 +35,7 @@
     if (scale != _scale) {
         _scale = scale;
         [self setNeedsDisplay];
+        [self saveOriginAndScale];
     }
 }
 
@@ -53,7 +58,48 @@
     if (origin.x != _origin.x || origin.y != _origin.y) {
         _origin = origin;
         [self setNeedsDisplay];
+        [self saveOriginAndScale];
     }
+}
+
+#define ORIGIN_KEY @"GraphView.Origin"
+
+- (void) saveOriginAndScale
+{
+    NSMutableArray *originAndScale = [NSMutableArray array];
+    [originAndScale addObject:[NSNumber numberWithDouble:self.origin.x]];
+    [originAndScale addObject:[NSNumber numberWithDouble:self.origin.y]];
+    [originAndScale addObject:[NSNumber numberWithDouble:self.scale]];
+
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setValue:originAndScale forKey:ORIGIN_KEY];
+    [defaults synchronize];
+}
+
+- (void) loadOriginAndScale
+{
+    NSArray *originAndScale = [[NSUserDefaults standardUserDefaults] objectForKey:ORIGIN_KEY];
+    if (!originAndScale) {
+        CGPoint midPoint;
+        midPoint.x = self.bounds.origin.x + self.bounds.size.width/2;
+        midPoint.y = self.bounds.origin.y + self.bounds.size.height/2;
+        self.origin = midPoint;
+        self.scale = DEFAULT_SCALE;
+        [self saveOriginAndScale];
+    } else {
+        CGPoint aPoint;
+        aPoint.x = [(NSNumber *)[originAndScale objectAtIndex:0] doubleValue];
+        aPoint.y = [(NSNumber *)[originAndScale objectAtIndex:1] doubleValue];
+        self.origin = aPoint;
+        self.scale = [(NSNumber *)[originAndScale objectAtIndex:2] doubleValue];
+    }
+}
+
+- (id)initWithCoder:(NSCoder *)decoder
+{
+    self = [super initWithCoder:decoder];
+    [self loadOriginAndScale];
+    return self;
 }
 
 - (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer {
@@ -72,7 +118,7 @@
 
 - (void)drawRect:(CGRect)rect
 {
-    NSString *description = [self.dataSource descriptionOfGraph:self];
+    //NSString *description = [self.dataSource descriptionOfGraph:self];
     //NSLog(@"%@", description);
 
     CGPoint midPoint;
