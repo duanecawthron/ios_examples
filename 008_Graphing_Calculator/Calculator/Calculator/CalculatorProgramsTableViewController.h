@@ -10,10 +10,12 @@
 
 @class CalculatorProgramsTableViewController;
 
-@protocol CalculatorProgramsTableViewControllerDelegate
+@protocol CalculatorProgramsTableViewControllerDelegate <NSObject>
 @optional
 - (void) calculatorProgramsTableViewController:(CalculatorProgramsTableViewController *)sender
                                   choseProgram:(id)program;
+- (void)calculatorProgramsTableViewController:(CalculatorProgramsTableViewController *)sender
+                               deletedProgram:(id)program;
 @end
 
 @interface CalculatorProgramsTableViewController : UITableViewController

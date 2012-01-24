@@ -14,6 +14,16 @@
 @synthesize programs = _programs;
 @synthesize delegate = _delegate;
 
+// added after lecture to be sure table gets reloaded if Model changes
+// you should always do this (i.e. reload table when Model changes)
+// the Model getting out of synch with the contents of the table is bad
+
+- (void)setPrograms:(NSArray *)programs
+{
+    _programs = programs;
+    [self.tableView reloadData];
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -137,6 +147,25 @@
     return YES;
 }
 */
+
+// this method added after lecture to support deletion
+// simply delegates deletion
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        id program = [self.programs objectAtIndex:indexPath.row];
+        [self.delegate calculatorProgramsTableViewController:self deletedProgram:program];
+    }
+}
+
+// added after lecture
+// don't allow deletion if the delegate does not support it too!
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [self.delegate respondsToSelector:@selector(calculatorProgramsTableViewController:deletedProgram:)];
+}
 
 #pragma mark - Table view delegate
 

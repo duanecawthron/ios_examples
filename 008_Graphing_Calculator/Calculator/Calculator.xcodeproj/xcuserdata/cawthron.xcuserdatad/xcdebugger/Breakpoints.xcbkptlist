@@ -9,13 +9,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Calculator/GraphViewController.m"
-         timestampString = "349132118.412188"
+         timestampString = "349133685.838316"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "113"
-         endingLineNumber = "113"
-         landmarkName = "-setProgram:"
-         landmarkType = "5">
+         startingLineNumber = "128"
+         endingLineNumber = "128">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
