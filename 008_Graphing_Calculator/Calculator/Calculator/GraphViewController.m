@@ -7,7 +7,7 @@
 //
 
 #import "GraphViewController.h"
-//#import "GraphView.h"
+#import "CalculatorProgramTableViewController.h"
 
 @interface GraphViewController() <GraphViewDataSource>
 @property (nonatomic, weak) IBOutlet UIToolbar *toolbar;
@@ -19,6 +19,27 @@
 @synthesize graphView = _graphView;
 @synthesize splitViewBarButtonItem =_splitViewBarButtonItem;
 @synthesize toolbar = _toolbar;
+@synthesize program = _program;
+
+#define FAVORITES_KEY @"CalculatorGraphViewController.Favorites"
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"Show Favorite Graphs"]) {
+        NSArray *programs = [[NSUserDefaults standardUserDefaults] objectForKey:FAVORITES_KEY];
+        [segue.destinationViewController setPrograms:programs];
+    }
+}
+
+- (IBAction)addToFavorites:(id)sender
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *favorites = [[defaults objectForKey:FAVORITES_KEY] mutableCopy];
+    if (!favorites) favorites = [NSMutableArray array];
+    [favorites addObject:self.program];
+    [defaults setValue:favorites forKey:FAVORITES_KEY];
+    [defaults synchronize];
+}
 
 - (void) setSplitViewBarButtonItem:(UIBarButtonItem *)splitViewBarButtonItem
 {
@@ -39,13 +60,13 @@
 - (double)yValueForGraphView:(GraphView *)sender forXValue:(double)xValue
 {
     NSDictionary *variableValues = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithDouble:xValue], @"x", nil];
-    double result = [[self.brain class] runProgram:self.brain.program usingVariableValues:variableValues];
+    double result = [[self.brain class] runProgram:self.program usingVariableValues:variableValues];
     return result;
 }
 
 - (NSString *)descriptionOfGraph:(GraphView *)sender
 {
-    return [[self.brain class] descriptionOfProgram:self.brain.program];
+    return [[self.brain class] descriptionOfProgram:self.program];
 }
 
 @end

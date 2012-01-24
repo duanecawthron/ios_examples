@@ -35,6 +35,7 @@
 {
     if ([self splitViewGrpahViewController]) {
         [self.splitViewGrpahViewController setBrain:self.brain];
+        [self.splitViewGrpahViewController setProgram:self.brain.program];
         
         // the followin are equivalent
         [[[self splitViewGrpahViewController] graphView] setNeedsDisplay];
@@ -47,6 +48,7 @@
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     [segue.destinationViewController setBrain:self.brain];
+    [self.splitViewGrpahViewController setProgram:self.brain.program];
 }
 
 - (CalculatorBrain *) brain

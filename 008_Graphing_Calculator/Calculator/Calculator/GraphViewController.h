@@ -13,5 +13,6 @@
 
 @interface GraphViewController : UIViewController <SplitViewBarButtonItemPresenter>
 @property (nonatomic, strong) CalculatorBrain *brain;
+@property (nonatomic, strong) id program;
 @property (nonatomic, weak) IBOutlet GraphView *graphView;
 @end

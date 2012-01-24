@@ -14,6 +14,10 @@
 - (void)pushVariable:(NSString *)variable;
 - (double)performOperation:(NSString *)operation;
 
+//- (void) clear;
+//- (void) undo;
+
+// Program is always guaranteed to be a property list
 @property (nonatomic, readonly) id program;
 
 + (double)runProgram:(id)program;
