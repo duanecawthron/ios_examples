@@ -8,9 +8,9 @@
 
 #import "GraphViewController.h"
 #import "CalculatorBrain.h"
-#import "CalculatorProgramTableViewController.h"
+#import "CalculatorProgramsTableViewController.h"
 
-@interface GraphViewController() <GraphViewDataSource>
+@interface GraphViewController() <GraphViewDataSource, CalculatorProgramsTableViewControllerDelegate>
 @property (nonatomic, weak) IBOutlet UIToolbar *toolbar;
 @end
 
@@ -28,6 +28,7 @@
     if ([segue.identifier isEqualToString:@"Show Favorite Graphs"]) {
         NSArray *programs = [[NSUserDefaults standardUserDefaults] objectForKey:FAVORITES_KEY];
         [segue.destinationViewController setPrograms:programs];
+        [segue.destinationViewController setDelegate:self];
     }
 }
 
@@ -68,5 +69,18 @@
 {
     return [CalculatorBrain descriptionOfProgram:self.program];
 }
+
+- (void)setProgram:(id)program
+{
+    _program = program;
+    [self.graphView setNeedsDisplay];
+}
+
+- (void) calculatorProgramsTableViewController:(CalculatorProgramsTableViewController *)sender
+                                  choseProgram:(id)program
+{
+    self.program = program;
+}
+
 
 @end

@@ -6,12 +6,13 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "CalculatorProgramTableViewController.h"
+#import "CalculatorProgramsTableViewController.h"
 #import "CalculatorBrain.h"
 
-@implementation CalculatorProgramTableViewController
+@implementation CalculatorProgramsTableViewController
 
 @synthesize programs = _programs;
+@synthesize delegate = _delegate;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -141,13 +142,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    id program = [self.programs objectAtIndex:indexPath.row];
+    [self.delegate calculatorProgramsTableViewController:self choseProgram:program];
 }
 
 @end

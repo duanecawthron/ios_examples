@@ -21,7 +21,7 @@
 		6ADCA33314AA640000B7E7EF /* CalculatorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCA33214AA640000B7E7EF /* CalculatorAppDelegate.m */; };
 		6ADCA33614AA640000B7E7EF /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ADCA33414AA640000B7E7EF /* iPhone.storyboard */; };
 		6ADCA33914AA640000B7E7EF /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCA33814AA640000B7E7EF /* CalculatorViewController.m */; };
-		6AFC575F14CEF7DD00B16AED /* CalculatorProgramTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFC575E14CEF7DD00B16AED /* CalculatorProgramTableViewController.m */; };
+		6AFC575F14CEF7DD00B16AED /* CalculatorProgramsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AFC575E14CEF7DD00B16AED /* CalculatorProgramsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,8 +50,8 @@
 		6ADCA33514AA640000B7E7EF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/iPhone.storyboard; sourceTree = "<group>"; };
 		6ADCA33714AA640000B7E7EF /* CalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
 		6ADCA33814AA640000B7E7EF /* CalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
-		6AFC575D14CEF7DD00B16AED /* CalculatorProgramTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorProgramTableViewController.h; sourceTree = "<group>"; };
-		6AFC575E14CEF7DD00B16AED /* CalculatorProgramTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorProgramTableViewController.m; sourceTree = "<group>"; };
+		6AFC575D14CEF7DD00B16AED /* CalculatorProgramsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CalculatorProgramsTableViewController.h; sourceTree = "<group>"; };
+		6AFC575E14CEF7DD00B16AED /* CalculatorProgramsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorProgramsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +102,8 @@
 				6ADCA33214AA640000B7E7EF /* CalculatorAppDelegate.m */,
 				6ADCA33414AA640000B7E7EF /* iPhone.storyboard */,
 				6A7A5AB814CDFAB400AF9D55 /* iPad.storyboard */,
-				6AFC575D14CEF7DD00B16AED /* CalculatorProgramTableViewController.h */,
-				6AFC575E14CEF7DD00B16AED /* CalculatorProgramTableViewController.m */,
+				6AFC575D14CEF7DD00B16AED /* CalculatorProgramsTableViewController.h */,
+				6AFC575E14CEF7DD00B16AED /* CalculatorProgramsTableViewController.m */,
 				6AD5DF5B14BF70F40092B882 /* GraphView.h */,
 				6AD5DF5C14BF70F40092B882 /* GraphView.m */,
 				6AD5DF5714BF66A90092B882 /* GraphViewController.h */,
@@ -204,7 +204,7 @@
 				6AD5DF5914BF66A90092B882 /* GraphViewController.m in Sources */,
 				6AD5DF5D14BF70F40092B882 /* GraphView.m in Sources */,
 				6AAF389214CE0DF900E08975 /* RotatableViewController.m in Sources */,
-				6AFC575F14CEF7DD00B16AED /* CalculatorProgramTableViewController.m in Sources */,
+				6AFC575F14CEF7DD00B16AED /* CalculatorProgramsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
