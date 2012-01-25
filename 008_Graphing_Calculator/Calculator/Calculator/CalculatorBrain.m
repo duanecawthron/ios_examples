@@ -33,6 +33,11 @@
     return [self.programStack copy];
 }
 
+- (void)clear
+{
+    [self.programStack removeAllObjects];
+}
+
 + (NSString *)descriptionOfProgram:(id)program
 {
     NSString *description = @"f(x) = ";

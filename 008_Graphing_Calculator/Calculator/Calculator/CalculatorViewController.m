@@ -31,25 +31,6 @@
     return hvc;
 }
 
-- (IBAction)drawGraph:(id)sender
-{
-    if ([self splitViewGrpahViewController]) {
-        [self.splitViewGrpahViewController setProgram:self.brain.program];
-        
-        // the following are not needed because setProgram calls setNeedsDisplay
-        // the following are equivalent
-        // [[[self splitViewGrpahViewController] graphView] setNeedsDisplay];
-        // [[self splitViewGrpahViewController].graphView setNeedsDisplay];
-        // [self.splitViewGrpahViewController.graphView setNeedsDisplay];
-        // self.splitViewGrpahViewController.graphView.setNeedsDisplay;
-    }
-}
-
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    [segue.destinationViewController setProgram:self.brain.program];
-}
-
 - (CalculatorBrain *) brain
 {
     if (!_brain) _brain = [[CalculatorBrain alloc] init];
@@ -80,8 +61,16 @@
     }
 }
 
+- (BOOL)isVariable:(NSString *)text
+{
+    return ([text isEqualToString:@"x"] || [text isEqualToString:@"y"] || [text isEqualToString:@"z"]);
+}
+
 - (IBAction)enterPressed {
-    [self.brain pushOperand:[self.display.text doubleValue]];
+    if ([self isVariable:self.display.text])
+        [self.brain pushVariable:self.display.text];
+    else
+        [self.brain pushOperand:[self.display.text doubleValue]];
     self.userIsInTheMiddleOfEnteringANumber = NO;
     self.formula.text = [self.formula.text stringByAppendingFormat:@"%@ ", self.display.text];
 
@@ -95,6 +84,7 @@
     
     if ([sender.currentTitle isEqualToString:@"C"]) {
         self.formula.text = @"";
+        [self.brain clear];
     } else {
         self.formula.text = [self.formula.text stringByAppendingFormat:@"%@ ", sender.currentTitle];
     }
@@ -129,6 +119,29 @@
     [self enterPressed];
 }
 
+// iPad Graph button pressed
+- (IBAction)drawGraph:(id)sender
+{
+    if (self.userIsInTheMiddleOfEnteringANumber) [self enterPressed];
+    if ([self splitViewGrpahViewController]) {
+        [self.splitViewGrpahViewController setProgram:self.brain.program];
+        
+        // the following are not needed because setProgram calls setNeedsDisplay
+        // the following are equivalent
+        // [[[self splitViewGrpahViewController] graphView] setNeedsDisplay];
+        // [[self splitViewGrpahViewController].graphView setNeedsDisplay];
+        // [self.splitViewGrpahViewController.graphView setNeedsDisplay];
+        // self.splitViewGrpahViewController.graphView.setNeedsDisplay;
+    }
+}
+
+// iPhone Graph button pressed
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if (self.userIsInTheMiddleOfEnteringANumber) [self enterPressed];
+    [segue.destinationViewController setProgram:self.brain.program];
+}
+
 - (void)viewDidUnload {
     [self setFormula:nil];
     [super viewDidUnload];
@@ -139,7 +152,7 @@
     if ([self splitViewGrpahViewController]) return YES;
     else {
         // Return YES for supported orientations
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+        return (interfaceOrientation == UIInterfaceOrientationPortrait);
     }
 }
 

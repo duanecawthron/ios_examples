@@ -14,7 +14,7 @@
 - (void)pushVariable:(NSString *)variable;
 - (double)performOperation:(NSString *)operation;
 
-//- (void) clear;
+- (void) clear;
 //- (void) undo;
 
 // Program is always guaranteed to be a property list
