@@ -15,8 +15,14 @@
 
 - (IBAction)refresh:(id)sender
 {
-    NSArray *photos = [FlickrFetcher recentGeoreferencedPhotos];
-    self.photos = photos;
+    dispatch_queue_t downloadQueue = dispatch_queue_create("flickr downloader", NULL);
+    dispatch_async(downloadQueue, ^{
+        NSArray *photos = [FlickrFetcher recentGeoreferencedPhotos];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.photos = photos; 
+        });
+    });
+    dispatch_release(downloadQueue);
 }
 
 - (void)setPhotos:(NSArray *)photos
