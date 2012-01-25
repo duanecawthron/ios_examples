@@ -44,3 +44,4 @@ These examples demonstrate various features of iOS development.
 006_iPad_Psychologist:: Psychologist iPad qApp from Stanford University CS 193P Lecture 7
 007_Imaginarium:: Imaginarium App from Stanford University CS 193P Lecture 8
 008_Graphing_Calculator:: RPN Calculator from Stanford University CS 193P Lecture 6
+009_Shutterbug:: Shutterbug from Stanford University CS 193P Lecture 10
