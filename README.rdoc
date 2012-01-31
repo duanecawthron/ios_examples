@@ -45,3 +45,4 @@ These examples demonstrate various features of iOS development.
 007_Imaginarium:: Imaginarium App from Stanford University CS 193P Lecture 8
 008_Graphing_Calculator:: RPN Calculator from Stanford University CS 193P Lecture 6
 009_Shutterbug:: Shutterbug from Stanford University CS 193P Lecture 10
+010_Photomania:: Photomania from Stanford University CS 193P Lecture 14
