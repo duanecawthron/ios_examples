@@ -1,0 +1,11 @@
+= CSV_core_data is a simple app that loads a CSV file into a database
+
+== Software versions
+
+    Mac OS X Lion v10.7.2
+    Xcode v4.2.1
+    iOS 5.0
+
+== Introduction
+
+This app loads data from a CSV file and shows it in a table view controller.

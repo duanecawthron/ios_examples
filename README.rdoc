@@ -47,3 +47,4 @@ These examples demonstrate various features of iOS development.
 009_Shutterbug:: Shutterbug from Stanford University CS 193P Lecture 10
 010_Photomania:: Photomania from Stanford University CS 193P Lecture 14
 011_CSV_parser:: CSV_parser is a simple app that parses a CSV file
+012_CSV_core_data:: CSV_core_data is a simple app that loads a CSV file into a database
