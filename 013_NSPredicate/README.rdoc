@@ -1,0 +1,15 @@
+= NSPredicate is a collection of simple examples that use NSPredicate
+
+== Software versions
+
+    Mac OS X Lion v10.7.2
+    Xcode v4.2.1
+    iOS 5.0
+
+== Introduction
+
+Run the app and see results from NSLog.
+
+== Files
+	AppDelegate.m calls [Examples run]
+	Examples.m
