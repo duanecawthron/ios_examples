@@ -49,3 +49,4 @@ These examples demonstrate various features of iOS development.
 011_CSV_parser:: CSV_parser is a simple app that parses a CSV file
 012_CSV_core_data:: CSV_core_data is a simple app that loads a CSV file into a database
 013_NSPredicate:: NSPredicate is a collection of simple examples that use NSPredicate
+014_Singleton:: Singleton Factory always returns the same pointer to the one and only Singleton object
