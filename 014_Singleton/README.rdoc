@@ -2,33 +2,33 @@
 
 == Software versions
 
-	Mac OS X Lion v10.7.2
-	Xcode v4.2.1
-	iOS 5.0
+    Mac OS X Lion v10.7.2
+    Xcode v4.2.1
+    iOS 5.0
 
 == Resources
 
-	Objective-C Fundamentals by Fairbairn, Fahrenkrug and Ruffenach
-	http://stackoverflow.com/questions/145154/what-does-your-objective-c-singleton-look-like
+    Objective-C Fundamentals by Fairbairn, Fahrenkrug and Ruffenach
+    http://stackoverflow.com/questions/145154/what-does-your-objective-c-singleton-look-like
 
 == Introduction
 
 I read this in "Objective-C Fundamentals".
 
-	The statement [NSNull null] doesn’t create a new object each time it’s called. Instead, [NSNull null] always returns the memory location of a sole instance of the NSNull class. This means that two variables that are storing a pointer to an NSNull value will have an identical address, and hence the == operator will consider them the same. This is an example of the Singleton design pattern.
+    The statement [NSNull null] doesn’t create a new object each time it’s called. Instead, [NSNull null] always returns the memory location of a sole instance of the NSNull class. This means that two variables that are storing a pointer to an NSNull value will have an identical address, and hence the == operator will consider them the same. This is an example of the Singleton design pattern.
 
 IMPLEMENTATION 1
 
 I wondered how this was implemented. And, I wrote this example.
 
-	Singleton.m
+    Singleton.m
 
 This stack overflow article validates my implementation and adds a couple of things that I had not considered.
 
-	http://stackoverflow.com/questions/145154/what-does-your-objective-c-singleton-look-like
+    http://stackoverflow.com/questions/145154/what-does-your-objective-c-singleton-look-like
 
 IMPLEMENTATION 2
 
 The same stack overflow article recommended a second implementation that I implemented in:
 
-	Singleton2.m
+    Singleton2.m
