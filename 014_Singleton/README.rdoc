@@ -15,7 +15,7 @@
 
 I read this in "Objective-C Fundamentals".
 
-    The statement [NSNull null] doesn’t create a new object each time it’s called. Instead, [NSNull null] always returns the memory location of a sole instance of the NSNull class. This means that two variables that are storing a pointer to an NSNull value will have an identical address, and hence the == operator will consider them the same. This is an example of the Singleton design pattern.
+"The statement [NSNull null] doesn’t create a new object each time it’s called. Instead, [NSNull null] always returns the memory location of a sole instance of the NSNull class. This means that two variables that are storing a pointer to an NSNull value will have an identical address, and hence the == operator will consider them the same. This is an example of the Singleton design pattern."
 
 IMPLEMENTATION 1
 
