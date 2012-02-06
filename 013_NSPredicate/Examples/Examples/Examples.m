@@ -256,9 +256,109 @@
     }
 }
 
++ (void)example12
+{
+    NSSet *sourceSet = [NSSet setWithObjects:@"One", @"Two", @"Three", @"Four", nil];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF beginswith 'T'"];
+    NSSet *filteredSet = [sourceSet filteredSetUsingPredicate:predicate];
+    // filteredSet contains (Two, Three)
+    NSLog(@"%@", filteredSet);
+}
+
++ (void)example13
+{
+    NSSet *population = 
+    [NSSet setWithObjects:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      @"New York",@"City",
+      @"New York",@"State",
+      [NSNumber numberWithInt:8175133],@"Population",nil],
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      @"Los Angeles",@"City",
+      @"California",@"State",
+      [NSNumber numberWithInt:3792621],@"Population",nil],
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      @"Chicago",@"City",
+      @"Illinois",@"State",
+      [NSNumber numberWithInt:2695598],@"Population",nil],
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      @"Houston",@"City",
+      @"Texas",@"State",
+      [NSNumber numberWithInt:2099451],@"Population",nil],
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      @"Philadelphia",@"City",
+      @"Pennsylvania",@"State",
+      [NSNumber numberWithInt:1526006],@"Population",nil],
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      @"Phoenix",@"City",
+      @"Arizona",@"State",
+      [NSNumber numberWithInt:1445632],@"Population",nil],
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      @"San Antonio",@"City",
+      @"Texas",@"State",
+      [NSNumber numberWithInt:1327407],@"Population",nil],
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      @"San Diego",@"City",
+      @"California",@"State",
+      [NSNumber numberWithInt:1307402],@"Population",nil],
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      @"Dallas",@"City",
+      @"Texas",@"State",
+      [NSNumber numberWithInt:1197816],@"Population",nil],
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      @"San Jose",@"City",
+      @"California",@"State",
+      [NSNumber numberWithInt:945942],@"Population",nil],
+     nil];
+    
+    NSLog(@"\nRaw Data");
+    for (id obj in population)
+        NSLog(@"%@, %@ %ld",
+              [obj valueForKeyPath:@"City"],
+              [obj valueForKeyPath:@"State"],
+              [(NSNumber *)[obj valueForKeyPath:@"Population"] longValue]);
+    
+    NSArray *states = [population valueForKeyPath:@"@distinctUnionOfObjects.State"];
+    
+    NSLog(@"\nStates");
+    for (id obj in states)
+        NSLog(@"%@", obj);
+    
+    NSSortDescriptor *sortStateDescriptor = [[NSSortDescriptor alloc] initWithKey:@"State" ascending:YES];
+    NSSortDescriptor *sortCityDescriptor = [[NSSortDescriptor alloc] initWithKey:@"City" ascending:YES];
+    NSSortDescriptor *sortPopulationDescriptor = [[NSSortDescriptor alloc] initWithKey:@"Population" ascending:NO];
+    
+    NSArray *descriptors = [NSArray arrayWithObjects:sortStateDescriptor, sortCityDescriptor, nil];
+    NSArray *sortedStatesAndCities =[population sortedArrayUsingDescriptors:descriptors];
+    
+    NSLog(@"\nSort by State and City");
+    for (id obj in sortedStatesAndCities)
+        NSLog(@"%@, %@",
+              [obj valueForKeyPath:@"State"],
+              [obj valueForKeyPath:@"City"]);
+    
+    NSLog(@"\nSort by Population and show total State Population");
+    descriptors = [NSArray arrayWithObjects:sortPopulationDescriptor, nil];
+    for (id state in states) {
+        NSSet *filtered = [population filteredSetUsingPredicate:[NSPredicate predicateWithFormat:@"(State == %@)", state]];
+        NSArray *sorted =[filtered sortedArrayUsingDescriptors:descriptors];
+        
+        //NSLog(@"%@", filtered);
+        //NSLog(@"%@", sorted);
+        
+        for (id obj in sorted)
+            NSLog(@"%@, %@ %ld",
+                  [obj valueForKeyPath:@"City"],
+                  [obj valueForKeyPath:@"State"],
+                  [(NSNumber *)[obj valueForKeyPath:@"Population"] longValue]);
+        
+        NSLog(@"TOTAL %@ %ld", state, [(NSNumber *)[sorted valueForKeyPath:@"@sum.Population"] longValue]);
+    }
+}
+
 + (void) run
 {
-    [Examples example11];
+    [Examples example13];
 }
 
 @end
