@@ -356,9 +356,26 @@
     }
 }
 
++ (void)example14
+{
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    
+    // this is not required
+    //[numberFormatter setAllowsFloats:YES];
+    
+    for (NSString *stringValue in [NSArray arrayWithObjects:@"one", @"3", @"4.5", nil]) {
+        NSNumber *numberValue = [numberFormatter numberFromString:stringValue];
+        if (numberValue) {
+            NSLog(@" %@ number from string %@", numberValue, stringValue);
+        } else {
+            NSLog(@"%@", stringValue);
+        }
+    }
+}
+
 + (void) run
 {
-    [Examples example13];
+    [Examples example14];
 }
 
 @end
