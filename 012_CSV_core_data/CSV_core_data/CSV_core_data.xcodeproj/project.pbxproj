@@ -18,11 +18,11 @@
 		6A79EB0E14D9D45E00A542A6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79EB0D14D9D45E00A542A6 /* ViewController.m */; };
 		6A79EB1114D9D54200A542A6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A79EB0F14D9D54200A542A6 /* Model.xcdatamodeld */; };
 		6A79EB1714D9DB0800A542A6 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79EB1614D9DB0800A542A6 /* CoreDataTableViewController.m */; };
-		6A79EB1914D9DB6800A542A6 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A79EB1814D9DB6800A542A6 /* MainStoryboard.storyboard */; };
 		6A79EB1C14D9DBF000A542A6 /* CitiesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79EB1B14D9DBF000A542A6 /* CitiesTableViewController.m */; };
 		6A79EB1E14D9F01A00A542A6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A79EB1D14D9F01A00A542A6 /* CoreData.framework */; };
 		6A79EB2114D9F3D600A542A6 /* Population.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79EB2014D9F3D600A542A6 /* Population.m */; };
 		6A79EB2714D9F4A500A542A6 /* Population+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79EB2614D9F4A500A542A6 /* Population+Create.m */; };
+		6AEC85FE14E5E2F300E3F373 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AEC85FD14E5E2F300E3F373 /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +44,6 @@
 		6A79EB1014D9D54200A542A6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		6A79EB1514D9DB0800A542A6 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
 		6A79EB1614D9DB0800A542A6 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
-		6A79EB1814D9DB6800A542A6 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../MainStoryboard.storyboard; sourceTree = "<group>"; };
 		6A79EB1A14D9DBF000A542A6 /* CitiesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitiesTableViewController.h; sourceTree = "<group>"; };
 		6A79EB1B14D9DBF000A542A6 /* CitiesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesTableViewController.m; sourceTree = "<group>"; };
 		6A79EB1D14D9F01A00A542A6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -52,6 +51,7 @@
 		6A79EB2014D9F3D600A542A6 /* Population.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Population.m; sourceTree = "<group>"; };
 		6A79EB2514D9F4A500A542A6 /* Population+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Population+Create.h"; sourceTree = "<group>"; };
 		6A79EB2614D9F4A500A542A6 /* Population+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Population+Create.m"; sourceTree = "<group>"; };
+		6AEC85FD14E5E2F300E3F373 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 				6A79EB1B14D9DBF000A542A6 /* CitiesTableViewController.m */,
 				6A79EB1514D9DB0800A542A6 /* CoreDataTableViewController.h */,
 				6A79EB1614D9DB0800A542A6 /* CoreDataTableViewController.m */,
-				6A79EB1814D9DB6800A542A6 /* MainStoryboard.storyboard */,
+				6AEC85FD14E5E2F300E3F373 /* MainStoryboard.storyboard */,
 				6A79EB0F14D9D54200A542A6 /* Model.xcdatamodeld */,
 				6A79EB0914D9D43D00A542A6 /* NSString+ParsingExtension.h */,
 				6A79EB0A14D9D43D00A542A6 /* NSString+ParsingExtension.m */,
@@ -185,7 +185,7 @@
 			files = (
 				6A75445B14D9D08B0022789A /* InfoPlist.strings in Resources */,
 				6A79EB0714D9D3F000A542A6 /* population.csv in Resources */,
-				6A79EB1914D9DB6800A542A6 /* MainStoryboard.storyboard in Resources */,
+				6AEC85FE14E5E2F300E3F373 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
