@@ -17,7 +17,7 @@
 - (void)setupFetchedResultsController
 {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Population"];
-    request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"population" ascending:NO selector:@selector(localizedCaseInsensitiveCompare:)]];
+    request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"population" ascending:NO]];
     
     self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:self.populationDatabase.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
 }
@@ -47,7 +47,13 @@
 
 - (void)useDocument
 {
-    if (![[NSFileManager defaultManager] fileExistsAtPath:[self.populationDatabase.fileURL path]]) {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    // remove the file so that it reads the CSV file every time
+    NSError *error;
+    [fileManager removeItemAtURL:self.populationDatabase.fileURL error:&error];
+    
+    if (![fileManager fileExistsAtPath:[self.populationDatabase.fileURL path]]) {
         [self.populationDatabase saveToURL:self.populationDatabase.fileURL forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success) {
             [self setupFetchedResultsController];
             [self fetchCSVDataIntoDocument:self.populationDatabase];
