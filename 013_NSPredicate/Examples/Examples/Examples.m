@@ -373,9 +373,21 @@
     }
 }
 
++ (void)example15
+{
+    NSDictionary *arnold = [NSDictionary dictionaryWithObjectsAndKeys:@"arnold", @"name", @"california", @"state", nil];
+    NSDictionary *jimmy = [NSDictionary dictionaryWithObjectsAndKeys:@"jimmy", @"name", @"new york", @"state", nil];
+    NSDictionary *henry = [NSDictionary dictionaryWithObjectsAndKeys:@"henry", @"name", @"michigan", @"state", nil];
+    NSDictionary *woz = [NSDictionary dictionaryWithObjectsAndKeys:@"woz", @"name", @"california", @"state", nil];
+    
+    NSArray *people = [NSArray arrayWithObjects:arnold, jimmy, henry, woz, nil];
+    
+    NSLog(@"Unique States:\n %@", [people valueForKeyPath:@"@distinctUnionOfObjects.state"]);
+}
+
 + (void) run
 {
-    [Examples example14];
+    [Examples example15];
 }
 
 @end
