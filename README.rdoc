@@ -51,3 +51,4 @@ These examples demonstrate various features of iOS development.
 013_NSPredicate:: NSPredicate is a collection of simple examples that use NSPredicate
 014_Singleton:: Singleton Factory always returns the same pointer to the one and only Singleton object
 015_Key_Value_Observing:: Key Value Observing example
+016_Plist:: Read a plilst file
