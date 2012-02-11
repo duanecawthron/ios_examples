@@ -1,4 +1,4 @@
-= CSV_core_data is a simple app that loads a CSV file into a database
+= CSV_core_data is an app that loads a CSV file into a database
 
 == Software versions
 
@@ -8,4 +8,12 @@
 
 == Introduction
 
-This app loads data from a CSV file and shows it in a table view controller.
+This example is based on example 010_Photomania. Derived from that example are the use table view controllers coupled with core data.
+
+This example uses the CSV parser from example 011_CSV_parser. Data is read into a UIManagedDocument.
+
+Unlike 010_Photomania, the model is not implemented in the view controller. The model is implemented in a separate file. The model is implemented as a Singleton as in example 014_Singleton.
+
+Two view controllers access the same model.
+
+Since opening the UIManagedDocument is asynchronous, the view controllers use Key Value Coding (from example 015_Key_Value_Observing) to know when the document is available.
