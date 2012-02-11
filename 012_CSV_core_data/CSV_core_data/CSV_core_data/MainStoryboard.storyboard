@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11C74" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vaO-3F-sVI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11C74" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3xi-iU-Nm9">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
@@ -8,9 +8,9 @@
         <scene sceneID="oHB-vF-hL7">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnE-hn-6Ph" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="vaO-3F-sVI" customClass="StatesTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="States" id="vaO-3F-sVI" customClass="CitiesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NBf-j6-d62">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -45,12 +45,78 @@
                             <outlet property="delegate" destination="vaO-3F-sVI" id="4F2-oc-rGN"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="wnR-W7-AT2"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="294" y="65"/>
+            <point key="canvasLocation" x="556" y="-82"/>
+        </scene>
+        <scene sceneID="UIK-zM-DiA">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rit-46-2sa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="u6y-u9-wwi" customClass="StatesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="31W-Oa-c1f">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="City Cell" textLabel="cjf-Sx-YLl" detailTextLabel="rDh-gn-kfF" style="IBUITableViewCellStyleSubtitle" id="gOz-ea-s0C">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cjf-Sx-YLl">
+                                            <rect key="frame" x="10" y="2" width="38" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rDh-gn-kfF">
+                                            <rect key="frame" x="10" y="24" width="47" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="u6y-u9-wwi" id="6Eq-Hu-Qgg"/>
+                            <outlet property="delegate" destination="u6y-u9-wwi" id="bd0-ak-BVo"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="jK7-NF-YNf"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="927" y="382"/>
+        </scene>
+        <scene sceneID="jim-fA-LpI">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2S6-4a-f6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController id="3xi-iU-Nm9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="h7I-pb-Ppz">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vaO-3F-sVI" kind="relationship" relationship="viewControllers" id="p8P-zh-jVF"/>
+                        <segue destination="u6y-u9-wwi" kind="relationship" relationship="viewControllers" id="LlC-sv-GGh"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="98" y="278"/>
         </scene>
     </scenes>
     <classes>
+        <class className="CitiesTableViewController" superclassName="CoreDataTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CitiesTableViewController.h"/>
+        </class>
         <class className="CoreDataTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CoreDataTableViewController.h"/>
         </class>

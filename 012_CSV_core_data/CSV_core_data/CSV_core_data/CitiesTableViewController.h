@@ -11,6 +11,4 @@
 
 @interface CitiesTableViewController : CoreDataTableViewController
 
-@property (nonatomic, strong) UIManagedDocument *populationDatabase;
-
 @end
