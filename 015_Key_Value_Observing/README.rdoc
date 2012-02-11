@@ -1,0 +1,11 @@
+= Key Value Observing example
+
+== Software versions
+
+    Mac OS X Lion v10.7.2
+    Xcode v4.2.1
+    iOS 5.0
+
+== Introduction
+
+This simple example defines a Model with some properties and and Observer that responds to updates to the model properties.
