@@ -15,13 +15,14 @@
 		6A75446114D9D08B0022789A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A75446014D9D08B0022789A /* AppDelegate.m */; };
 		6A79EB0714D9D3F000A542A6 /* population.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6A79EB0614D9D3F000A542A6 /* population.csv */; };
 		6A79EB0B14D9D43D00A542A6 /* NSString+ParsingExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79EB0A14D9D43D00A542A6 /* NSString+ParsingExtension.m */; };
-		6A79EB0E14D9D45E00A542A6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79EB0D14D9D45E00A542A6 /* ViewController.m */; };
 		6A79EB1114D9D54200A542A6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A79EB0F14D9D54200A542A6 /* Model.xcdatamodeld */; };
 		6A79EB1714D9DB0800A542A6 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79EB1614D9DB0800A542A6 /* CoreDataTableViewController.m */; };
 		6A79EB1C14D9DBF000A542A6 /* CitiesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79EB1B14D9DBF000A542A6 /* CitiesTableViewController.m */; };
 		6A79EB1E14D9F01A00A542A6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A79EB1D14D9F01A00A542A6 /* CoreData.framework */; };
 		6A79EB2114D9F3D600A542A6 /* Population.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79EB2014D9F3D600A542A6 /* Population.m */; };
 		6A79EB2714D9F4A500A542A6 /* Population+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79EB2614D9F4A500A542A6 /* Population+Create.m */; };
+		6AADD38014E6CB0A00B6BA8E /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AADD37D14E6CB0A00B6BA8E /* Model.m */; };
+		6AADD38114E6CB0A00B6BA8E /* StatesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AADD37F14E6CB0A00B6BA8E /* StatesTableViewController.m */; };
 		6AEC85FE14E5E2F300E3F373 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AEC85FD14E5E2F300E3F373 /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -39,8 +40,6 @@
 		6A79EB0614D9D3F000A542A6 /* population.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = population.csv; sourceTree = "<group>"; };
 		6A79EB0914D9D43D00A542A6 /* NSString+ParsingExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ParsingExtension.h"; sourceTree = "<group>"; };
 		6A79EB0A14D9D43D00A542A6 /* NSString+ParsingExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ParsingExtension.m"; sourceTree = "<group>"; };
-		6A79EB0C14D9D45E00A542A6 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6A79EB0D14D9D45E00A542A6 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6A79EB1014D9D54200A542A6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		6A79EB1514D9DB0800A542A6 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
 		6A79EB1614D9DB0800A542A6 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
@@ -51,6 +50,10 @@
 		6A79EB2014D9F3D600A542A6 /* Population.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Population.m; sourceTree = "<group>"; };
 		6A79EB2514D9F4A500A542A6 /* Population+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Population+Create.h"; sourceTree = "<group>"; };
 		6A79EB2614D9F4A500A542A6 /* Population+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Population+Create.m"; sourceTree = "<group>"; };
+		6AADD37C14E6CB0A00B6BA8E /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		6AADD37D14E6CB0A00B6BA8E /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		6AADD37E14E6CB0A00B6BA8E /* StatesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatesTableViewController.h; sourceTree = "<group>"; };
+		6AADD37F14E6CB0A00B6BA8E /* StatesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatesTableViewController.m; sourceTree = "<group>"; };
 		6AEC85FD14E5E2F300E3F373 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,17 +110,19 @@
 				6A79EB1514D9DB0800A542A6 /* CoreDataTableViewController.h */,
 				6A79EB1614D9DB0800A542A6 /* CoreDataTableViewController.m */,
 				6AEC85FD14E5E2F300E3F373 /* MainStoryboard.storyboard */,
+				6AADD37C14E6CB0A00B6BA8E /* Model.h */,
+				6AADD37D14E6CB0A00B6BA8E /* Model.m */,
 				6A79EB0F14D9D54200A542A6 /* Model.xcdatamodeld */,
 				6A79EB0914D9D43D00A542A6 /* NSString+ParsingExtension.h */,
 				6A79EB0A14D9D43D00A542A6 /* NSString+ParsingExtension.m */,
+				6A79EB2514D9F4A500A542A6 /* Population+Create.h */,
+				6A79EB2614D9F4A500A542A6 /* Population+Create.m */,
 				6A79EB0614D9D3F000A542A6 /* population.csv */,
 				6A79EB1F14D9F3D600A542A6 /* Population.h */,
 				6A79EB2014D9F3D600A542A6 /* Population.m */,
-				6A79EB2514D9F4A500A542A6 /* Population+Create.h */,
-				6A79EB2614D9F4A500A542A6 /* Population+Create.m */,
+				6AADD37E14E6CB0A00B6BA8E /* StatesTableViewController.h */,
+				6AADD37F14E6CB0A00B6BA8E /* StatesTableViewController.m */,
 				6A75445714D9D08B0022789A /* Supporting Files */,
-				6A79EB0C14D9D45E00A542A6 /* ViewController.h */,
-				6A79EB0D14D9D45E00A542A6 /* ViewController.m */,
 			);
 			path = CSV_core_data;
 			sourceTree = "<group>";
@@ -199,12 +204,13 @@
 				6A75445D14D9D08B0022789A /* main.m in Sources */,
 				6A75446114D9D08B0022789A /* AppDelegate.m in Sources */,
 				6A79EB0B14D9D43D00A542A6 /* NSString+ParsingExtension.m in Sources */,
-				6A79EB0E14D9D45E00A542A6 /* ViewController.m in Sources */,
 				6A79EB1114D9D54200A542A6 /* Model.xcdatamodeld in Sources */,
 				6A79EB1714D9DB0800A542A6 /* CoreDataTableViewController.m in Sources */,
 				6A79EB1C14D9DBF000A542A6 /* CitiesTableViewController.m in Sources */,
 				6A79EB2114D9F3D600A542A6 /* Population.m in Sources */,
 				6A79EB2714D9F4A500A542A6 /* Population+Create.m in Sources */,
+				6AADD38014E6CB0A00B6BA8E /* Model.m in Sources */,
+				6AADD38114E6CB0A00B6BA8E /* StatesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
