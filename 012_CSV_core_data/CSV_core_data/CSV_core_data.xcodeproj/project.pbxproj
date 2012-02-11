@@ -21,6 +21,7 @@
 		6A79EB1E14D9F01A00A542A6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A79EB1D14D9F01A00A542A6 /* CoreData.framework */; };
 		6A79EB2114D9F3D600A542A6 /* Population.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79EB2014D9F3D600A542A6 /* Population.m */; };
 		6A79EB2714D9F4A500A542A6 /* Population+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A79EB2614D9F4A500A542A6 /* Population+Create.m */; };
+		6A951F1C14E6D9710074CBE2 /* PopulationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A951F1B14E6D9710074CBE2 /* PopulationTableViewController.m */; };
 		6AADD38014E6CB0A00B6BA8E /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AADD37D14E6CB0A00B6BA8E /* Model.m */; };
 		6AADD38114E6CB0A00B6BA8E /* StatesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AADD37F14E6CB0A00B6BA8E /* StatesTableViewController.m */; };
 		6AEC85FE14E5E2F300E3F373 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AEC85FD14E5E2F300E3F373 /* MainStoryboard.storyboard */; };
@@ -50,6 +51,8 @@
 		6A79EB2014D9F3D600A542A6 /* Population.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Population.m; sourceTree = "<group>"; };
 		6A79EB2514D9F4A500A542A6 /* Population+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Population+Create.h"; sourceTree = "<group>"; };
 		6A79EB2614D9F4A500A542A6 /* Population+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Population+Create.m"; sourceTree = "<group>"; };
+		6A951F1A14E6D9710074CBE2 /* PopulationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopulationTableViewController.h; sourceTree = "<group>"; };
+		6A951F1B14E6D9710074CBE2 /* PopulationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopulationTableViewController.m; sourceTree = "<group>"; };
 		6AADD37C14E6CB0A00B6BA8E /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		6AADD37D14E6CB0A00B6BA8E /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		6AADD37E14E6CB0A00B6BA8E /* StatesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatesTableViewController.h; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 				6A79EB0614D9D3F000A542A6 /* population.csv */,
 				6A79EB1F14D9F3D600A542A6 /* Population.h */,
 				6A79EB2014D9F3D600A542A6 /* Population.m */,
+				6A951F1A14E6D9710074CBE2 /* PopulationTableViewController.h */,
+				6A951F1B14E6D9710074CBE2 /* PopulationTableViewController.m */,
 				6AADD37E14E6CB0A00B6BA8E /* StatesTableViewController.h */,
 				6AADD37F14E6CB0A00B6BA8E /* StatesTableViewController.m */,
 				6A75445714D9D08B0022789A /* Supporting Files */,
@@ -211,6 +216,7 @@
 				6A79EB2714D9F4A500A542A6 /* Population+Create.m in Sources */,
 				6AADD38014E6CB0A00B6BA8E /* Model.m in Sources */,
 				6AADD38114E6CB0A00B6BA8E /* StatesTableViewController.m in Sources */,
+				6A951F1C14E6D9710074CBE2 /* PopulationTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

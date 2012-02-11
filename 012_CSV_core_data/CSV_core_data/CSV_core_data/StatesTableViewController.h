@@ -6,9 +6,8 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "CoreDataTableViewController.h"
+#import "PopulationTableViewController.h"
 
-@interface StatesTableViewController : CoreDataTableViewController
+@interface StatesTableViewController : PopulationTableViewController
 
 @end
