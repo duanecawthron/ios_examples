@@ -8,7 +8,7 @@
         <scene sceneID="oHB-vF-hL7">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnE-hn-6Ph" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="vaO-3F-sVI" customClass="CitiesTableViewController" sceneMemberID="viewController">
+                <tableViewController id="vaO-3F-sVI" customClass="StatesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NBf-j6-d62">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,6 +50,14 @@
             <point key="canvasLocation" x="294" y="65"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="CoreDataTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoreDataTableViewController.h"/>
+        </class>
+        <class className="StatesTableViewController" superclassName="CoreDataTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StatesTableViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
