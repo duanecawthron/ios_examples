@@ -8,7 +8,7 @@
 
 == Introduction
 
-This example is based on example 010_Photomania. Derived from that example are the use table view controllers coupled with core data.
+This example is based on example 010_Photomania. Derived from that example are the use of table view controllers coupled with core data.
 
 This example uses the CSV parser from example 011_CSV_parser. Data is read into a UIManagedDocument.
 
