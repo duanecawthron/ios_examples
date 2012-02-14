@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PlacesTableViewController.h
 //  Flickr
 //
 //  Created by Duane Cawthron on 2/13/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface PlacesTableViewController : UITableViewController
+@property (nonatomic, strong) NSArray *places;
 @end
