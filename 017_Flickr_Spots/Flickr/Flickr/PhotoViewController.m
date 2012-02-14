@@ -32,6 +32,8 @@
                     self.imageView.image = image;
                     self.scrollView.contentSize = self.imageView.image.size;
                     self.imageView.frame = CGRectMake(0, 0, self.imageView.image.size.width, self.imageView.image.size.height);
+                    // zoom to show the whole image
+                    [self.scrollView zoomToRect:self.imageView.frame animated:YES];
                 });
             });
             dispatch_release(imageDownloadQ);
