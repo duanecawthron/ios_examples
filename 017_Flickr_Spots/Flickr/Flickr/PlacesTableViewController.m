@@ -27,7 +27,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             if (sender) self.navigationItem.rightBarButtonItem = sender;
             self.places = places;
-            NSLog(@"\n places %@", places);
+            //NSLog(@"\n places %@", places);
         });
     });
     dispatch_release(downloadQueue);
@@ -124,7 +124,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
     // Configure the cell...

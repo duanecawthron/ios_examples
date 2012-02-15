@@ -1,38 +1,22 @@
 //
-//  PlacePhotosTableViewController.m
+//  RecentPhotosTableViewController.m
 //  Flickr
 //
-//  Created by Duane Cawthron on 2/13/12.
+//  Created by Duane Cawthron on 2/14/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "PlacePhotosTableViewController.h"
+#import "RecentPhotosTableViewController.h"
+#import "RecentPhotos.h"
 #import "FlickrFetcher.h"
 
-@implementation PlacePhotosTableViewController
-
-@synthesize place = _place;
-@synthesize photos = _photos;
-
-- (IBAction)refresh:(id)sender
-{
-    if (sender) {
-        UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-        [spinner startAnimating];
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:spinner];
-    }
+@interface  RecentPhotosTableViewController()
+@property (nonatomic, strong) NSArray *photos;
+@end
     
-    dispatch_queue_t downloadQueue = dispatch_queue_create("flickr place photos", NULL);
-    dispatch_async(downloadQueue, ^{
-        NSArray *photos = [FlickrFetcher photosInPlace:self.place maxResults:50];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (sender) self.navigationItem.rightBarButtonItem = sender;
-            self.photos = photos;
-            //NSLog(@"\n photos %@", photos);
-        });
-    });
-    dispatch_release(downloadQueue);
-}
+@implementation RecentPhotosTableViewController
+
+@synthesize photos = _photos;
 
 - (void)setPhotos:(NSArray *)photos
 {
@@ -82,7 +66,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self refresh:nil];
+    self.photos = [[RecentPhotos recentPhotos] photos];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -121,7 +105,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Place Photo Cell";
+    static NSString *CellIdentifier = @"Recent Photos Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {

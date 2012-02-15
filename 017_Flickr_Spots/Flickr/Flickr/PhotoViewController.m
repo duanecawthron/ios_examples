@@ -8,6 +8,7 @@
 
 #import "PhotoViewController.h"
 #import "FlickrFetcher.h"
+#import "RecentPhotos.h"
 
 @interface PhotoViewController() <UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -52,6 +53,7 @@
         } else {                        // we're not on screen, so no need to loadImage (it will happen next viewWillAppear:)
             self.imageView.image = nil; // but image has changed (so we can't leave imageView.image the same, so set to nil)
         }
+        [[RecentPhotos recentPhotos] addPhoto:photo];
     }
 }
 

@@ -15,6 +15,8 @@
 		6A129BF014E9D2830043F9A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A129BEF14E9D2830043F9A4 /* AppDelegate.m */; };
 		6A129BF314E9D2830043F9A4 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A129BF114E9D2830043F9A4 /* iPhone.storyboard */; };
 		6A129BF614E9D2830043F9A4 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A129BF414E9D2830043F9A4 /* iPad.storyboard */; };
+		6A51FDA814EB13EA00B6B2E0 /* RecentPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A51FDA714EB13EA00B6B2E0 /* RecentPhotos.m */; };
+		6A51FDAC14EB1E4900B6B2E0 /* RecentPhotosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A51FDAB14EB1E4900B6B2E0 /* RecentPhotosTableViewController.m */; };
 		6A76B25614E9E80000843B6A /* FlickrAPIKey.h.example in Resources */ = {isa = PBXBuildFile; fileRef = 6A76B25314E9E80000843B6A /* FlickrAPIKey.h.example */; };
 		6A76B25714E9E80000843B6A /* FlickrFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A76B25514E9E80000843B6A /* FlickrFetcher.m */; };
 		6A76B25A14E9E8B100843B6A /* PlacesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A76B25914E9E8B100843B6A /* PlacesTableViewController.m */; };
@@ -35,6 +37,10 @@
 		6A129BEF14E9D2830043F9A4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6A129BF214E9D2830043F9A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/iPhone.storyboard; sourceTree = "<group>"; };
 		6A129BF514E9D2830043F9A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/iPad.storyboard; sourceTree = "<group>"; };
+		6A51FDA614EB13EA00B6B2E0 /* RecentPhotos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentPhotos.h; sourceTree = "<group>"; };
+		6A51FDA714EB13EA00B6B2E0 /* RecentPhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentPhotos.m; sourceTree = "<group>"; };
+		6A51FDAA14EB1E4900B6B2E0 /* RecentPhotosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentPhotosTableViewController.h; sourceTree = "<group>"; };
+		6A51FDAB14EB1E4900B6B2E0 /* RecentPhotosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentPhotosTableViewController.m; sourceTree = "<group>"; };
 		6A76B25214E9E80000843B6A /* FlickrAPIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrAPIKey.h; sourceTree = "<group>"; };
 		6A76B25314E9E80000843B6A /* FlickrAPIKey.h.example */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FlickrAPIKey.h.example; sourceTree = "<group>"; };
 		6A76B25414E9E80000843B6A /* FlickrFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrFetcher.h; sourceTree = "<group>"; };
@@ -105,6 +111,10 @@
 				6A76B26014E9FB9E00843B6A /* PlacePhotosTableViewController.m */,
 				6A76B25814E9E8B100843B6A /* PlacesTableViewController.h */,
 				6A76B25914E9E8B100843B6A /* PlacesTableViewController.m */,
+				6A51FDA614EB13EA00B6B2E0 /* RecentPhotos.h */,
+				6A51FDA714EB13EA00B6B2E0 /* RecentPhotos.m */,
+				6A51FDAA14EB1E4900B6B2E0 /* RecentPhotosTableViewController.h */,
+				6A51FDAB14EB1E4900B6B2E0 /* RecentPhotosTableViewController.m */,
 				6A129BE614E9D2830043F9A4 /* Supporting Files */,
 			);
 			path = Flickr;
@@ -191,6 +201,8 @@
 				6A76B25A14E9E8B100843B6A /* PlacesTableViewController.m in Sources */,
 				6A76B26114E9FB9E00843B6A /* PlacePhotosTableViewController.m in Sources */,
 				6A76B26C14EA037A00843B6A /* PhotoViewController.m in Sources */,
+				6A51FDA814EB13EA00B6B2E0 /* RecentPhotos.m in Sources */,
+				6A51FDAC14EB1E4900B6B2E0 /* RecentPhotosTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
