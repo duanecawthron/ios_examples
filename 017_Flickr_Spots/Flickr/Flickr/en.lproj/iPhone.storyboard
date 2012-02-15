@@ -48,7 +48,7 @@
                             <outlet property="delegate" destination="htK-L7-qEu" id="WCk-b2-OCp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="53K-58-z3I">
+                    <navigationItem key="navigationItem" title="Places" id="53K-58-z3I">
                         <barButtonItem key="rightBarButtonItem" title="Refresh" id="jHu-kh-rKe">
                             <connections>
                                 <action selector="refresh:" destination="htK-L7-qEu" id="eRP-Iz-J2A"/>
@@ -86,7 +86,7 @@
                             <outlet property="delegate" destination="gaT-KG-nEV" id="617-2B-OPu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="sPv-dA-XiJ"/>
+                    <navigationItem key="navigationItem" title="Photos" id="sPv-dA-XiJ"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="2026" y="400"/>
@@ -127,8 +127,8 @@
         <scene sceneID="VkH-oH-gWT">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIe-Pl-4Wa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController id="ZZ6-0U-NnN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Vea-Vi-uID"/>
+                <navigationController storyboardIdentifier="" id="ZZ6-0U-NnN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Places" id="Vea-Vi-uID"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="duh-vt-jRz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -185,7 +185,7 @@
                             <outlet property="delegate" destination="Yqf-FA-nlS" id="dcx-gL-nbq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="WUA-gS-RVf"/>
+                    <navigationItem key="navigationItem" title="Recent Photos" id="WUA-gS-RVf"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1610" y="1082"/>
@@ -194,7 +194,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1D8-Bv-6Lb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="Vmd-LK-l9B" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="LY7-sf-bnK"/>
+                    <tabBarItem key="tabBarItem" title="Recent" id="LY7-sf-bnK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Kc0-pm-Vh6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

@@ -22,7 +22,6 @@
 {
     if (_photos != photos) {
         _photos = photos;
-        [self.tableView reloadData];
     }
 }
 
@@ -67,6 +66,7 @@
 {
     [super viewWillAppear:animated];
     self.photos = [[RecentPhotos recentPhotos] photos];
+    [self.tableView reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -75,7 +75,7 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated
-{
+{   
     [super viewWillDisappear:animated];
 }
 
@@ -178,6 +178,7 @@
     NSDictionary *photo= [self.photos objectAtIndex:indexPath.row];
     if ([segue.destinationViewController respondsToSelector:@selector(setPhoto:)]) {
         [segue.destinationViewController performSelector:@selector(setPhoto:) withObject:photo];
+        [segue.destinationViewController setTitle:[photo valueForKey:FLICKR_PHOTO_TITLE]];
     }
 }
 

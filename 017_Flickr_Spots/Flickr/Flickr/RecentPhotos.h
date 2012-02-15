@@ -9,7 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface RecentPhotos : NSObject
+
+// recent photos
+@property (nonatomic, strong, readonly) NSArray *photos;
+
+// add the most recent photo
 - (void)addPhoto:(NSDictionary *)photo;
-- (NSArray *)photos;
+
+// return a singletone instance
 + (RecentPhotos *)recentPhotos;
 @end

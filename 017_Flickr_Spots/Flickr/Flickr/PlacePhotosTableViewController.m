@@ -194,6 +194,7 @@
     NSDictionary *photo= [self.photos objectAtIndex:indexPath.row];
     if ([segue.destinationViewController respondsToSelector:@selector(setPhoto:)]) {
         [segue.destinationViewController performSelector:@selector(setPhoto:) withObject:photo];
+        [segue.destinationViewController setTitle:[photo valueForKey:FLICKR_PHOTO_TITLE]];
     }
 }
 

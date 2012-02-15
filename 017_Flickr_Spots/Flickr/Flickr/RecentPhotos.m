@@ -15,10 +15,19 @@
 
 @implementation RecentPhotos
 
+@synthesize photos = _photos;
 @synthesize myRecentPhotos = _myRecentPhotos;
 
 const NSUInteger MAX = 20;
 #define RECENT_KEY @"Recent Flickr Photos"
+
+- (NSArray *)photos
+{
+    if (!_photos) {
+        _photos = self.myRecentPhotos;
+    }
+    return _photos;
+}
 
 - (NSMutableArray *)myRecentPhotos
 {
@@ -49,15 +58,11 @@ const NSUInteger MAX = 20;
         [self.myRecentPhotos removeObject:[self.myRecentPhotos lastObject]];
     }
     [self.myRecentPhotos insertObject:photo atIndex:0];
+    
+    // save in NSUserDefaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setValue:self.myRecentPhotos forKey:RECENT_KEY];
     [defaults synchronize];
-    NSLog(@"\n thePhtos %@", self.myRecentPhotos);
-}
-
-- (NSArray *)photos
-{
-    return self.myRecentPhotos;
 }
 
 + (RecentPhotos *)recentPhotos
