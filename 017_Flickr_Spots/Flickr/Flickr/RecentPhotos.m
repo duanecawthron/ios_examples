@@ -35,7 +35,7 @@ const NSUInteger MAX = 20;
         NSArray *userDefaultPhotos = [[NSUserDefaults standardUserDefaults] objectForKey:RECENT_KEY];
         if (userDefaultPhotos) {
             _myRecentPhotos = [userDefaultPhotos mutableCopy];
-            NSLog(@"\n thePhtos %@", self.myRecentPhotos);
+            //NSLog(@"\n thePhtos %@", self.myRecentPhotos);
         } else {
             _myRecentPhotos = [[NSMutableArray alloc] initWithCapacity:MAX];
         }
