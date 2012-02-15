@@ -8,6 +8,7 @@
 
 #import "PlacePhotosTableViewController.h"
 #import "FlickrFetcher.h"
+#import "PhotoViewController.h"
 
 @implementation PlacePhotosTableViewController
 
@@ -88,6 +89,20 @@
     cell.detailTextLabel.text = [photo valueForKeyPath:FLICKR_PHOTO_DESCRIPTION];
     
     return cell;
+}
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UINavigationController *navigationController = [self.splitViewController.viewControllers lastObject];
+    PhotoViewController *photoViewController = [[navigationController viewControllers] objectAtIndex:0];
+    
+    if ([photoViewController respondsToSelector:@selector(setPhoto:)]) {
+        NSDictionary *photo= [self.photos objectAtIndex:indexPath.row];
+        [photoViewController performSelector:@selector(setPhoto:) withObject:photo];
+        [photoViewController setTitle:[photo valueForKey:FLICKR_PHOTO_TITLE]];
+    }
 }
 
 @end
