@@ -57,6 +57,14 @@
     }
 }
 
+#pragma mark - View lifecycle
+
+- (void) awakeFromNib
+{
+    [super awakeFromNib];
+    self.splitViewController.delegate = self;
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -87,6 +95,39 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return YES;
+}
+
+#pragma mark - UISplitViewControllerDelegate
+
+- (BOOL)splitViewController:(UISplitViewController *)svc
+   shouldHideViewController:(UIViewController *)vc
+              inOrientation:(UIInterfaceOrientation)orientation
+{
+    return UIInterfaceOrientationIsPortrait(orientation);
+}
+
+- (void) splitViewController:(UISplitViewController *)svc
+      willHideViewController:(UIViewController *)aViewController
+           withBarButtonItem:(UIBarButtonItem *)barButtonItem
+        forPopoverController:(UIPopoverController *)pc
+{
+
+    UITabBarController *tabBarController = [self.splitViewController.viewControllers objectAtIndex:0];
+    UINavigationController *navigationController = (UINavigationController *) [tabBarController selectedViewController];
+    UITableViewController *tableViewController = [[navigationController viewControllers] objectAtIndex:0];
+    if ([tableViewController.navigationItem title]) barButtonItem.title = [tableViewController.navigationItem title];
+    else barButtonItem.title = @"Menu";
+
+    // tell the detail view to put this button up
+    [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
+}
+
+- (void) splitViewController:(UISplitViewController *)svc
+      willShowViewController:(UIViewController *)aViewController
+   invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
+{
+    // tell the detail view to take the button away
+    [self.navigationItem setLeftBarButtonItem:nil animated:YES];
 }
 
 @end

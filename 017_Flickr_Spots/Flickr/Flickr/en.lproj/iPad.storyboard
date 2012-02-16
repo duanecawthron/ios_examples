@@ -16,12 +16,12 @@
                     </connections>
                 </splitViewController>
             </objects>
-            <point key="canvasLocation" x="-989" y="-104"/>
+            <point key="canvasLocation" x="-753" y="-56"/>
         </scene>
         <scene sceneID="8YX-RI-fcg">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UBe-Th-wuW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="Lqo-N0-SO6" customClass="PlacesTableViewController" sceneMemberID="viewController">
+                <tableViewController title="XYZ" id="Lqo-N0-SO6" customClass="PlacesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="WQa-Ap-2Is">
                         <rect key="frame" x="0.0" y="64" width="320" height="739"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,11 +162,41 @@
                             <outlet property="delegate" destination="UTb-zS-sZ2" id="vi9-Qh-c4R"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Recent Photos" id="w8L-QI-xSB"/>
+                    <navigationItem key="navigationItem" title="Photos" id="w8L-QI-xSB"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="2516" y="177"/>
+        </scene>
+        <scene sceneID="mzf-rn-J13">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oZ2-4a-qCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Gfs-bX-IS3" customClass="PhotoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M8R-oZ-vlL">
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.20000000000000001" maximumZoomScale="5" id="AD0-mY-vnd">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="fSD-S3-yWs">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Photo" id="H28-WB-mJQ"/>
+                    <connections>
+                        <outlet property="imageView" destination="fSD-S3-yWs" id="cBd-3B-pvn"/>
+                        <outlet property="scrollView" destination="AD0-mY-vnd" id="S8c-yQ-cHa"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1151" y="668"/>
         </scene>
         <scene sceneID="ikr-EP-bdr">
             <objects>
@@ -203,7 +233,7 @@
                     </connections>
                 </tabBarController>
             </objects>
-            <point key="canvasLocation" x="322" y="-433"/>
+            <point key="canvasLocation" x="458" y="-353"/>
         </scene>
         <scene sceneID="7dN-0Q-b8S">
             <objects>
@@ -216,65 +246,13 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="qlk-Ev-LkW" kind="relationship" relationship="rootViewController" id="wzk-NB-zqO"/>
+                        <segue destination="Gfs-bX-IS3" kind="relationship" relationship="rootViewController" id="lT2-kQ-zai"/>
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="135" y="668"/>
-        </scene>
-        <scene sceneID="o80-xg-VJU">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vg8-Qk-SvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="qlk-Ev-LkW" customClass="PhotoViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9m6-RC-2IN">
-                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.20000000298023224" maximumZoomScale="5" id="Mr6-oi-pH5">
-                                <rect key="frame" x="-20" y="-20" width="360" height="500"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="GnL-IW-SYv">
-                                        <rect key="frame" x="20" y="20" width="320" height="460"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <connections>
-                                    <outlet property="delegate" destination="qlk-Ev-LkW" id="FLr-sd-4gq"/>
-                                </connections>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="RHE-Km-hJ8"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
-                    <connections>
-                        <outlet property="imageView" destination="GnL-IW-SYv" id="Jo5-Is-EdZ"/>
-                        <outlet property="scrollView" destination="Mr6-oi-pH5" id="LYt-vd-W4L"/>
-                    </connections>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="1036" y="660"/>
+            <point key="canvasLocation" x="275" y="668"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="PhotoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PhotoViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="PlacePhotosTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlacePhotosTableViewController.h"/>
-        </class>
-        <class className="PlacesTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlacesTableViewController.h"/>
-        </class>
-        <class className="RecentPhotosTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RecentPhotosTableViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

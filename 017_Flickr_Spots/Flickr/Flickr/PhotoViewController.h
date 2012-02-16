@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PhotoViewController : UIViewController
+@interface PhotoViewController : UIViewController <UISplitViewControllerDelegate>
 @property (nonatomic, strong) NSDictionary *photo;
 @end
