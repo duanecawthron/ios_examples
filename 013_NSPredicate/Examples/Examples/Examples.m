@@ -165,6 +165,7 @@
     NSLog(@"should be YES= %@", [predicate evaluateWithObject:@"Shaffiq"] ? @"YES" : @"NO");
 }
 
+// From http://stackoverflow.com/questions/1844031/how-to-sort-nsmutablearray-using-sortedarrayusingdescriptors
 + (void)example11
 {
     NSArray *population = 
