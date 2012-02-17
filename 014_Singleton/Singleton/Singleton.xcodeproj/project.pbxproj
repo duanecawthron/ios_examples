@@ -20,6 +20,7 @@
 		6A4B204214DED14E00838ACE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6A4B204014DED14E00838ACE /* InfoPlist.strings */; };
 		6A4B204514DED14E00838ACE /* SingletonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4B204414DED14E00838ACE /* SingletonTests.m */; };
 		6A4B205014DED16D00838ACE /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4B204F14DED16D00838ACE /* Singleton.m */; };
+		E387B19014EEBD680078A77B /* Singleton3.m in Sources */ = {isa = PBXBuildFile; fileRef = E387B18F14EEBD680078A77B /* Singleton3.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		6A4B204414DED14E00838ACE /* SingletonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingletonTests.m; sourceTree = "<group>"; };
 		6A4B204E14DED16D00838ACE /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		6A4B204F14DED16D00838ACE /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
+		E387B18E14EEBD680078A77B /* Singleton3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton3.h; sourceTree = "<group>"; };
+		E387B18F14EEBD680078A77B /* Singleton3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton3.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				6A4B204F14DED16D00838ACE /* Singleton.m */,
 				6A07BD3214DEDA21003919F8 /* Singleton2.h */,
 				6A07BD3314DEDA21003919F8 /* Singleton2.m */,
+				E387B18E14EEBD680078A77B /* Singleton3.h */,
+				E387B18F14EEBD680078A77B /* Singleton3.m */,
 				6A4B202614DED14E00838ACE /* Supporting Files */,
 			);
 			path = Singleton;
@@ -262,6 +267,7 @@
 				6A4B203014DED14E00838ACE /* AppDelegate.m in Sources */,
 				6A4B205014DED16D00838ACE /* Singleton.m in Sources */,
 				6A07BD3414DEDA21003919F8 /* Singleton2.m in Sources */,
+				E387B19014EEBD680078A77B /* Singleton3.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
