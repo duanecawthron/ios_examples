@@ -1,0 +1,17 @@
+= Shutterbug Maps from Stanford University CS 193P Lecture 11
+
+== Software versions
+
+    Mac OS X Lion v10.7.3
+    Xcode v4.2.1
+    iOS 5.0
+
+== Resources
+
+    Stanford University CS 193P
+    http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=473757255
+    http://www.stanford.edu/class/cs193p/cgi-bin/drupal/ for downloads.
+
+== Introduction
+
+Start with 009_Shutterbug and follow the demo in lecture 11 to add maps.
