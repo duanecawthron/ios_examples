@@ -27,11 +27,6 @@
     }
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
-}
-
 - (void)setRandomLocationForView:(UIView *)view
 {
     [view sizeToFit];
@@ -49,6 +44,25 @@
     label.backgroundColor = [UIColor clearColor];
     [self setRandomLocationForView:label];
     [self.kitchenSink addSubview:label];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return YES;
+}
+
+#pragma mark Annimation of random location of labels
+
+- (IBAction)tap:(UITapGestureRecognizer *)gesture
+{
+    CGPoint tapLocation = [gesture locationInView:self.kitchenSink];
+    for (UIView *view in self.kitchenSink.subviews) {
+        if (CGRectContainsPoint(view.frame, tapLocation)) {
+            [UIView animateWithDuration:4.0 animations:^{
+                [self setRandomLocationForView:view];
+            }];
+        }
+    }
 }
 
 #pragma mark AskerViewControllerDelegate

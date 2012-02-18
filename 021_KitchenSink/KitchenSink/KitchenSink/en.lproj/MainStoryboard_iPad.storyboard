@@ -28,6 +28,10 @@
                                 <rect key="frame" x="0.0" y="37" width="768" height="967"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vth-Mg-3h7" appends="YES" id="Jwu-7U-cHn"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -36,6 +40,11 @@
                         <outlet property="kitchenSink" destination="dUd-Id-zVy" id="qYh-a6-WtX"/>
                     </connections>
                 </viewController>
+                <tapGestureRecognizer id="vth-Mg-3h7">
+                    <connections>
+                        <action selector="tap:" destination="2" id="9YV-mj-E6j"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="254" y="-424"/>
         </scene>
@@ -72,6 +81,21 @@
             <point key="canvasLocation" x="1176" y="-424"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AskerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AskerViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="answerTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="questionLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="KitchenSinkViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/KitchenSinkViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="kitchenSink" candidateClass="UIView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
