@@ -1,0 +1,11 @@
+= File Manager is a collection of simple examples that use NSFileManager
+
+== Software versions
+
+    Mac OS X Lion v10.7.3
+    Xcode v4.2.1
+    iOS 5.0
+
+== Introduction
+
+Run the unit test and see results from NSLog.

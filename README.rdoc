@@ -52,3 +52,6 @@ These examples demonstrate various features of iOS development.
 014_Singleton:: Singleton Factory always returns the same pointer to the one and only Singleton object
 015_Key_Value_Observing:: Key Value Observing example
 016_Plist:: Read a plilst file
+017_Flickr_Spots:: Flickr Spots from Stanford University CS 193P Assignment 4
+018_Shutterbug_Maps:: Shutterbug Maps from Stanford University CS 193P Lecture 11
+019_File_Manager:: File Manager is a collection of simple examples that use NSFileManager
