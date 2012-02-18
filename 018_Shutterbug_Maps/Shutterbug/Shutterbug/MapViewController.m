@@ -7,7 +7,7 @@
 //
 
 #import "MapViewController.h"
-#import "MapKit/MapKit.h"
+
 
 @interface MapViewController() <UISplitViewControllerDelegate, MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -17,6 +17,7 @@
 @implementation MapViewController
 
 @synthesize annotations = _annotations;
+@synthesize delegate = _default;
 @synthesize mapView = _mapView;
 
 - (void)updateMapView
@@ -73,7 +74,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //self.mapView.delegate = self;
+    self.mapView.delegate = self;
 }
 
 - (void)viewDidUnload
@@ -96,11 +97,18 @@
 {
     MKAnnotationView *aView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"MapVC"];
     if (!aView) {
-        aView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"MapVC"];
+        aView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"MapVC"];
         aView.canShowCallout = YES;
+        aView.leftCalloutAccessoryView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
     }
     aView.annotation = annotation;
     return aView;
+}
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)aView
+{
+    UIImage *image = [self.delegate mapViewController:self imageForAnnotation:aView.annotation];
+    [(UIImageView *)aView.leftCalloutAccessoryView setImage:image];
 }
 
 #pragma mark - UISplitViewControllerDelegate

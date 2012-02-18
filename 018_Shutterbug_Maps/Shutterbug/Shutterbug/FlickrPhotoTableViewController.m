@@ -11,6 +11,8 @@
 #import "MapViewController.h"
 #import "FlickrPhotoAnnotation.h"
 
+@interface FlickrPhotoTableViewController() <MapViewControllerDelegate>
+@end
 @implementation FlickrPhotoTableViewController
 
 @synthesize photos = _photos;
@@ -47,6 +49,7 @@
     id detail = [[navigationController viewControllers] objectAtIndex:0];
     if ([detail isKindOfClass:[MapViewController class]]) {
         MapViewController *mapVC = (MapViewController *)detail;
+        mapVC.delegate = self;
         mapVC.annotations = [self mapAnnotations];
     }
 }
@@ -102,6 +105,21 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+#pragma mark - MapViewControllerDelegate
+
+- (UIImage *)mapViewController:(MapViewController *)sender imageForAnnotation:(id<MKAnnotation>)annotation
+{
+    FlickrPhotoAnnotation *fpa = (FlickrPhotoAnnotation *)annotation;
+    if ([fpa isKindOfClass:[FlickrPhotoAnnotation class]]) {
+        NSURL *url = [FlickrFetcher urlForPhoto:fpa.photo format:FlickrPhotoFormatSquare];
+        
+        // need to run this on another thread
+        // WARNING: when the thread is done, the same annotation may not be selected
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        return data ? [UIImage imageWithData:data] : nil;
+    }
 }
 
 @end
