@@ -55,3 +55,4 @@ These examples demonstrate various features of iOS development.
 017_Flickr_Spots:: Flickr Spots from Stanford University CS 193P Assignment 4
 018_Shutterbug_Maps:: Shutterbug Maps from Stanford University CS 193P Lecture 11
 019_File_Manager:: File Manager is a collection of simple examples that use NSFileManager
+020_SQLite:: SQLite is a simple example that uses SQLite

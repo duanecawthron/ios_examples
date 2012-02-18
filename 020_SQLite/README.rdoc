@@ -1,0 +1,22 @@
+= SQLite is a simple example that uses SQLite
+
+== Software versions
+
+    Mac OS X Lion v10.7.3
+    Xcode v4.2.1
+    iOS 5.0
+
+== Resources
+
+    http://www.techotopia.com/index.php/An_Example_SQLite_based_iOS_4_iPhone_Application
+
+== Introduction
+
+Run the app and see results from NSLog.
+
+The app creates a database, creates a table, writes one record and reads one record.
+
+== Files
+
+    AppDelegate.m calls [self example1]
+
