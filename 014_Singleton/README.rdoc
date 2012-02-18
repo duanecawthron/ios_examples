@@ -32,3 +32,10 @@ IMPLEMENTATION 2
 The same stack overflow article recommended a second implementation that I implemented in:
 
     Singleton2.m
+
+IMPLEMENTATION 3
+
+It appears that the using dispatch_once is the preferred way of making a singleton in iOS 5.
+
+	http://cocoasamurai.blogspot.com/2011/04/singletons-your-doing-them-wrong.html
+
