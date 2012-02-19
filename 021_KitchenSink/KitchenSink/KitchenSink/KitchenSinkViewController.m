@@ -29,16 +29,6 @@
     }
 }
 
-- (void)setRandomLocationForView:(UIView *)view
-{
-    [view sizeToFit];
-    CGRect sinkBounds = CGRectInset(self.kitchenSink.bounds, view.frame.size.width/2, view.frame.size.height/2);
-    CGFloat x = arc4random() % (int)sinkBounds.size.width + view.frame.size.width/2;
-    CGFloat y = arc4random() % (int)sinkBounds.size.height + view.frame.size.height/2;
-    view.center = CGPointMake(x, y);
-}
-
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return YES;
@@ -102,6 +92,16 @@
     [super viewWillDisappear:animated];
 }
 
+#pragma mark Annimation of random location of labels
+
+- (void)setRandomLocationForView:(UIView *)view
+{
+    [view sizeToFit];
+    CGRect sinkBounds = CGRectInset(self.kitchenSink.bounds, view.frame.size.width/2, view.frame.size.height/2);
+    CGFloat x = arc4random() % (int)sinkBounds.size.width + view.frame.size.width/2;
+    CGFloat y = arc4random() % (int)sinkBounds.size.height + view.frame.size.height/2;
+    view.center = CGPointMake(x, y);
+}
 
 - (void)addLabel:(NSString *)text
 {
@@ -113,15 +113,23 @@
     [self.kitchenSink addSubview:label];
 }
 
-#pragma mark Annimation of random location of labels
-
 - (IBAction)tap:(UITapGestureRecognizer *)gesture
 {
     CGPoint tapLocation = [gesture locationInView:self.kitchenSink];
     for (UIView *view in self.kitchenSink.subviews) {
         if (CGRectContainsPoint(view.frame, tapLocation)) {
-            [UIView animateWithDuration:4.0 animations:^{
+            
+            // option 1
+            // translate without interrupting the drain
+            // [UIView animateWithDuration:4.0 animations:^{
+            
+            // option 2
+            // stop the drain and translate
+            [UIView animateWithDuration:4.0 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
                 [self setRandomLocationForView:view];
+                view.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.99, 0.99);
+            } completion:^(BOOL finished) {
+                view.transform = CGAffineTransformIdentity;
             }];
         }
     }
