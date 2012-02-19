@@ -116,11 +116,11 @@
 		E3B986E614F0380D00C00CE4 /* KitchenSink */ = {
 			isa = PBXGroup;
 			children = (
+				E3B986F514F0380D00C00CE4 /* MainStoryboard_iPad.storyboard */,
 				E3B9871B14F03A7500C00CE4 /* AskerViewController.h */,
 				E3B9871C14F03A7500C00CE4 /* AskerViewController.m */,
 				E3B9871814F039A300C00CE4 /* KitchenSinkViewController.h */,
 				E3B9871914F039A300C00CE4 /* KitchenSinkViewController.m */,
-				E3B986F514F0380D00C00CE4 /* MainStoryboard_iPad.storyboard */,
 				E3B986E714F0380D00C00CE4 /* Supporting Files */,
 			);
 			path = KitchenSink;
@@ -449,6 +449,7 @@
 				E3B9871414F0380D00C00CE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3B9871514F0380D00C00CE4 /* Build configuration list for PBXNativeTarget "KitchenSinkTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +458,7 @@
 				E3B9871714F0380D00C00CE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

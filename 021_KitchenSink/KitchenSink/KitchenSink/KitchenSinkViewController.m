@@ -11,11 +11,13 @@
 
 @interface KitchenSinkViewController() <AskerViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIView *kitchenSink;
+@property (weak, nonatomic) NSTimer *drainTImer;
 @end
 
 @implementation KitchenSinkViewController
 
 @synthesize kitchenSink = _kitchenSink;
+@synthesize drainTImer = _drainTImer;
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -36,6 +38,71 @@
     view.center = CGPointMake(x, y);
 }
 
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return YES;
+}
+
+#pragma mart Draining Timer
+
+#define DRAIN_DURATION 3.0
+
+- (void)drain
+{
+    for (UIView *view in self.kitchenSink.subviews) {
+        CGAffineTransform transform = view.transform;
+        if (CGAffineTransformIsIdentity(transform)) {
+            UIViewAnimationOptions options = UIViewAnimationOptionCurveLinear;
+            [UIView animateWithDuration:DRAIN_DURATION/3 delay:0 options:options animations:^{
+                view.transform = CGAffineTransformRotate(CGAffineTransformScale(transform, 0.7, 0.7), 2*M_PI/3);
+            } completion:^(BOOL finished) {
+                if (finished) {
+                    [UIView animateWithDuration:DRAIN_DURATION/3 delay:0 options:options animations:^{
+                        view.transform = CGAffineTransformRotate(CGAffineTransformScale(transform, 0.4, 0.4), -2*M_PI/3);
+                    } completion:^(BOOL finished) {
+                        if (finished) {
+                            [UIView animateWithDuration:DRAIN_DURATION/3 delay:0 options:options animations:^{
+                                view.transform = CGAffineTransformScale(transform, 0.1, 0.1);
+                            } completion:^(BOOL finished) {
+                                if (finished) [view removeFromSuperview];
+                            }];
+                        }
+                    }];
+                }
+            }];
+        }
+    }
+}
+
+- (void)drain:(NSTimer *)timer
+{
+    [self drain];
+}
+
+- (void)startDraining
+{
+    self.drainTImer = [NSTimer scheduledTimerWithTimeInterval:DRAIN_DURATION target:self selector:@selector(drain) userInfo:nil repeats:YES];
+}
+
+- (void)stopDraining
+{
+    [self.drainTImer invalidate];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self startDraining];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self stopDraining];
+    [super viewWillDisappear:animated];
+}
+
+
 - (void)addLabel:(NSString *)text
 {
     UILabel *label = [[UILabel alloc] init];
@@ -44,11 +111,6 @@
     label.backgroundColor = [UIColor clearColor];
     [self setRandomLocationForView:label];
     [self.kitchenSink addSubview:label];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
 }
 
 #pragma mark Annimation of random location of labels
