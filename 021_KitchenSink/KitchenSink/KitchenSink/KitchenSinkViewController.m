@@ -9,15 +9,17 @@
 #import "KitchenSinkViewController.h"
 #import "AskerViewController.h"
 
-@interface KitchenSinkViewController() <AskerViewControllerDelegate>
+@interface KitchenSinkViewController() <AskerViewControllerDelegate, UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UIView *kitchenSink;
 @property (weak, nonatomic) NSTimer *drainTImer;
+@property (weak, nonatomic) UIActionSheet *actionSheet;
 @end
 
 @implementation KitchenSinkViewController
 
 @synthesize kitchenSink = _kitchenSink;
 @synthesize drainTImer = _drainTImer;
+@synthesize actionSheet = _actionSheet;
 
 #pragma mart Draining Timer
 
@@ -142,6 +144,36 @@
     if (self.kitchenSink.window) {
         [self addLabel:nil];
         [self performSelector:@selector(drip) withObject:nil afterDelay:FAUCET_INTERVAL];
+    }
+}
+
+#pragma mark - Sink Controls and UIActionSheetDelegate
+
+- (IBAction)controlSink:(UIBarButtonItem *)sender
+{
+    if (self.actionSheet) {
+        // if the actionSheet is already up, you might be tempted to dismiss it
+        // but, the Apple UI guidelines say do nothing
+    } else {
+        NSString *drainButton = self.drainTImer ? @"Stopper Drain" : @"Unstopper Drain";
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Sink Controls" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Empty Sink" otherButtonTitles:drainButton, nil];
+        [actionSheet showFromBarButtonItem:sender animated:YES];
+        self.actionSheet = actionSheet;
+    }
+}
+
+#define STOP_DRAIN @"Stopper Drain"
+#define UNSTOP_DRAIN @"Unstopper Drain"
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *choice = [actionSheet buttonTitleAtIndex:buttonIndex];
+    if (buttonIndex == [actionSheet destructiveButtonIndex]) {
+        [self.kitchenSink.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    } else if ([choice isEqualToString:STOP_DRAIN]) {
+        [self stopDraining];
+    } else if ([choice isEqualToString:UNSTOP_DRAIN]) {
+        [self startDraining];
     }
 }
 

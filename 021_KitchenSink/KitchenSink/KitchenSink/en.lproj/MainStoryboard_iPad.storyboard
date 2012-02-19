@@ -22,6 +22,12 @@
                                             <segue destination="Dmf-Cl-Q8W" kind="modal" identifier="Create Label Curl" modalTransitionStyle="partialCurl" id="gJ2-8X-fDs"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Ddc-rN-BWU"/>
+                                    <barButtonItem title="Sink Controls" id="dqf-cZ-OLD">
+                                        <connections>
+                                            <action selector="controlSink:" destination="2" id="iI0-Zu-JpJ"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <view clipsSubviews="YES" contentMode="scaleToFill" id="dUd-Id-zVy">
