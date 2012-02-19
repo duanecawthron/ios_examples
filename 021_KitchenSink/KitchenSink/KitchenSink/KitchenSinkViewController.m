@@ -19,21 +19,6 @@
 @synthesize kitchenSink = _kitchenSink;
 @synthesize drainTImer = _drainTImer;
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier hasPrefix:@"Create Label"]) {
-        AskerViewController *asker = (AskerViewController *)segue.destinationViewController;
-        asker.question = @"What do you want your label to say?";
-        asker.answer = @"Label Text";
-        asker.delegate = self;
-    }
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
-}
-
 #pragma mart Draining Timer
 
 #define DRAIN_DURATION 3.0
@@ -80,18 +65,6 @@
     [self.drainTImer invalidate];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    [self startDraining];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [self stopDraining];
-    [super viewWillDisappear:animated];
-}
-
 #pragma mark Annimation of random location of labels
 
 - (void)setRandomLocationForView:(UIView *)view
@@ -103,12 +76,28 @@
     view.center = CGPointMake(x, y);
 }
 
+// add a label to the view, generate a label if text is nil
 - (void)addLabel:(NSString *)text
 {
     UILabel *label = [[UILabel alloc] init];
+    static NSDictionary *colors = nil;
+    if (!colors) colors = [NSDictionary dictionaryWithObjectsAndKeys:
+                           [UIColor blueColor], @"Blue",
+                           [UIColor greenColor], @"Green",
+                           [UIColor orangeColor], @"Orange",
+                           [UIColor redColor], @"Red",
+                           [UIColor purpleColor], @"Purple",
+                           [UIColor brownColor], @"Brown",
+                           nil];
+    if (![text length]) {
+        NSString *color = [[colors allKeys] objectAtIndex:arc4random()%[colors count]];
+        text = color;
+        label.textColor = [colors objectForKey:color];
+    }
     label.text = text;
     label.font = [UIFont systemFontOfSize:48.0];
     label.backgroundColor = [UIColor clearColor];
+    [label sizeToFit];
     [self setRandomLocationForView:label];
     [self.kitchenSink addSubview:label];
 }
@@ -137,10 +126,53 @@
 
 #pragma mark AskerViewControllerDelegate
 
+
 - (void) askerViewController:(AskerViewController *)sender didAskQuestion:(NSString *)question andGotAnswer:(NSString *)answer
 {
     [self addLabel:answer];
     [self dismissModalViewControllerAnimated:YES];
+}
+
+#pragma mark - dripping faucet
+
+#define FAUCET_INTERVAL 2.0
+
+- (void)drip
+{
+    if (self.kitchenSink.window) {
+        [self addLabel:nil];
+        [self performSelector:@selector(drip) withObject:nil afterDelay:FAUCET_INTERVAL];
+    }
+}
+
+#pragma mark - View lifecycle
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self startDraining];
+    [self drip];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self stopDraining];
+    [super viewWillDisappear:animated];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return YES;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier hasPrefix:@"Create Label"]) {
+        AskerViewController *asker = (AskerViewController *)segue.destinationViewController;
+        asker.question = @"What do you want your label to say?";
+        asker.answer = @"Label Text";
+        asker.delegate = self;
+    }
 }
 
 @end
