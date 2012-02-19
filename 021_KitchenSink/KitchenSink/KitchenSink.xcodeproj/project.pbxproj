@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E31E558014F1503400DC9975 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E31E557F14F1503400DC9975 /* MobileCoreServices.framework */; };
 		E3B986E114F0380D00C00CE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B986E014F0380D00C00CE4 /* UIKit.framework */; };
 		E3B986E314F0380D00C00CE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B986E214F0380D00C00CE4 /* Foundation.framework */; };
 		E3B986E514F0380D00C00CE4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B986E414F0380D00C00CE4 /* CoreGraphics.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E31E557F14F1503400DC9975 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		E3B986DC14F0380D00C00CE4 /* KitchenSink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KitchenSink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3B986E014F0380D00C00CE4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E3B986E214F0380D00C00CE4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E31E558014F1503400DC9975 /* MobileCoreServices.framework in Frameworks */,
 				E3B986E114F0380D00C00CE4 /* UIKit.framework in Frameworks */,
 				E3B986E314F0380D00C00CE4 /* Foundation.framework in Frameworks */,
 				E3B986E514F0380D00C00CE4 /* CoreGraphics.framework in Frameworks */,
@@ -86,6 +89,7 @@
 		E3B986D114F0380D00C00CE4 = {
 			isa = PBXGroup;
 			children = (
+				E31E557F14F1503400DC9975 /* MobileCoreServices.framework */,
 				E3B986E614F0380D00C00CE4 /* KitchenSink */,
 				E3B9870714F0380D00C00CE4 /* KitchenSinkTests */,
 				E3B986DF14F0380D00C00CE4 /* Frameworks */,

@@ -8,8 +8,12 @@
 
 #import "KitchenSinkViewController.h"
 #import "AskerViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
-@interface KitchenSinkViewController() <AskerViewControllerDelegate, UIActionSheetDelegate>
+// NOTE: UIImagePickerControllerDelegate requires UINavigationControllerDelegate
+// UINavigationControllerDelegate will not be used
+
+@interface KitchenSinkViewController() <AskerViewControllerDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIView *kitchenSink;
 @property (weak, nonatomic) NSTimer *drainTImer;
 @property (weak, nonatomic) UIActionSheet *actionSheet;
@@ -175,6 +179,54 @@
     } else if ([choice isEqualToString:UNSTOP_DRAIN]) {
         [self startDraining];
     }
+}
+
+#pragma mark - UIImagePickerController
+
+- (IBAction)addImage:(UIBarButtonItem *)sender
+{
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        NSArray *mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
+        if ([mediaTypes containsObject:(NSString *)kUTTypeImage]) {
+            UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+            picker.delegate = self;
+            picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+            picker.mediaTypes = [NSArray arrayWithObject:(NSString *)kUTTypeImage];
+            picker.allowsEditing = YES;
+            [self presentModalViewController:picker animated:YES];
+        }
+    }
+}
+
+- (void)dismissImagePicker
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+#define MAX_IMAGE_WIDTH 200
+
+- (void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
+    if (!image) image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    if (image) {
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+        CGRect frame = imageView.frame;
+        while (frame.size.width > MAX_IMAGE_WIDTH) {
+            frame.size.width /= 2;
+            frame.size.height /= 2;
+        }
+        imageView.frame = frame;
+        [self setRandomLocationForView:imageView];
+        [self.kitchenSink addSubview:imageView];
+    }
+    [self dismissImagePicker];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissImagePicker];
 }
 
 #pragma mark - View lifecycle
