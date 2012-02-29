@@ -56,3 +56,5 @@ These examples demonstrate various features of iOS development.
 018_Shutterbug_Maps:: Shutterbug Maps from Stanford University CS 193P Lecture 11
 019_File_Manager:: File Manager is a collection of simple examples that use NSFileManager
 020_SQLite:: SQLite is a simple example that uses SQLite
+021_KitchenSink:: Kitchen Sink from Stanford University CS 193P Lecture 15
+022_NSNotification:: NSNotification example
