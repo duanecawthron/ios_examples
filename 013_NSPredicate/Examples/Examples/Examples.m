@@ -386,9 +386,112 @@
     NSLog(@"Unique States:\n %@", [people valueForKeyPath:@"@distinctUnionOfObjects.state"]);
 }
 
++ (void)example16
+{
+    NSDictionary *arnold = [NSDictionary dictionaryWithObjectsAndKeys:@"arnold", @"name", @"california", @"state", [NSNumber numberWithInt:1], @"age", nil];
+    NSDictionary *jimmy = [NSDictionary dictionaryWithObjectsAndKeys:@"jimmy", @"name", @"new york", @"state", [NSNumber numberWithInt:2], @"age", nil];
+    NSDictionary *henry = [NSDictionary dictionaryWithObjectsAndKeys:@"henry", @"name", @"michigan", @"state", [NSNumber numberWithInt:3], @"age", nil];
+    NSDictionary *woz = [NSDictionary dictionaryWithObjectsAndKeys:@"woz", @"name", @"california", @"state", [NSNumber numberWithInt:4], @"age", nil];
+    
+    NSDictionary *mary = [NSDictionary dictionaryWithObjectsAndKeys:@"mary", @"name", @"california", @"state", [NSNumber numberWithInt:1], @"age", nil];
+    NSDictionary *jane = [NSDictionary dictionaryWithObjectsAndKeys:@"jane", @"name", @"new york", @"state", [NSNumber numberWithInt:2], @"age", nil];
+
+    NSArray *people = [NSArray arrayWithObjects:arnold, jimmy, henry, woz, nil];
+    NSArray *people2 = [NSArray arrayWithObjects:mary, jane, woz, nil];
+    
+    // Simple Collection Operators
+    NSLog(@"\n %@", [people valueForKeyPath:@"@count.age"]);
+    NSLog(@"\n %@", [people valueForKeyPath:@"@avg.age"]);
+    NSLog(@"\n %@", [people valueForKeyPath:@"@max.age"]);
+    NSLog(@"\n %@", [people valueForKeyPath:@"@min.age"]);
+    NSLog(@"\n %@", [people valueForKeyPath:@"@sum.age"]);
+
+    NSLog(@"\n %@", [arnold valueForKeyPath:@"state"]);
+    NSLog(@"\n %@", [people valueForKeyPath:@"state"]);
+    NSLog(@"\n %@", [people valueForKeyPath:@"@avg.age"]);
+    
+    // Object Operators
+    NSLog(@"\n %@", [people valueForKeyPath:@"@distinctUnionOfObjects.state"]);
+    NSLog(@"\n %@", [people valueForKeyPath:@"@unionOfObjects.state"]);
+    
+    NSArray *group = [NSArray arrayWithObjects:people, people2, nil];
+    
+    // Array and Set Operators
+    NSLog(@"\n %@", [group valueForKeyPath:@"@distinctUnionOfArrays.name"]);
+    NSLog(@"\n %@", [group valueForKeyPath:@"@unionOfArrays.name"]);
+    // NSLog(@"\n %@", [group valueForKeyPath:@"@unionOfArrays"]); // does not work, requires keypathToProperty
+
+    NSSet *peopleSet = [NSSet setWithObjects:arnold, jimmy, henry, woz, nil];
+    NSSet *people2Set = [NSSet setWithObjects:mary, jane, woz, nil];
+    NSSet *groupSet = [NSSet setWithObjects:peopleSet, people2Set, nil];
+
+    // Object Operators
+    NSLog(@"\n %@", [peopleSet valueForKeyPath:@"@distinctUnionOfObjects.state"]);
+    // NSLog(@"\n %@", [peopleSet valueForKeyPath:@"@unionOfObjects.state"]); // does not work, @unionOfObjects is not a set operatror
+    
+    // Array and Set Operators
+    NSLog(@"\n %@", [groupSet valueForKeyPath:@"@distinctUnionOfSets.name"]);
+    // NSLog(@"\n %@", [groupSet valueForKeyPath:@"@distinctUnionOfSets"]); // does not work, requires keypathToProperty
+    // NSLog(@"\n %@", [groupSet valueForKeyPath:@"@unionOfSets.name"]); // does not work, @unionOfSets is not an operator
+ 
+    // @distinctUnionOfArrays works on sets also
+    NSLog(@"\n %@", [groupSet valueForKeyPath:@"@distinctUnionOfArrays.name"]);
+    // NSLog(@"\n %@", [groupSet valueForKeyPath:@"@unionOfArrays.name"]); // does not work
+    
+    NSArray *group2 = [NSArray arrayWithObjects:group, group, nil];
+    NSLog(@"\n hi %@", [group2 valueForKeyPath:@"@distinctUnionOfArrays.name"]);
+    
+    NSArray *group3 = [NSArray arrayWithObjects:group2, group2, nil];
+    NSLog(@"\n hi %@", [group3 valueForKeyPath:@"@distinctUnionOfArrays.name"]);
+    
+    // mixed arrays and sets
+    NSArray *group4 = [NSArray arrayWithObjects:group, groupSet, nil];
+    NSLog(@"\n hi %@", [group4 valueForKeyPath:@"@distinctUnionOfArrays.name"]);
+    
+    // mixed levels of arrays
+    NSArray *group5 = [NSArray arrayWithObjects:group2, group, nil];
+    NSLog(@"\n hi %@", [group5 valueForKeyPath:@"@distinctUnionOfArrays.name"]);
+}
+
++ (void)example17
+{
+    NSDictionary *arnold = [NSDictionary dictionaryWithObjectsAndKeys:@"arnold", @"name", @"california", @"state", [NSNumber numberWithInt:1], @"age", nil];
+    NSDictionary *jimmy = [NSDictionary dictionaryWithObjectsAndKeys:@"jimmy", @"name", @"new york", @"state", [NSNumber numberWithInt:2], @"age", nil];
+    NSDictionary *henry = [NSDictionary dictionaryWithObjectsAndKeys:@"henry", @"name", @"michigan", @"state", [NSNumber numberWithInt:3], @"age", nil];
+    NSDictionary *woz = [NSDictionary dictionaryWithObjectsAndKeys:@"woz", @"name", @"california", @"state", [NSNumber numberWithInt:4], @"age", nil];
+    NSDictionary *mary = [NSDictionary dictionaryWithObjectsAndKeys:@"mary", @"name", @"california", @"state", [NSNumber numberWithInt:1], @"age", nil];
+    NSDictionary *jane = [NSDictionary dictionaryWithObjectsAndKeys:@"jane", @"name", @"new york", @"state", [NSNumber numberWithInt:2], @"age", nil];
+    
+    NSDictionary *level1a = [NSDictionary dictionaryWithObjectsAndKeys:arnold, @"one", jimmy, @"two", nil];
+    NSDictionary *level1b = [NSDictionary dictionaryWithObjectsAndKeys:henry, @"one", woz, @"two", nil];
+    NSDictionary *level1c = [NSDictionary dictionaryWithObjectsAndKeys:mary, @"one", jane, @"two", nil];
+    
+    NSDictionary *level2a = [NSDictionary dictionaryWithObjectsAndKeys:level1a, @"three", level1b, @"four", nil];
+    NSDictionary *level2b = [NSDictionary dictionaryWithObjectsAndKeys:level1c, @"three", nil];
+    
+    NSArray *people = [NSArray arrayWithObjects:level2a, nil];
+    NSArray *people2 = [NSArray arrayWithObjects:level2b, nil];
+    
+    NSArray *group = [NSArray arrayWithObjects:people, people2, nil];
+    
+    NSLog(@"\n %@", [level2a valueForKeyPath:@"one.one"]);
+    
+    // keypathToCollection.@collectionOperator.keypathToProperty
+    
+    NSLog(@"\n %@", [group valueForKeyPath:@"@distinctUnionOfArrays.three"]);
+    NSLog(@"\n %@", [group valueForKeyPath:@"@distinctUnionOfArrays.three.one"]);
+    NSLog(@"\n %@", [group valueForKeyPath:@"@distinctUnionOfArrays.three.one.name"]);
+    
+    NSArray *group2 = [NSArray arrayWithObjects:group, group, nil];
+    
+    NSLog(@"\n %@", [group2 valueForKeyPath:@"@distinctUnionOfArrays.three"]);
+    NSLog(@"\n %@", [group2 valueForKeyPath:@"@distinctUnionOfArrays.three.one"]);
+    NSLog(@"\n %@", [group2 valueForKeyPath:@"@distinctUnionOfArrays.three.one.name"]);
+}
+
 + (void) run
 {
-    [Examples example15];
+    [Examples example17];
 }
 
 @end
