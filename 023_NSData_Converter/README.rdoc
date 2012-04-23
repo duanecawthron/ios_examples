@@ -1,0 +1,40 @@
+= NSDataConverter imports a C struct, makes an NSData object and writes the data to a file
+
+== Software versions
+
+    Mac OS X Lion v10.7.3
+    Xcode v4.3.1
+    iOS 5.0
+
+== Introduction
+
+Jim Hillhouse has this project that displays a 3D model of the International Space Station.
+
+    https://github.com/cocoacoderorg/GLKitSampler
+
+The 3D model is imported as a C struct from a .h file.
+
+NSDataConverter imports the .h file and writes the data to a .data file.
+
+This is a fork of GLKitSampler that reads the 3D model from the .data file.
+
+    https://github.com/duanecawthron/GLKitSampler
+
+== Where to find the data file
+
+Running NSDataConverter on the iPhone simulator, generates ISS_LowRes_MeshVertexData.data. This file was imported into the GLKitSampler project.
+
+Look for ISS_LowRes_MeshVertexData.data in the iPhone Simulator folder.
+
+    /Users/USER_NAME/Library/"Application Support/iPhone Simulator"/5.1/Applications/APP_UUID/Documents/ISS_LowRes_MeshVertexData.data
+
+Where:
+
+    USER_NAME is your Macintosh user name.
+    APP_UUID is soemthing like A0BE6722-0C63-4A4C-A989-D937FBC634F1
+
+== Disclaimer
+
+This is a simple proof of concept. Running an iOS project on the simulator to convert a data file is a clunky way of doing things.
+This is a 
+

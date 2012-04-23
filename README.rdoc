@@ -2,6 +2,8 @@
 
 These examples are experiments used to learn about iOS app development.
 
+WARNING: Enter at your own risk. This is a code junk yard. Beware sharp objects and unsafe conditions.
+
 == Resources
 
     http://developer.apple.com/
@@ -58,3 +60,4 @@ These examples demonstrate various features of iOS development.
 020_SQLite:: SQLite is a simple example that uses SQLite
 021_KitchenSink:: Kitchen Sink from Stanford University CS 193P Lecture 15
 022_NSNotification:: NSNotification example
+023_NSData_Converter:: NSDataConverter imports a C struct, makes an NSData object and writes the data to a file
