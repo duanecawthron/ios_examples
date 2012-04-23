@@ -35,6 +35,4 @@ Where:
 
 == Disclaimer
 
-This is a simple proof of concept. Running an iOS project on the simulator to convert a data file is a clunky way of doing things.
-This is a 
-
+This is a simple proof of concept. Running an iOS project on the simulator to convert a data file is clunky.
