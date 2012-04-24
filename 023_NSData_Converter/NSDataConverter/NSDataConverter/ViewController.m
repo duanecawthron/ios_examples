@@ -42,11 +42,27 @@
      */
 }
 
+- (void)cPointerDemo
+{
+    char *x = "abcdefghijkl";
+    NSLog(@"x = %s, size of x = %d", x, (int)sizeof(x));
+    // x = abcdefghijkl, size of x = 4
+    
+    char y[] = "abcdefghijkl";
+    NSLog(@"y = %s, size of y = %d", y, (int)sizeof(y));
+    // y = abcdefghijkl, size of y = 13
+    
+    char *z = y;
+    NSLog(@"z = %s, size of z = %d", z, (int)sizeof(z));
+    //z = abcdefghijkl, size of z = 4
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    [self cPointerDemo];
     [self convertStructVertexDataTexturedToNSData];
 }
 
