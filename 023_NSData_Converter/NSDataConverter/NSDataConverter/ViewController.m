@@ -55,6 +55,16 @@
     char *z = y;
     NSLog(@"z = %s, size of z = %d", z, (int)sizeof(z));
     //z = abcdefghijkl, size of z = 4
+    
+    char v[13] = "abcdefghijkl";
+    NSLog(@"v = %s, size of v = %d", v, (int)sizeof(v));
+    // v = abcdefghijkl, size of v = 13
+    
+    int i = 13;
+    char w[i];
+    strcpy(w, "abcdefghijkl");
+    NSLog(@"w = %s, size of w = %d", w, (int)sizeof(w));
+    // w = abcdefghijkl, size of w = 13
 }
 
 - (void)viewDidLoad
