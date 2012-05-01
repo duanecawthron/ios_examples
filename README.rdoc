@@ -61,3 +61,4 @@ These examples demonstrate various features of iOS development.
 021_KitchenSink:: Kitchen Sink from Stanford University CS 193P Lecture 15
 022_NSNotification:: NSNotification example
 023_NSData_Converter:: NSDataConverter imports a C struct, makes an NSData object and writes the data to a file
+024_Icons_iOS_5:: Icons_iOS_5 demonstrates the use of application icons on iOS

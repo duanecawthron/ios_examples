@@ -1,0 +1,51 @@
+= Icons_iOS_5 demonstrates the use of application icons on iOS
+
+== Software versions
+
+    Mac OS X Lion v10.7.3
+    Xcode v4.3.1
+    iOS 5.0
+
+== Resources
+
+    https://developer.apple.com/library/ios/#samplecode/Icons/Introduction/Intro.html#//apple_ref/doc/uid/DTS40010442
+
+== Introduction
+
+Drag and drop the App icons to the App Settings Summary page. The App icons will be added to the App plist file.
+
+	Icon.png					57 x 57
+	Icon@2x.png					114 x 114
+	Icon-72.png					72 x 72
+	Icon-144.png				144 x 144
+
+Add the small App icons to the App plist file.
+
+	Icon-Small.png				29 x 29
+	Icon-Small@2x.png			58 x 58
+	Icon-Small-50.png			50 x 50
+	Icon-Small-100.png			100 x 100
+
+Drag and drop the default launch images to the App Settings Summary page. They do not need to be added to the App plist file.
+
+These are the iPhone default launch images.
+
+	Default.png						320 x 460 (20 short of 480)
+	Default@2x.png					640 x 920 (40 short of 960)
+
+Xcode v4.3.1 created these names for the iPad default launch images.
+
+	Default-Landscape~ipad.png		1024 x 748 (20 short of 768)
+	Default-Landscape@2x~ipad.png	2048 x 1496 (40 short of 1536)
+	Default-Portrait~ipad.png		768 x 1004 (20 short of 1004)
+	Default-Portrait@2x~ipad.png	1536 x 2008 (40 short of 2048)
+
+These are old names for the iPad default launch images.
+
+	Default-Landscape.png			1024 x 748 (20 short of 768)
+	Default-Portrait.png			768 x 1004 (20 short of 1004)
+
+These are the icons for the iTunes Store.
+
+	iTunesArtwork					512 x 512 (png file without the extension)
+	iTunesArtwork (what name)		1024 x 1024 (png file without the extension)
