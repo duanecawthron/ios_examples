@@ -1,0 +1,21 @@
+= AVCaptureStillImage demonstrates how to capture a still image using AV Foundation
+
+== Software versions
+
+    Mac OS X Lion v10.7.3
+    Xcode v4.3.2
+    iOS 5.0
+
+== Resources
+
+    https://developer.apple.com/library/ios/#samplecode/AVCam/Introduction/Intro.html#//apple_ref/doc/uid/DTS40010112
+    https://developer.apple.com/library/ios/#samplecode/SquareCam/Introduction/Intro.html#//apple_ref/doc/uid/DTS40011190
+    
+== Introduction
+
+iOS provides two ways of capturing images from the camera.
+
+    UIImagePickerController - simple high level interface
+    AVCaptureSession - low level interface allows more control
+
+AVCaptureSession can be used for much more that capturing still images. This example demonstrates a simple configuration that can be used to capture still images.

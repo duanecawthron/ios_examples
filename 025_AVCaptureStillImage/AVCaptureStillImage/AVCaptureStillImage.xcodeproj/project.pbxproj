@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6AE5A5C9155C205D009EC23C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE5A5C8155C205D009EC23C /* UIKit.framework */; };
+		6AE5A5CB155C205D009EC23C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE5A5CA155C205D009EC23C /* Foundation.framework */; };
+		6AE5A5CD155C205D009EC23C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE5A5CC155C205D009EC23C /* CoreGraphics.framework */; };
+		6AE5A5D3155C205D009EC23C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AE5A5D1155C205D009EC23C /* InfoPlist.strings */; };
+		6AE5A5D5155C205D009EC23C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5A5D4155C205D009EC23C /* main.m */; };
+		6AE5A5D9155C205D009EC23C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5A5D8155C205D009EC23C /* AppDelegate.m */; };
+		6AE5A5DC155C205D009EC23C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AE5A5DA155C205D009EC23C /* MainStoryboard.storyboard */; };
+		6AE5A5DF155C205D009EC23C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5A5DE155C205D009EC23C /* ViewController.m */; };
+		6AE5A5E7155C205D009EC23C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE5A5E6155C205D009EC23C /* SenTestingKit.framework */; };
+		6AE5A5E8155C205D009EC23C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE5A5C8155C205D009EC23C /* UIKit.framework */; };
+		6AE5A5E9155C205D009EC23C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE5A5CA155C205D009EC23C /* Foundation.framework */; };
+		6AE5A5F1155C205D009EC23C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AE5A5EF155C205D009EC23C /* InfoPlist.strings */; };
+		6AE5A5F4155C205D009EC23C /* AVCaptureStillImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5A5F3155C205D009EC23C /* AVCaptureStillImageTests.m */; };
+		6AE5A5FF155C20BE009EC23C /* DCCaptureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5A5FE155C20BE009EC23C /* DCCaptureManager.m */; };
+		6AE5A600155C20BE009EC23C /* DCCaptureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5A5FE155C20BE009EC23C /* DCCaptureManager.m */; };
+		6AE5A602155C2141009EC23C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE5A601155C2141009EC23C /* AssetsLibrary.framework */; };
+		6AE5A604155C2148009EC23C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE5A603155C2148009EC23C /* CoreMedia.framework */; };
+		6AE5A606155C214E009EC23C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE5A605155C214E009EC23C /* ImageIO.framework */; };
+		6AE5A608155C2158009EC23C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE5A607155C2158009EC23C /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6AE5A5EA155C205D009EC23C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AE5A5BB155C205D009EC23C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AE5A5C3155C205D009EC23C;
+			remoteInfo = AVCaptureStillImage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6AE5A5C4155C205D009EC23C /* AVCaptureStillImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVCaptureStillImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AE5A5C8155C205D009EC23C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6AE5A5CA155C205D009EC23C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6AE5A5CC155C205D009EC23C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6AE5A5D0155C205D009EC23C /* AVCaptureStillImage-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AVCaptureStillImage-Info.plist"; sourceTree = "<group>"; };
+		6AE5A5D2155C205D009EC23C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6AE5A5D4155C205D009EC23C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6AE5A5D6155C205D009EC23C /* AVCaptureStillImage-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVCaptureStillImage-Prefix.pch"; sourceTree = "<group>"; };
+		6AE5A5D7155C205D009EC23C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6AE5A5D8155C205D009EC23C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6AE5A5DB155C205D009EC23C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		6AE5A5DD155C205D009EC23C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6AE5A5DE155C205D009EC23C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6AE5A5E5155C205D009EC23C /* AVCaptureStillImageTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVCaptureStillImageTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AE5A5E6155C205D009EC23C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		6AE5A5EE155C205D009EC23C /* AVCaptureStillImageTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AVCaptureStillImageTests-Info.plist"; sourceTree = "<group>"; };
+		6AE5A5F0155C205D009EC23C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6AE5A5F2155C205D009EC23C /* AVCaptureStillImageTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVCaptureStillImageTests.h; sourceTree = "<group>"; };
+		6AE5A5F3155C205D009EC23C /* AVCaptureStillImageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVCaptureStillImageTests.m; sourceTree = "<group>"; };
+		6AE5A5FD155C20BE009EC23C /* DCCaptureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCaptureManager.h; sourceTree = "<group>"; };
+		6AE5A5FE155C20BE009EC23C /* DCCaptureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCaptureManager.m; sourceTree = "<group>"; };
+		6AE5A601155C2141009EC23C /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		6AE5A603155C2148009EC23C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		6AE5A605155C214E009EC23C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		6AE5A607155C2158009EC23C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6AE5A5C1155C205D009EC23C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AE5A608155C2158009EC23C /* AVFoundation.framework in Frameworks */,
+				6AE5A606155C214E009EC23C /* ImageIO.framework in Frameworks */,
+				6AE5A604155C2148009EC23C /* CoreMedia.framework in Frameworks */,
+				6AE5A602155C2141009EC23C /* AssetsLibrary.framework in Frameworks */,
+				6AE5A5C9155C205D009EC23C /* UIKit.framework in Frameworks */,
+				6AE5A5CB155C205D009EC23C /* Foundation.framework in Frameworks */,
+				6AE5A5CD155C205D009EC23C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AE5A5E1155C205D009EC23C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AE5A5E7155C205D009EC23C /* SenTestingKit.framework in Frameworks */,
+				6AE5A5E8155C205D009EC23C /* UIKit.framework in Frameworks */,
+				6AE5A5E9155C205D009EC23C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6AE5A5B9155C205D009EC23C = {
+			isa = PBXGroup;
+			children = (
+				6AE5A607155C2158009EC23C /* AVFoundation.framework */,
+				6AE5A605155C214E009EC23C /* ImageIO.framework */,
+				6AE5A603155C2148009EC23C /* CoreMedia.framework */,
+				6AE5A601155C2141009EC23C /* AssetsLibrary.framework */,
+				6AE5A5CE155C205D009EC23C /* AVCaptureStillImage */,
+				6AE5A5EC155C205D009EC23C /* AVCaptureStillImageTests */,
+				6AE5A5C7155C205D009EC23C /* Frameworks */,
+				6AE5A5C5155C205D009EC23C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6AE5A5C5155C205D009EC23C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6AE5A5C4155C205D009EC23C /* AVCaptureStillImage.app */,
+				6AE5A5E5155C205D009EC23C /* AVCaptureStillImageTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6AE5A5C7155C205D009EC23C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AE5A5C8155C205D009EC23C /* UIKit.framework */,
+				6AE5A5CA155C205D009EC23C /* Foundation.framework */,
+				6AE5A5CC155C205D009EC23C /* CoreGraphics.framework */,
+				6AE5A5E6155C205D009EC23C /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6AE5A5CE155C205D009EC23C /* AVCaptureStillImage */ = {
+			isa = PBXGroup;
+			children = (
+				6AE5A5D7155C205D009EC23C /* AppDelegate.h */,
+				6AE5A5D8155C205D009EC23C /* AppDelegate.m */,
+				6AE5A5FD155C20BE009EC23C /* DCCaptureManager.h */,
+				6AE5A5FE155C20BE009EC23C /* DCCaptureManager.m */,
+				6AE5A5DA155C205D009EC23C /* MainStoryboard.storyboard */,
+				6AE5A5DD155C205D009EC23C /* ViewController.h */,
+				6AE5A5DE155C205D009EC23C /* ViewController.m */,
+				6AE5A5CF155C205D009EC23C /* Supporting Files */,
+			);
+			path = AVCaptureStillImage;
+			sourceTree = "<group>";
+		};
+		6AE5A5CF155C205D009EC23C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6AE5A5D0155C205D009EC23C /* AVCaptureStillImage-Info.plist */,
+				6AE5A5D1155C205D009EC23C /* InfoPlist.strings */,
+				6AE5A5D4155C205D009EC23C /* main.m */,
+				6AE5A5D6155C205D009EC23C /* AVCaptureStillImage-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6AE5A5EC155C205D009EC23C /* AVCaptureStillImageTests */ = {
+			isa = PBXGroup;
+			children = (
+				6AE5A5F2155C205D009EC23C /* AVCaptureStillImageTests.h */,
+				6AE5A5F3155C205D009EC23C /* AVCaptureStillImageTests.m */,
+				6AE5A5ED155C205D009EC23C /* Supporting Files */,
+			);
+			path = AVCaptureStillImageTests;
+			sourceTree = "<group>";
+		};
+		6AE5A5ED155C205D009EC23C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6AE5A5EE155C205D009EC23C /* AVCaptureStillImageTests-Info.plist */,
+				6AE5A5EF155C205D009EC23C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6AE5A5C3155C205D009EC23C /* AVCaptureStillImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AE5A5F7155C205D009EC23C /* Build configuration list for PBXNativeTarget "AVCaptureStillImage" */;
+			buildPhases = (
+				6AE5A5C0155C205D009EC23C /* Sources */,
+				6AE5A5C1155C205D009EC23C /* Frameworks */,
+				6AE5A5C2155C205D009EC23C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AVCaptureStillImage;
+			productName = AVCaptureStillImage;
+			productReference = 6AE5A5C4155C205D009EC23C /* AVCaptureStillImage.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6AE5A5E4155C205D009EC23C /* AVCaptureStillImageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AE5A5FA155C205D009EC23C /* Build configuration list for PBXNativeTarget "AVCaptureStillImageTests" */;
+			buildPhases = (
+				6AE5A5E0155C205D009EC23C /* Sources */,
+				6AE5A5E1155C205D009EC23C /* Frameworks */,
+				6AE5A5E2155C205D009EC23C /* Resources */,
+				6AE5A5E3155C205D009EC23C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6AE5A5EB155C205D009EC23C /* PBXTargetDependency */,
+			);
+			name = AVCaptureStillImageTests;
+			productName = AVCaptureStillImageTests;
+			productReference = 6AE5A5E5155C205D009EC23C /* AVCaptureStillImageTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6AE5A5BB155C205D009EC23C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Cawthron Consulting Services, Inc.";
+			};
+			buildConfigurationList = 6AE5A5BE155C205D009EC23C /* Build configuration list for PBXProject "AVCaptureStillImage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6AE5A5B9155C205D009EC23C;
+			productRefGroup = 6AE5A5C5155C205D009EC23C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6AE5A5C3155C205D009EC23C /* AVCaptureStillImage */,
+				6AE5A5E4155C205D009EC23C /* AVCaptureStillImageTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6AE5A5C2155C205D009EC23C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AE5A5D3155C205D009EC23C /* InfoPlist.strings in Resources */,
+				6AE5A5DC155C205D009EC23C /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AE5A5E2155C205D009EC23C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AE5A5F1155C205D009EC23C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6AE5A5E3155C205D009EC23C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6AE5A5C0155C205D009EC23C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AE5A5D5155C205D009EC23C /* main.m in Sources */,
+				6AE5A5D9155C205D009EC23C /* AppDelegate.m in Sources */,
+				6AE5A5DF155C205D009EC23C /* ViewController.m in Sources */,
+				6AE5A5FF155C20BE009EC23C /* DCCaptureManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AE5A5E0155C205D009EC23C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AE5A5F4155C205D009EC23C /* AVCaptureStillImageTests.m in Sources */,
+				6AE5A600155C20BE009EC23C /* DCCaptureManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6AE5A5EB155C205D009EC23C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6AE5A5C3155C205D009EC23C /* AVCaptureStillImage */;
+			targetProxy = 6AE5A5EA155C205D009EC23C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6AE5A5D1155C205D009EC23C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AE5A5D2155C205D009EC23C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6AE5A5DA155C205D009EC23C /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AE5A5DB155C205D009EC23C /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		6AE5A5EF155C205D009EC23C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AE5A5F0155C205D009EC23C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6AE5A5F5155C205D009EC23C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6AE5A5F6155C205D009EC23C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6AE5A5F8155C205D009EC23C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVCaptureStillImage/AVCaptureStillImage-Prefix.pch";
+				INFOPLIST_FILE = "AVCaptureStillImage/AVCaptureStillImage-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6AE5A5F9155C205D009EC23C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVCaptureStillImage/AVCaptureStillImage-Prefix.pch";
+				INFOPLIST_FILE = "AVCaptureStillImage/AVCaptureStillImage-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6AE5A5FB155C205D009EC23C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AVCaptureStillImage.app/AVCaptureStillImage";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVCaptureStillImage/AVCaptureStillImage-Prefix.pch";
+				INFOPLIST_FILE = "AVCaptureStillImageTests/AVCaptureStillImageTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		6AE5A5FC155C205D009EC23C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AVCaptureStillImage.app/AVCaptureStillImage";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVCaptureStillImage/AVCaptureStillImage-Prefix.pch";
+				INFOPLIST_FILE = "AVCaptureStillImageTests/AVCaptureStillImageTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6AE5A5BE155C205D009EC23C /* Build configuration list for PBXProject "AVCaptureStillImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AE5A5F5155C205D009EC23C /* Debug */,
+				6AE5A5F6155C205D009EC23C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AE5A5F7155C205D009EC23C /* Build configuration list for PBXNativeTarget "AVCaptureStillImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AE5A5F8155C205D009EC23C /* Debug */,
+				6AE5A5F9155C205D009EC23C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6AE5A5FA155C205D009EC23C /* Build configuration list for PBXNativeTarget "AVCaptureStillImageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AE5A5FB155C205D009EC23C /* Debug */,
+				6AE5A5FC155C205D009EC23C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6AE5A5BB155C205D009EC23C /* Project object */;
+}
