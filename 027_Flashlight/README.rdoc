@@ -1,0 +1,14 @@
+= Flashlight demonstrates how to use the camera flash LED as a flashlight
+
+== Software versions
+
+    Mac OS X Lion v10.7.3
+    Xcode v4.3.2
+    iOS 5.0
+
+== Resources
+
+    http://developer.apple.com/library/mac/#releasenotes/AudioVideo/RN-AVFoundation/_index.html
+    See Using the LED torch as a flashlight
+
+== Introduction

@@ -1,0 +1,20 @@
+= Brightness demonstrates how to adjust screen brightness
+
+== Software versions
+
+    Mac OS X Lion v10.7.3
+    Xcode v4.3.2
+    iOS 5.0
+
+== Resources
+
+    http://stackoverflow.com/questions/5103755/iphone-change-the-screen-brightness-like-ibook-does
+
+== Introduction
+
+It is this simple.
+
+    [UIScreen mainScreen].brightness = 0.0; // min
+    [UIScreen mainScreen].brightness = 1.0; // max
+
+NOTE: Changes made in this App are not reflected in the Settings App.

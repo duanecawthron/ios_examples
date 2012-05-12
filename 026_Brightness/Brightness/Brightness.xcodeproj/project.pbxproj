@@ -1,0 +1,284 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A5C4E5D155EBA7000232099 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5C4E5C155EBA7000232099 /* UIKit.framework */; };
+		6A5C4E5F155EBA7000232099 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5C4E5E155EBA7000232099 /* Foundation.framework */; };
+		6A5C4E61155EBA7000232099 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5C4E60155EBA7000232099 /* CoreGraphics.framework */; };
+		6A5C4E67155EBA7000232099 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6A5C4E65155EBA7000232099 /* InfoPlist.strings */; };
+		6A5C4E69155EBA7000232099 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C4E68155EBA7000232099 /* main.m */; };
+		6A5C4E6D155EBA7000232099 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C4E6C155EBA7000232099 /* AppDelegate.m */; };
+		6A5C4E70155EBA7000232099 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A5C4E6E155EBA7000232099 /* MainStoryboard.storyboard */; };
+		6A5C4E73155EBA7000232099 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C4E72155EBA7000232099 /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6A5C4E58155EBA7000232099 /* Brightness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brightness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A5C4E5C155EBA7000232099 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6A5C4E5E155EBA7000232099 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6A5C4E60155EBA7000232099 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6A5C4E64155EBA7000232099 /* Brightness-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Brightness-Info.plist"; sourceTree = "<group>"; };
+		6A5C4E66155EBA7000232099 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6A5C4E68155EBA7000232099 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6A5C4E6A155EBA7000232099 /* Brightness-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Brightness-Prefix.pch"; sourceTree = "<group>"; };
+		6A5C4E6B155EBA7000232099 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6A5C4E6C155EBA7000232099 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6A5C4E6F155EBA7000232099 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		6A5C4E71155EBA7000232099 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6A5C4E72155EBA7000232099 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6A5C4E55155EBA7000232099 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A5C4E5D155EBA7000232099 /* UIKit.framework in Frameworks */,
+				6A5C4E5F155EBA7000232099 /* Foundation.framework in Frameworks */,
+				6A5C4E61155EBA7000232099 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A5C4E4D155EBA7000232099 = {
+			isa = PBXGroup;
+			children = (
+				6A5C4E62155EBA7000232099 /* Brightness */,
+				6A5C4E5B155EBA7000232099 /* Frameworks */,
+				6A5C4E59155EBA7000232099 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6A5C4E59155EBA7000232099 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A5C4E58155EBA7000232099 /* Brightness.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6A5C4E5B155EBA7000232099 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A5C4E5C155EBA7000232099 /* UIKit.framework */,
+				6A5C4E5E155EBA7000232099 /* Foundation.framework */,
+				6A5C4E60155EBA7000232099 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A5C4E62155EBA7000232099 /* Brightness */ = {
+			isa = PBXGroup;
+			children = (
+				6A5C4E6B155EBA7000232099 /* AppDelegate.h */,
+				6A5C4E6C155EBA7000232099 /* AppDelegate.m */,
+				6A5C4E6E155EBA7000232099 /* MainStoryboard.storyboard */,
+				6A5C4E71155EBA7000232099 /* ViewController.h */,
+				6A5C4E72155EBA7000232099 /* ViewController.m */,
+				6A5C4E63155EBA7000232099 /* Supporting Files */,
+			);
+			path = Brightness;
+			sourceTree = "<group>";
+		};
+		6A5C4E63155EBA7000232099 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A5C4E64155EBA7000232099 /* Brightness-Info.plist */,
+				6A5C4E65155EBA7000232099 /* InfoPlist.strings */,
+				6A5C4E68155EBA7000232099 /* main.m */,
+				6A5C4E6A155EBA7000232099 /* Brightness-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6A5C4E57155EBA7000232099 /* Brightness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A5C4E76155EBA7000232099 /* Build configuration list for PBXNativeTarget "Brightness" */;
+			buildPhases = (
+				6A5C4E54155EBA7000232099 /* Sources */,
+				6A5C4E55155EBA7000232099 /* Frameworks */,
+				6A5C4E56155EBA7000232099 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Brightness;
+			productName = Brightness;
+			productReference = 6A5C4E58155EBA7000232099 /* Brightness.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6A5C4E4F155EBA7000232099 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Cawthron Consulting Services, Inc.";
+			};
+			buildConfigurationList = 6A5C4E52155EBA7000232099 /* Build configuration list for PBXProject "Brightness" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6A5C4E4D155EBA7000232099;
+			productRefGroup = 6A5C4E59155EBA7000232099 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6A5C4E57155EBA7000232099 /* Brightness */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6A5C4E56155EBA7000232099 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A5C4E67155EBA7000232099 /* InfoPlist.strings in Resources */,
+				6A5C4E70155EBA7000232099 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6A5C4E54155EBA7000232099 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A5C4E69155EBA7000232099 /* main.m in Sources */,
+				6A5C4E6D155EBA7000232099 /* AppDelegate.m in Sources */,
+				6A5C4E73155EBA7000232099 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6A5C4E65155EBA7000232099 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A5C4E66155EBA7000232099 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6A5C4E6E155EBA7000232099 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A5C4E6F155EBA7000232099 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6A5C4E74155EBA7000232099 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6A5C4E75155EBA7000232099 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6A5C4E77155EBA7000232099 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Brightness/Brightness-Prefix.pch";
+				INFOPLIST_FILE = "Brightness/Brightness-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6A5C4E78155EBA7000232099 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Brightness/Brightness-Prefix.pch";
+				INFOPLIST_FILE = "Brightness/Brightness-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6A5C4E52155EBA7000232099 /* Build configuration list for PBXProject "Brightness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A5C4E74155EBA7000232099 /* Debug */,
+				6A5C4E75155EBA7000232099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A5C4E76155EBA7000232099 /* Build configuration list for PBXNativeTarget "Brightness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A5C4E77155EBA7000232099 /* Debug */,
+				6A5C4E78155EBA7000232099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6A5C4E4F155EBA7000232099 /* Project object */;
+}
