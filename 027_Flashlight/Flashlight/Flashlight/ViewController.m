@@ -11,9 +11,13 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UISwitch *powerSwitch;
+@property (weak, nonatomic) IBOutlet UILabel *batteryLabel;
 @end
 
 @implementation ViewController
+
+@synthesize powerSwitch = _powerSwitch;
+@synthesize batteryLabel = _batteryLabel;
 
 - (void)flipSwitchOn:(BOOL)on
 {
@@ -30,8 +34,6 @@
     [self.powerSwitch setOn:on animated:YES];
 }
 
-@synthesize powerSwitch;
-
 - (IBAction)powerSwitch:(UISwitch *)sender {
     [self flipSwitchOn:sender.isOn];
 }
@@ -41,12 +43,18 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    [UIDevice currentDevice].batteryMonitoringEnabled = YES;
+    float batteyLevel = [UIDevice currentDevice].batteryLevel;
+    // could also monitor UIDeviceBatteryLevelDidChangeNotification
+    
+    self.batteryLabel.text = [NSString stringWithFormat:@"%d %%", (int)(batteyLevel * 100)];
     [self flipSwitchOn:YES];
 }
 
 - (void)viewDidUnload
 {
     [self setPowerSwitch:nil];
+    [self setBatteryLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
