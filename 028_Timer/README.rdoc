@@ -1,0 +1,12 @@
+= DCTimer can be used to perform a block after a delay, the timer can be cancelled
+
+== Software versions
+
+    Mac OS X Lion v10.7.3
+    Xcode v4.3.2
+    iOS 5.0
+
+== Introduction
+
+    - (DCTimer *)initWithDelay:(NSTimeInterval)delayInSeconds performBlock:(void (^)(void))block;
+    - (void)cancel;
