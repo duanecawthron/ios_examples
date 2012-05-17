@@ -1,0 +1,13 @@
+= Queue is a simple queue
+
+== Software versions
+
+    Mac OS X Lion v10.7.3
+    Xcode v4.3.2
+    iOS 5.0
+
+== Resources
+
+    https://github.com/esromneb/ios-queue-object/
+
+== Introduction
