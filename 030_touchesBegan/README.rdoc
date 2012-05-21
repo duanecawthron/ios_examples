@@ -24,4 +24,4 @@ If you override this method without calling super (a common use pattern), you mu
 
 == Note about Gesture Recognizers
 
-Gestures are recognized in multiple level of the view hierarchy regardless of whether or not the touches are passed to super.
+Gestures are recognized in multiple levels of the view hierarchy regardless of whether or not the touches are passed to super.
