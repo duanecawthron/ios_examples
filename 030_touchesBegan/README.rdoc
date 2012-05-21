@@ -14,10 +14,14 @@
 
 From UIResponder Class Reference: The default implementation of touchesBegan:withEvent: does nothing. However immediate UIKit subclasses of UIResponder, particularly UIView, forward the message up the responder chain. To forward the message to the next responder, send the message to super (the superclass implementation); do not send the message directly to the next responder. For example,
 
-	[super touchesBegan:touches withEvent:event];
+    [super touchesBegan:touches withEvent:event];
 
 If you override this method without calling super (a common use pattern), you must also override the other methods for handling touch events, if only as stub (empy) implementations.
 
-	- (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {}
-	- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {}
-	- (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {}
+    - (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {}
+    - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {}
+    - (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {}
+
+== Note about Gesture Recognizers
+
+Gestures are recognized in multiple level of the view hierarchy regardless of whether or not the touches are passed to super.

@@ -51,7 +51,6 @@
     self.subViewB.userInteractionEnabled = YES;
     self.subViewC.userInteractionEnabled = YES;
     
-    /*
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapTop:)];
     [self.view addGestureRecognizer:tapRecognizer];
     
@@ -63,7 +62,6 @@
     
     tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapC:)];
     [self.subViewC addGestureRecognizer:tapRecognizer];
-    */
 }
 
 - (void)handleTapTop:(UITapGestureRecognizer *)recognizer
