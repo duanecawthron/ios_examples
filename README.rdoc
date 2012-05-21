@@ -65,4 +65,6 @@ These examples demonstrate various features of iOS development.
 025_AVCaptureStillImage:: AVCaptureStillImage demonstrates how to capture a still image using AV Foundation
 026_Brightness:: Brightness demonstrates how to adjust screen brightness
 027_Flashlight:: Flashlight demonstrates how to use the camera flash LED as a flashlight
-028_Timer:: DCTimer can be used to perform a block after a delay, the timer can be cancelled
+028_Timer:: DCTimer can be used to perform a block after a delay. The timer can be cancelled.
+029_Queue:: Queue is a simple queue
+030_touchesBegan:: touchesBegan shows how handle an event or pass it to the next responder

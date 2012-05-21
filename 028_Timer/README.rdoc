@@ -1,4 +1,4 @@
-= DCTimer can be used to perform a block after a delay, the timer can be cancelled
+= DCTimer can be used to perform a block after a delay. The timer can be cancelled.
 
 == Software versions
 

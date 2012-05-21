@@ -1,0 +1,23 @@
+= touchesBegan shows how handle an event or pass it to the next responder
+
+== Software versions
+
+    Mac OS X Lion v10.7.4
+    Xcode v4.3.2
+    iOS 5.0
+
+== Resources
+
+    https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIResponder_Class/Reference/Reference.html#//apple_ref/doc/uid/TP40006783
+
+== Introduction
+
+From UIResponder Class Reference: The default implementation of touchesBegan:withEvent: does nothing. However immediate UIKit subclasses of UIResponder, particularly UIView, forward the message up the responder chain. To forward the message to the next responder, send the message to super (the superclass implementation); do not send the message directly to the next responder. For example,
+
+	[super touchesBegan:touches withEvent:event];
+
+If you override this method without calling super (a common use pattern), you must also override the other methods for handling touch events, if only as stub (empy) implementations.
+
+	- (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {}
+	- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {}
+	- (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {}
