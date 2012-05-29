@@ -1,0 +1,16 @@
+= UIPopoverBackgroundView shows how to customize the background for a popover
+
+== Software versions
+
+    Mac OS X Lion v10.7.4
+    Xcode v4.3.2
+    iOS 5.0
+
+== Resources
+
+    https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIPopoverController_class/Reference/Reference.html#//apple_ref/doc/uid/TP40009306
+    https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIPopoverBackgroundView_class/Reference/Reference.html#//apple_ref/doc/uid/TP40011171
+
+== Introduction
+
+The background of the UIPopoverBackgroundView is a stretchable image. The stretchable image is created with the resizableImageWithCapInsets: method of UIImage.
