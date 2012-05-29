@@ -61,6 +61,8 @@
     return YES;
 }
 
+#pragma mark - UIPopoverControllerDelegate
+
 - (BOOL)popoverControllerShouldDismissPopover:(UIPopoverController *)popoverController
 {   
     return YES;
