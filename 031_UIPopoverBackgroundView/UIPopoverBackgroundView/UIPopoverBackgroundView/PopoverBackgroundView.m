@@ -117,8 +117,9 @@
     self.arrowView.transform = CGAffineTransformTranslate(self.arrowView.transform, dxArrow, dyArrow);
     self.arrowView.transform = CGAffineTransformRotate(self.arrowView.transform, degrees * M_PI/180.0);
     
+    //NSLog(@"self.frame %@,", NSStringFromCGRect(self.frame));
     //NSLog(@"self.backgroundView.frame %@, self.backgroundView.center %@", NSStringFromCGRect(self.backgroundView.frame), NSStringFromCGPoint(self.backgroundView.center));
-   // NSLog(@"self.arrowView.center %@, dx %g, dy %g", NSStringFromCGPoint(self.arrowView.center), dxArrow, dyArrow);
+    //NSLog(@"self.arrowView.center %@, dx %g, dy %g", NSStringFromCGPoint(self.arrowView.center), dxArrow, dyArrow);
 }
 
 @end
