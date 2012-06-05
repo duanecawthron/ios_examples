@@ -1,4 +1,4 @@
-= touchesBegan shows how handle an event or pass it to the next responder
+= touchesBegan shows how to handle an event or pass it to the next responder
 
 == Software versions
 

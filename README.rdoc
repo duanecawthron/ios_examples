@@ -69,3 +69,4 @@ These examples demonstrate various features of iOS development.
 029_Queue:: Queue is a simple queue
 030_touchesBegan:: touchesBegan shows how handle an event or pass it to the next responder
 031_UIPopoverBackgroundView:: UIPopoverBackgroundView shows how to customize the background for a popover
+032_GestureBlocksTouch:: GestureBlocksTouch demonstrates how gesture recognizers block touch events

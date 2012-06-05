@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A944343157EB99100DE58AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A944342157EB99100DE58AE /* UIKit.framework */; };
+		6A944345157EB99100DE58AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A944344157EB99100DE58AE /* Foundation.framework */; };
+		6A944347157EB99100DE58AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A944346157EB99100DE58AE /* CoreGraphics.framework */; };
+		6A94434D157EB99100DE58AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6A94434B157EB99100DE58AE /* InfoPlist.strings */; };
+		6A94434F157EB99100DE58AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A94434E157EB99100DE58AE /* main.m */; };
+		6A944353157EB99100DE58AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A944352157EB99100DE58AE /* AppDelegate.m */; };
+		6A944356157EB99100DE58AE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A944354157EB99100DE58AE /* MainStoryboard.storyboard */; };
+		6A944361157EBD5600DE58AE /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A944360157EBD5600DE58AE /* Test1ViewController.m */; };
+		6A944364157EBD6200DE58AE /* Test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A944363157EBD6200DE58AE /* Test2ViewController.m */; };
+		6A94436B157EC26600DE58AE /* Test3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A94436A157EC26600DE58AE /* Test3ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6A94433E157EB99100DE58AE /* GestureBlocksTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureBlocksTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A944342157EB99100DE58AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6A944344157EB99100DE58AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6A944346157EB99100DE58AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6A94434A157EB99100DE58AE /* GestureBlocksTouch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GestureBlocksTouch-Info.plist"; sourceTree = "<group>"; };
+		6A94434C157EB99100DE58AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6A94434E157EB99100DE58AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6A944350157EB99100DE58AE /* GestureBlocksTouch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GestureBlocksTouch-Prefix.pch"; sourceTree = "<group>"; };
+		6A944351157EB99100DE58AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6A944352157EB99100DE58AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6A944355157EB99100DE58AE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		6A94435F157EBD5600DE58AE /* Test1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test1ViewController.h; sourceTree = "<group>"; };
+		6A944360157EBD5600DE58AE /* Test1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test1ViewController.m; sourceTree = "<group>"; };
+		6A944362157EBD6200DE58AE /* Test2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2ViewController.h; sourceTree = "<group>"; };
+		6A944363157EBD6200DE58AE /* Test2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test2ViewController.m; sourceTree = "<group>"; };
+		6A944369157EC26600DE58AE /* Test3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test3ViewController.h; sourceTree = "<group>"; };
+		6A94436A157EC26600DE58AE /* Test3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test3ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6A94433B157EB99100DE58AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A944343157EB99100DE58AE /* UIKit.framework in Frameworks */,
+				6A944345157EB99100DE58AE /* Foundation.framework in Frameworks */,
+				6A944347157EB99100DE58AE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A944333157EB99100DE58AE = {
+			isa = PBXGroup;
+			children = (
+				6A944348157EB99100DE58AE /* GestureBlocksTouch */,
+				6A944341157EB99100DE58AE /* Frameworks */,
+				6A94433F157EB99100DE58AE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6A94433F157EB99100DE58AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A94433E157EB99100DE58AE /* GestureBlocksTouch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6A944341157EB99100DE58AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A944342157EB99100DE58AE /* UIKit.framework */,
+				6A944344157EB99100DE58AE /* Foundation.framework */,
+				6A944346157EB99100DE58AE /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A944348157EB99100DE58AE /* GestureBlocksTouch */ = {
+			isa = PBXGroup;
+			children = (
+				6A944351157EB99100DE58AE /* AppDelegate.h */,
+				6A944352157EB99100DE58AE /* AppDelegate.m */,
+				6A944354157EB99100DE58AE /* MainStoryboard.storyboard */,
+				6A944369157EC26600DE58AE /* Test3ViewController.h */,
+				6A94436A157EC26600DE58AE /* Test3ViewController.m */,
+				6A94435F157EBD5600DE58AE /* Test1ViewController.h */,
+				6A944360157EBD5600DE58AE /* Test1ViewController.m */,
+				6A944362157EBD6200DE58AE /* Test2ViewController.h */,
+				6A944363157EBD6200DE58AE /* Test2ViewController.m */,
+				6A944349157EB99100DE58AE /* Supporting Files */,
+			);
+			path = GestureBlocksTouch;
+			sourceTree = "<group>";
+		};
+		6A944349157EB99100DE58AE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A94434A157EB99100DE58AE /* GestureBlocksTouch-Info.plist */,
+				6A94434B157EB99100DE58AE /* InfoPlist.strings */,
+				6A94434E157EB99100DE58AE /* main.m */,
+				6A944350157EB99100DE58AE /* GestureBlocksTouch-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6A94433D157EB99100DE58AE /* GestureBlocksTouch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A94435C157EB99100DE58AE /* Build configuration list for PBXNativeTarget "GestureBlocksTouch" */;
+			buildPhases = (
+				6A94433A157EB99100DE58AE /* Sources */,
+				6A94433B157EB99100DE58AE /* Frameworks */,
+				6A94433C157EB99100DE58AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GestureBlocksTouch;
+			productName = GestureBlocksTouch;
+			productReference = 6A94433E157EB99100DE58AE /* GestureBlocksTouch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6A944335157EB99100DE58AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Cawthron Consulting Services, Inc.";
+			};
+			buildConfigurationList = 6A944338157EB99100DE58AE /* Build configuration list for PBXProject "GestureBlocksTouch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6A944333157EB99100DE58AE;
+			productRefGroup = 6A94433F157EB99100DE58AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6A94433D157EB99100DE58AE /* GestureBlocksTouch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6A94433C157EB99100DE58AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A94434D157EB99100DE58AE /* InfoPlist.strings in Resources */,
+				6A944356157EB99100DE58AE /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6A94433A157EB99100DE58AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A94434F157EB99100DE58AE /* main.m in Sources */,
+				6A944353157EB99100DE58AE /* AppDelegate.m in Sources */,
+				6A944361157EBD5600DE58AE /* Test1ViewController.m in Sources */,
+				6A944364157EBD6200DE58AE /* Test2ViewController.m in Sources */,
+				6A94436B157EC26600DE58AE /* Test3ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6A94434B157EB99100DE58AE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A94434C157EB99100DE58AE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6A944354157EB99100DE58AE /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A944355157EB99100DE58AE /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6A94435A157EB99100DE58AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6A94435B157EB99100DE58AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6A94435D157EB99100DE58AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GestureBlocksTouch/GestureBlocksTouch-Prefix.pch";
+				INFOPLIST_FILE = "GestureBlocksTouch/GestureBlocksTouch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6A94435E157EB99100DE58AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GestureBlocksTouch/GestureBlocksTouch-Prefix.pch";
+				INFOPLIST_FILE = "GestureBlocksTouch/GestureBlocksTouch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6A944338157EB99100DE58AE /* Build configuration list for PBXProject "GestureBlocksTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A94435A157EB99100DE58AE /* Debug */,
+				6A94435B157EB99100DE58AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A94435C157EB99100DE58AE /* Build configuration list for PBXNativeTarget "GestureBlocksTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A94435D157EB99100DE58AE /* Debug */,
+				6A94435E157EB99100DE58AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6A944335157EB99100DE58AE /* Project object */;
+}

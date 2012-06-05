@@ -1,0 +1,15 @@
+= GestureBlocksTouch demonstrates how gesture recognizers block touch events
+
+== Software versions
+
+    Mac OS X Lion v10.7.4
+    Xcode v4.3.2
+    iOS 5.0
+
+== Resources
+
+    http://developer.apple.com/library/ios/#documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/GestureRecognizers/GestureRecognizers.html
+    
+== Introduction
+
+Suppose that a button is in a view that is in front of a second view. If the second view has a tap gesture recognizer, it will cancel touch events that would normally be handled by the button.
