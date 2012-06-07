@@ -1,0 +1,26 @@
+= addChildViewController adds a child view controller to the responder chain used to handle events
+
+== Software versions
+
+    Mac OS X Lion v10.7.4
+    Xcode v4.3.2
+    iOS 5.1
+
+== Resources
+
+    https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/uid/TP40006926
+    See Implementing a Container View Controller
+
+== Introduction
+
+Adding a second view controller to control part of the screen requires connecting the view and the controller.
+
+1. The second view controller's view must be added to the view hierarchy.
+2. The view controller must be added to the view controller hierarchy.
+
+In this example, a sub view is an overlay that covers the entire main view. Touching the subview triggers touch events in the following.
+
+* sub view
+* sub view controller (enabled by calling addChildViewController)
+* main view
+* main view controller
