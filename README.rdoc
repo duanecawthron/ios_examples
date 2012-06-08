@@ -44,7 +44,7 @@ These examples demonstrate various features of iOS development.
 009_Shutterbug:: Shutterbug from Stanford University CS 193P Lecture 10
 010_Photomania:: Photomania from Stanford University CS 193P Lecture 14
 011_CSV_parser:: CSV_parser is a simple app that parses a CSV file
-012_CSV_core_data:: CSV_core_data is a simple app that loads a CSV file into a database
+012_CSV_core_data:: CSV_core_data is an app that loads a CSV file into a database
 013_NSPredicate:: NSPredicate is a collection of simple examples that use NSPredicate
 014_Singleton:: Singleton Factory always returns the same pointer to the one and only Singleton object
 015_Key_Value_Observing:: Key Value Observing example
@@ -62,8 +62,8 @@ These examples demonstrate various features of iOS development.
 027_Flashlight:: Flashlight demonstrates how to use the camera flash LED as a flashlight
 028_Timer:: DCTimer can be used to perform a block after a delay. The timer can be cancelled.
 029_Queue:: Queue is a simple queue
-030_touchesBegan:: touchesBegan shows how handle an event or pass it to the next responder
+030_touchesBegan:: touchesBegan shows how to handle an event or pass it to the next responder
 031_UIPopoverBackgroundView:: UIPopoverBackgroundView shows how to customize the background for a popover
 032_GestureBlocksTouch:: GestureBlocksTouch demonstrates how gesture recognizers block touch events
-033_addChildViewController:: addChildViewController adds a child view controller to the responder chain used to handle events
+033_addChildViewController:: addChildViewController adds a child view controller to the responder chain
 034_Rotate_Or_Not:: Two views, one overlays the other, one rotates and one does not
