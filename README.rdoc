@@ -28,11 +28,6 @@ Fall 2010 for Xcode 3 and iOS 4
     Paul Hegarty
     See http://www.stanford.edu/class/cs193p/cgi-bin/drupal/downloads-2010-fall for downloads.
 
-== Need To Investigate
-
-    https://github.com/AFNetworking/AFNetworking
-    https://github.com/AlanQuatermain/AQGridView
-
 == iOS Examples
 
 These examples demonstrate various features of iOS development.
