@@ -12,9 +12,13 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) SubViewController *subViewController;
+
 @end
 
 @implementation ViewController
+
+@synthesize subViewController = _subViewController;
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -28,14 +32,14 @@
 	// Do any additional setup after loading the view, typically from a nib.
 #if 0
     // Case 1 - create SubViewController with alloc/init, do not call addChildViewController
-    SubViewController *subViewController = [[SubViewController alloc] init];
+    self.subViewController = [[SubViewController alloc] init];
     // alloc/init does not enable calling of any lifecycle methods
     
     View *view = [[View alloc] initWithFrame:self.view.bounds];
     view.backgroundColor = [UIColor yellowColor];
-    subViewController.view = view;
-    subViewController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    [self.view addSubview:subViewController.view];
+    self.subViewController.view = view;
+    self.subViewController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    [self.view addSubview:self.subViewController.view];
     
     // these are NOT called
     // - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
@@ -49,23 +53,23 @@
 #endif
 #if 0
     // Case 2 - create SubViewController with alloc/init, call addChildViewController
-    SubViewController *subViewController = [[SubViewController alloc] init];
+    self.subViewController = [[SubViewController alloc] init];
     // alloc/init does not enable calling of any lifecycle methods
     // - (void)viewDidLoad is not called
     
     View *view = [[View alloc] initWithFrame:self.view.bounds];
     view.backgroundColor = [UIColor yellowColor];
-    subViewController.view = view;
-    subViewController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    [self.view addSubview:subViewController.view];
+    self.subViewController.view = view;
+    self.subViewController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    [self.view addSubview:self.subViewController.view];
     
-    [self addChildViewController:subViewController];
+    [self addChildViewController:self.subViewController];
     // - (void)willMoveToParentViewController:(UIViewController *)parent
     
     // from this point on, subViewController works the same as case 4 below 
     // NOTE addChildViewController: adds the SubViewController to the responder chain used to handle events
     
-    [subViewController didMoveToParentViewController:self];
+    [self.subViewController didMoveToParentViewController:self];
     // - (void)didMoveToParentViewController:(UIViewController *)parent
     
     // these are called later in the run loop 
@@ -86,15 +90,15 @@
 #endif
 #if 0
     // Case 3 - create SubViewController from storyboard, do not call addChildViewController
-    SubViewController *subViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SubViewController"];
+    self.subViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SubViewController"];
     // instantiating from the storyboard enables calling some lifecycle methods
     
-    subViewController.view.frame = self.view.bounds;
+    self.subViewController.view.frame = self.view.bounds;
     // - (void)viewDidLoad
     
-    subViewController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.subViewController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
-    [self.view addSubview:subViewController.view];
+    [self.view addSubview:self.subViewController.view];
     
     // these are called later in the run loop 
     // - (void)viewWillAppear:(BOOL)animated
@@ -113,20 +117,20 @@
 #endif
 #if 1
     // Case 4 - create SubViewController from storyboard, call addChildViewController
-    SubViewController *subViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SubViewController"];
-    subViewController.view.frame = self.view.bounds;
+    self.subViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SubViewController"];
+    self.subViewController.view.frame = self.view.bounds;
     // - (void)viewDidLoad
     
-    subViewController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.subViewController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
-    [self.view addSubview:subViewController.view];
+    [self.view addSubview:self.subViewController.view];
     
-    [self addChildViewController:subViewController];
+    [self addChildViewController:self.subViewController];
     // - (void)willMoveToParentViewController:(UIViewController *)parent
     
     // NOTE addChildViewController: adds the SubViewController to the responder chain used to handle events
 
-    [subViewController didMoveToParentViewController:self];
+    [self.subViewController didMoveToParentViewController:self];
     // - (void)didMoveToParentViewController:(UIViewController *)parent
     
     // these are called later in the run loop 
@@ -147,10 +151,10 @@
 #endif
 #if 0
     dispatch_async(dispatch_get_main_queue(), ^{
-        [subViewController.view removeFromSuperview];
+        [self.subViewController.view removeFromSuperview];
         // - (void)viewWillDisappear:(BOOL)animated
         
-        [subViewController removeFromParentViewController];
+        [self.subViewController removeFromParentViewController];
         // - (void)willMoveToParentViewController:(UIViewController *)parent (parent = nil)
         // - (void)viewDidDisappear:(BOOL)animated
     });
