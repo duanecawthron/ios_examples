@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A5B63D71581436C00FD07FD /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5B63D61581436C00FD07FD /* RootViewController.m */; };
+		6A5B63DB1581437700FD07FD /* RotatableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5B63DA1581437700FD07FD /* RotatableViewController.m */; };
+		6A5B63DE1581438100FD07FD /* FixedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5B63DD1581438100FD07FD /* FixedViewController.m */; };
+		6A8FC325158103CC0078466C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A8FC324158103CC0078466C /* UIKit.framework */; };
+		6A8FC327158103CC0078466C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A8FC326158103CC0078466C /* Foundation.framework */; };
+		6A8FC329158103CC0078466C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A8FC328158103CC0078466C /* CoreGraphics.framework */; };
+		6A8FC32F158103CC0078466C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6A8FC32D158103CC0078466C /* InfoPlist.strings */; };
+		6A8FC331158103CC0078466C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8FC330158103CC0078466C /* main.m */; };
+		6A8FC335158103CC0078466C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8FC334158103CC0078466C /* AppDelegate.m */; };
+		6A8FC338158103CC0078466C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A8FC336158103CC0078466C /* MainStoryboard.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6A5B63D51581436C00FD07FD /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		6A5B63D61581436C00FD07FD /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		6A5B63D91581437700FD07FD /* RotatableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatableViewController.h; sourceTree = "<group>"; };
+		6A5B63DA1581437700FD07FD /* RotatableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatableViewController.m; sourceTree = "<group>"; };
+		6A5B63DC1581438100FD07FD /* FixedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixedViewController.h; sourceTree = "<group>"; };
+		6A5B63DD1581438100FD07FD /* FixedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixedViewController.m; sourceTree = "<group>"; };
+		6A8FC320158103CC0078466C /* Rotate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rotate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A8FC324158103CC0078466C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6A8FC326158103CC0078466C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6A8FC328158103CC0078466C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6A8FC32C158103CC0078466C /* Rotate-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Rotate-Info.plist"; sourceTree = "<group>"; };
+		6A8FC32E158103CC0078466C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6A8FC330158103CC0078466C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6A8FC332158103CC0078466C /* Rotate-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rotate-Prefix.pch"; sourceTree = "<group>"; };
+		6A8FC333158103CC0078466C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6A8FC334158103CC0078466C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6A8FC337158103CC0078466C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6A8FC31D158103CC0078466C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A8FC325158103CC0078466C /* UIKit.framework in Frameworks */,
+				6A8FC327158103CC0078466C /* Foundation.framework in Frameworks */,
+				6A8FC329158103CC0078466C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A8FC315158103CC0078466C = {
+			isa = PBXGroup;
+			children = (
+				6A8FC32A158103CC0078466C /* Rotate */,
+				6A8FC323158103CC0078466C /* Frameworks */,
+				6A8FC321158103CC0078466C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6A8FC321158103CC0078466C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A8FC320158103CC0078466C /* Rotate.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6A8FC323158103CC0078466C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A8FC324158103CC0078466C /* UIKit.framework */,
+				6A8FC326158103CC0078466C /* Foundation.framework */,
+				6A8FC328158103CC0078466C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A8FC32A158103CC0078466C /* Rotate */ = {
+			isa = PBXGroup;
+			children = (
+				6A8FC333158103CC0078466C /* AppDelegate.h */,
+				6A8FC334158103CC0078466C /* AppDelegate.m */,
+				6A5B63DC1581438100FD07FD /* FixedViewController.h */,
+				6A5B63DD1581438100FD07FD /* FixedViewController.m */,
+				6A8FC336158103CC0078466C /* MainStoryboard.storyboard */,
+				6A5B63D51581436C00FD07FD /* RootViewController.h */,
+				6A5B63D61581436C00FD07FD /* RootViewController.m */,
+				6A5B63D91581437700FD07FD /* RotatableViewController.h */,
+				6A5B63DA1581437700FD07FD /* RotatableViewController.m */,
+				6A8FC32B158103CC0078466C /* Supporting Files */,
+			);
+			path = Rotate;
+			sourceTree = "<group>";
+		};
+		6A8FC32B158103CC0078466C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A8FC32C158103CC0078466C /* Rotate-Info.plist */,
+				6A8FC32D158103CC0078466C /* InfoPlist.strings */,
+				6A8FC330158103CC0078466C /* main.m */,
+				6A8FC332158103CC0078466C /* Rotate-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6A8FC31F158103CC0078466C /* Rotate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A8FC33E158103CC0078466C /* Build configuration list for PBXNativeTarget "Rotate" */;
+			buildPhases = (
+				6A8FC31C158103CC0078466C /* Sources */,
+				6A8FC31D158103CC0078466C /* Frameworks */,
+				6A8FC31E158103CC0078466C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rotate;
+			productName = Rotate;
+			productReference = 6A8FC320158103CC0078466C /* Rotate.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6A8FC317158103CC0078466C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Cawthron Consulting Services, Inc.";
+			};
+			buildConfigurationList = 6A8FC31A158103CC0078466C /* Build configuration list for PBXProject "Rotate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6A8FC315158103CC0078466C;
+			productRefGroup = 6A8FC321158103CC0078466C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6A8FC31F158103CC0078466C /* Rotate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6A8FC31E158103CC0078466C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A8FC32F158103CC0078466C /* InfoPlist.strings in Resources */,
+				6A8FC338158103CC0078466C /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6A8FC31C158103CC0078466C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A8FC331158103CC0078466C /* main.m in Sources */,
+				6A8FC335158103CC0078466C /* AppDelegate.m in Sources */,
+				6A5B63D71581436C00FD07FD /* RootViewController.m in Sources */,
+				6A5B63DB1581437700FD07FD /* RotatableViewController.m in Sources */,
+				6A5B63DE1581438100FD07FD /* FixedViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6A8FC32D158103CC0078466C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A8FC32E158103CC0078466C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6A8FC336158103CC0078466C /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A8FC337158103CC0078466C /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6A8FC33C158103CC0078466C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6A8FC33D158103CC0078466C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6A8FC33F158103CC0078466C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Rotate/Rotate-Prefix.pch";
+				INFOPLIST_FILE = "Rotate/Rotate-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6A8FC340158103CC0078466C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Rotate/Rotate-Prefix.pch";
+				INFOPLIST_FILE = "Rotate/Rotate-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6A8FC31A158103CC0078466C /* Build configuration list for PBXProject "Rotate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A8FC33C158103CC0078466C /* Debug */,
+				6A8FC33D158103CC0078466C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A8FC33E158103CC0078466C /* Build configuration list for PBXNativeTarget "Rotate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A8FC33F158103CC0078466C /* Debug */,
+				6A8FC340158103CC0078466C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6A8FC317158103CC0078466C /* Project object */;
+}

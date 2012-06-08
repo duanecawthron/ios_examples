@@ -1,0 +1,18 @@
+= Two views, one overlays the other, one rotates and one does not
+
+== Software versions
+
+    Mac OS X Lion v10.7.4
+    Xcode v4.3.2
+    iOS 5.1
+
+== Resources
+
+    https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/uid/TP40006926
+    See Implementing a Container View Controller
+
+== Introduction
+
+This example uses three view controllers on screen at the same time. There is a root view and two sibling subviews. Each view fills the entire screen.
+
+The root view and one subview rotates. The second subview is fixed. It does not rotate.

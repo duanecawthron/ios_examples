@@ -1,4 +1,4 @@
-= addChildViewController adds a child view controller to the responder chain used to handle events
+= addChildViewController adds a child view controller to the responder chain
 
 == Software versions
 
@@ -16,7 +16,9 @@
 Adding a second view controller to control part of the screen requires connecting the view and the controller.
 
 1. The second view controller's view must be added to the view hierarchy.
-2. The view controller must be added to the view controller hierarchy.
+2. The view controller must be added to the view controller hierarchy with addChildViewController.
+
+addChildViewController adds a child view controller to the responder chain used to handle events.
 
 In this example, a sub view is an overlay that covers the entire main view. Touching the subview triggers touch events in the following.
 
