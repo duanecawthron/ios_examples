@@ -12,9 +12,15 @@
 
 @interface RootViewController ()
 
+@property (nonatomic, strong) FixedViewController *fixedViewController;
+@property (nonatomic, strong) RotatableViewController *rotatableViewController;
+
 @end
 
 @implementation RootViewController
+
+@synthesize fixedViewController = _fixedViewController;
+@synthesize rotatableViewController = _rotatableViewController;
 
 - (void)logAllSubviews:(UIView *)view withPrefix:(NSString *)prefix
 {
@@ -50,16 +56,16 @@
     
 #pragma mark - fixed view
     
-    FixedViewController *fixedViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"FixedViewController"];
+    self.fixedViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"FixedViewController"];
     // instantiating from the storyboard enables calling some lifecycle methods
     
-    fixedViewController.view.frame = self.view.window.bounds;
+    self.fixedViewController.view.frame = self.view.window.bounds;
     // - (void)viewDidLoad
     
-    fixedViewController.view.autoresizingMask = UIViewAutoresizingNone; // UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.fixedViewController.view.autoresizingMask = UIViewAutoresizingNone; // UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
-    [self.view.window addSubview:fixedViewController.view];
-    [self.view.window sendSubviewToBack:fixedViewController.view];
+    [self.view.window addSubview:self.fixedViewController.view];
+    [self.view.window sendSubviewToBack:self.fixedViewController.view];
     
     // these are called later in the run loop 
     // - (void)viewWillAppear:(BOOL)animated
@@ -78,20 +84,20 @@
 
 #pragma mark - rotatable view
     
-    RotatableViewController *rotatableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"RotatableViewController"];
-    rotatableViewController.view.frame = self.view.bounds;
+    self.rotatableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"RotatableViewController"];
+    self.rotatableViewController.view.frame = self.view.bounds;
     // - (void)viewDidLoad
     
-    rotatableViewController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.rotatableViewController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
-    [self.view addSubview:rotatableViewController.view];
+    [self.view addSubview:self.rotatableViewController.view];
     
-    [self addChildViewController:rotatableViewController];
+    [self addChildViewController:self.rotatableViewController];
     // - (void)willMoveToParentViewController:(UIViewController *)parent
     
     // NOTE addChildViewController: adds the SubViewController to the responder chain used to handle events
     
-    [rotatableViewController didMoveToParentViewController:self];
+    [self.rotatableViewController didMoveToParentViewController:self];
     // - (void)didMoveToParentViewController:(UIViewController *)parent
     
     // these are called later in the run loop 
