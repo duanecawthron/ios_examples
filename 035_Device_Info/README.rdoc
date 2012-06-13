@@ -1,0 +1,24 @@
+= DeviceInfo provides utility methods that return the device name and system version
+
+== Software versions
+
+    Mac OS X Lion v10.7.4
+    Xcode v4.3.2
+    iOS 5.1
+
+== Resources
+
+Option 1 calls uname()
+
+    http://stackoverflow.com/questions/8426518/how-to-find-iphone-ipod-device-model3g-3gs-4-4s-by-code
+    https://developer.apple.com/library/ios/#documentation/System/Conceptual/ManPages_iPhoneOS/man3/uname.3.html
+
+Option 2 calls sysctlbyname()
+
+    http://stackoverflow.com/questions/448162/determine-device-iphone-ipod-touch-with-iphone-sdk
+    http://developer.apple.com/iphone/library/documentation/System/Conceptual/ManPages_iPhoneOS/man3/sysctlbyname.3.html
+    https://gist.github.com/1323251
+
+== Introduction
+
+Both uname() and sysctlbyname() return a string like "iPhone4,1" that must be converted to "iPhone 4S".

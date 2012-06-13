@@ -67,3 +67,4 @@ These examples demonstrate various features of iOS development.
 032_GestureBlocksTouch:: GestureBlocksTouch demonstrates how gesture recognizers block touch events
 033_addChildViewController:: addChildViewController adds a child view controller to the responder chain
 034_Rotate_Or_Not:: Two views, one overlays the other, one rotates and one does not
+035_Device_Info:: DeviceInfo provides utility methods that return the device name and system version
