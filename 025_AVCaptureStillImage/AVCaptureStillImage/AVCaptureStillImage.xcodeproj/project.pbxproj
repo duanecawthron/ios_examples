@@ -385,8 +385,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AVCaptureStillImage/AVCaptureStillImage-Prefix.pch";
 				INFOPLIST_FILE = "AVCaptureStillImage/AVCaptureStillImage-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -397,8 +398,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AVCaptureStillImage/AVCaptureStillImage-Prefix.pch";
 				INFOPLIST_FILE = "AVCaptureStillImage/AVCaptureStillImage-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -456,6 +458,7 @@
 				6AE5A5F9155C205D009EC23C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6AE5A5FA155C205D009EC23C /* Build configuration list for PBXNativeTarget "AVCaptureStillImageTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +467,7 @@
 				6AE5A5FC155C205D009EC23C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
