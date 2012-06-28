@@ -2,5 +2,5 @@
 FlickrAPIKey.h
 
 # Xcode 4
-project.xcworkspace/
-xcuserdata/
+#project.xcworkspace/
+#xcuserdata/
