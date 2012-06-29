@@ -1,6 +1,5 @@
 .DS_Store
 FlickrAPIKey.h
 
-# Xcode 4
-#project.xcworkspace/
-#xcuserdata/
+# Xcode
+*.xcuserstate
