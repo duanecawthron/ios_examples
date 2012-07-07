@@ -125,6 +125,11 @@
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
+#if 0
+    // add this to make self.fixedViewController rotate (rotation is not animated)
+    self.fixedViewController.view.transform = self.view.transform;
+    self.fixedViewController.view.frame = self.view.frame;
+#endif
     [self logAllSubviews:self.view.window];
 }
 
